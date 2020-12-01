@@ -8,7 +8,7 @@
             <span class="bar"></span>
         </label>
         <ul id="nav-list" class="nav-list flex uppercase items-center">
-            <li><a class="nav-link <?php active('') or active('index.php') ?>" href="index.php">Home</a></li>
+            <li><a class="nav-link <?php active('http://www.maxcerasanitaryware.com') ?>" href="http://www.maxcerasanitaryware.com">Home</a></li>
             <li><a class="nav-link" href="">Sanitarware</a></li>
             <li><a class="nav-link" href="">Dowloads</a></li>
             <li><a class="nav-link <?php active('#about') ?>" href="index.php#about">About us</a></li>
