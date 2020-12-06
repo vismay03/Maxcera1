@@ -1,140 +1,188 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500&family=Poppins&display=swap');
-:root{
---exo2 : 'Exo 2', sans-serif;
---poppins: 'Poppins', sans-serif;
---white: #fff;
---bg-color: #1C1818;
---hover-color:#9e2c2c;
---black: #010101;
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@500&family=Poppins&display=swap");
+:root {
+  --exo2: "Exo 2", sans-serif;
+  --poppins: "Poppins", sans-serif;
+  --white: #fff;
+  --bg-color: #1c1818;
+  --hover-color: #9e2c2c;
+  --black: #010101;
 }
-body { background-color: var(--bg-color); }
+body {
+  background-color: var(--bg-color);
+}
+
+// NAVBAR
+
 nav {
-    background-color: var(--bg-color);
-    li {
-        margin-left: 20px;
-        
+  background-color: var(--bg-color);
+  li {
+    margin-left: 20px;
+
     a {
-        font-family: var(--poppins);
-        color: var(--white);
-        transition: all .3s;
-        &:hover, .active{
-            color:var(--hover-color);
-            transition: all 0.3s;
-            border-bottom: 1px solid var(--hover-color);
-        }
-        
-    }&::after{
-        content: "";
-        width: 20px;
-        height: 2px;
+      font-family: var(--poppins);
+      color: var(--white);
+      transition: all 0.3s;
+      &:hover,
+      .active {
+        color: var(--hover-color);
+        transition: all 0.3s;
+        border-bottom: 1px solid var(--hover-color);
+      }
+    }
+    &::after {
+      content: "";
+      background-color: var(--hover-color);
+      position: absolute;
+      top: 3rem;
+      left: 10rem;
+    }
+    &:nth-last-child(1) {
+      a {
         background-color: var(--hover-color);
-        position: absolute;
-        top: 3rem;
-       left: 10rem;
-    }
-    &:nth-last-child(1){
-        a {
-            background-color:var(--hover-color);
-            padding: 8px 13px;
-            color: var(--white);
-            &:hover{
-                border-bottom: 1px solid var(--white);
-                color: var(--bg-color);
-            }
+        padding: 8px 13px;
+        color: var(--white);
+        &:hover {
+          border-bottom: 1px solid var(--white);
+          color: var(--bg-color);
         }
+      }
     }
-   
-    }
+  }
 }
 
 .humberger {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  right: 2rem;
+  display: none;
+  .bar {
+    display: inline-block;
     width: 30px;
-    height: 30px;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    position: absolute;
-    right: 2rem;
-    display: none;
-    .bar {
-        display: inline-block;
-        width: 30px;
-        height: 2px;
-        background-color: #fff;
-        position: relative;
-        transition: all 0.3s;
-    &::before, &::after{
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: #fff;
-        transition: all 0.3s;
+    height: 2px;
+    background-color: #fff;
+    position: relative;
+    transition: all 0.3s;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      transition: all 0.3s;
     }
 
-    &::before { transform: translateY(-10px); }
-    &::after { transform: translateY(10px); }
-    
+    &::before {
+      transform: translateY(-10px);
     }
-
+    &::after {
+      transform: translateY(10px);
+    }
+  }
 }
 
-@media (max-width: 600px){
-    .nav-list {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+
+// ABOUT
+
+.about-img {
+    width: 24rem;
+    margin-right: 1.25rem;
+    box-shadow: -10px 10px 0 10px rgba(71, 62, 62, 0.35),
+                -20px 20px 0 20px rgba(32, 28, 28, 1);
+  }
+  .about-content {
+    width: 25rem;
+    margin-left: 1.25rem;
+    p{ font-family: var(--poppins); }
+    h2{
+        color: #DEBF9D;
+        font-family: var(--exo2);
+    }
+  }
+  .about {
+      width: 50rem;
+  }
+  
+
+@media (max-width: 800px) {
+  .nav-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+    li {
+      margin: 10px 0;
+      a {
+        display: inline-block;
+        font-size: 20px;
+        padding: 8px 20px;
+        margin: 1px;
+        transition: all 0.3s;
+        &:hover,
+        .active {
+          transform: scale(1.3);
+          transition: all 0.3s;
+          border: 0;
+        }
+      }
+    }
+    &:nth-last-child(1) {
+      a {
         background-color: var(--black);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transform: translateX(-100%);
-        transition: transform 0.3s;
-     li { 
-        margin: 10px 0;
-        a {
 
-            display: inline-block;
-            font-size: 20px;
-            padding: 8px 20px;
-            margin: 1px;
-            transition: all .3s;
-            &:hover, .active {
-                transform: scale(1.3);
-                transition: all 0.3s;
-                border: 0;
-            }
+        &:hover {
+          border: 0;
+          color: var(--hover-color);
         }
-        
-       
+      }
     }
-    &:nth-last-child(1){
-        a {
-            background-color:var(--black);
-           
-            &:hover{
-                border: 0;
-                color: var(--hover-color);
-            }
-        }
-    }
-    }
+  }
 
-    .humberger {
-        display: flex;
-        z-index: 999;
-    }
+  .humberger {
+    display: flex;
+    z-index: 999;
+  }
 
-    #humberger-toggle:checked ~ .nav-list { transform: none; }
+  #humberger-toggle:checked ~ .nav-list {
+    transform: none;
+  }
 
-    #humberger-toggle:checked ~ .humberger .bar::before{ transform: rotate(45deg); }
-    #humberger-toggle:checked ~ .humberger .bar{ background-color:transparent; }
-    #humberger-toggle:checked ~ .humberger .bar::after{ transform: rotate(-45deg); }
-    
-
+  #humberger-toggle:checked ~ .humberger .bar::before {
+    transform: rotate(45deg);
+  }
+  #humberger-toggle:checked ~ .humberger .bar {
+    background-color: transparent;
+  }
+  #humberger-toggle:checked ~ .humberger .bar::after {
+    transform: rotate(-45deg);
+  }
+  .about-img {
+    width: 90%;
+     margin-right: 0;
+  }
+  .about-content {
+     width: 90%;
+      margin-left: 0;
+      margin-top: 4rem;
+      text-align: center;
+  }
+  .about {
+      box-sizing: border-box;   
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: center;
+  }
 }
