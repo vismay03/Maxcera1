@@ -324,7 +324,7 @@ footer .social svg:hover {
     background-size: cover;
   }
   .landing {
-    height: 274px;
+    height: 100%;
     background-size: contain;
     background-position: 0 0;
   }
