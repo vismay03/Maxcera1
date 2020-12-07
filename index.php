@@ -206,7 +206,7 @@
         <hr class="mt-10 mb-1" >
 
 
-        <section class="text-white flex text-center flex-wrap justify-center sm:justify-around text-xs sm:text-sm py-2" >
+        <section class="text-white flex text-center flex-wrap justify-center sm:justify-around text-xs py-2" >
             <h2>&copy; copyright maxcera sanitaryware. All rights reserved.</h2>
             <h2 class="mt-1 sm:mt-0" >Design and developed by <a class="company-link" href="#">  Virtual Spark Technologies </a></h2>
         </section>
