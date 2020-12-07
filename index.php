@@ -39,15 +39,15 @@
         <h2 class="text-5xl collection-title uppercase text-center"> Our COLLECTION</h2>
         <div class="mt-12 flex flex-wrap justify-around">
             <section class="flex flex-col w-auto justify-center mt-16">
-                <img src="images/aboutImg.png" class="self-center"   alt="" />
+                <!-- <img src="images/aboutImg.png" class="self-center" loading="lazy" alt="" /> -->
                 <h3 class="uppercase text-white text-center text-2xl mt-8">COmmodes</h3>
             </section>
             <section class="flex flex-col w-auto justify-center mt-16">
-                <img src="images/aboutImg.png" class="self-center"   alt="" />
+                <!-- <img src="images/aboutImg.png" class="self-center" loading="lazy" alt="" /> -->
                 <h3 class="uppercase text-white text-center text-2xl mt-5">wash basin</h3>
             </section>
             <section class="flex flex-col w-auto justify-center mt-16">
-                <img src="images/aboutImg.png" class="self-center"   alt="" />
+                <!-- <img src="images/aboutImg.png" class="self-center" loading="lazy" alt="" /> -->
                 <h3 class="uppercase text-white text-center text-2xl mt-5">URINAL OR OTHER</h3>
             </section>
         </div>
@@ -59,15 +59,15 @@
         <h2 class="text-5xl product-title uppercase text-center">Premium Products</h2>
         <div class="mt-12 flex flex-col md:flex-row justify-around">
             <section class="flex flex-col w-auto justify-center mt-16">
-                <img src="images/productImg.png"   class="self-center" alt="" />
+                <!-- <img src="images/productImg.png" loading="lazy" class="self-center" alt="" /> -->
 
             </section>
             <section class="flex flex-col w-auto justify-center mt-16">
-                <img src="images/productImg.png"   class="self-center" alt="" />
+                <!-- <img src="images/productImg.png" loading="lazy" class="self-center" alt="" /> -->
 
             </section>
             <section class="flex flex-col w-auto justify-center mt-16">
-                <img src="images/productImg.png"   class="self-center" alt="" />
+                <!-- <img src="images/productImg.png" loading="lazy" class="self-center" alt="" /> -->
             </section>
         </div>
     </div>
@@ -86,24 +86,24 @@
             <div class="sm:w-1/2 w-full self-center">
                 <div class="flex justify-around align-center">
                     <section class="flex flex-col w-28 text-center">
-                        <img src="images/icons/1.png" class="w-24 h-24 self-center"   alt="" />
+                        <!-- <img src="images/icons/1.png" class="w-24 h-24 self-center" loading="lazy" alt="" /> -->
                         <h2>215+</h2>
                         <h2>Happy Clients</h2>
                     </section>
                     <section class="flex flex-col w-28 text-center">
-                        <img src="images/icons/2.png" class="w-24 h-24 self-center"   alt="" />
+                        <!-- <img src="images/icons/2.png" class="w-24 h-24 self-center" loading="lazy" alt="" /> -->
                         <h2>215+</h2>
                         <h2>Happy Clients</h2>
                     </section>
                 </div>
                 <div class="flex justify-around mt-8">
                     <section class="flex flex-col w-28 text-center">
-                        <img src="images/icons/3.png" class="w-32 h-24 self-center"   alt="" />
+                        <!-- <img src="images/icons/3.png" class="w-32 h-24 self-center" loading="lazy" alt="" /> -->
                         <h2>215+</h2>
                         <h2>Happy Clients</h2>
                     </section>
                     <section class="flex flex-col w-28 text-center">
-                        <img src="images/icons/4.png" class="w-24 h-24 self-center"   alt="" />
+                        <!-- <img src="images/icons/4.png" class="w-24 h-24 self-center" loading="lazy" alt="" /> -->
                         <h2>215+</h2>
                         <h2>Happy Clients</h2>
                     </section>
@@ -126,7 +126,7 @@
     <footer class="flex justify-center pt-10 flex-col  sm:p-0 sm:w-full">
         <div class="flex flex-col pl-5 sm:flex-row justify-around" >
         <section class="text-white ">
-        <img src="images/Maxcera-logo.png" class="logo mx-auto sm:mx-0" alt="logo" />
+        <!-- <img src="images/Maxcera-logo.png" class="logo mx-auto sm:mx-0" alt="logo" /> -->
             <h3 class="mt-3 text-center sm:text-left" >Follow us on:</h3>
 
             <section class="flex social mx-auto sm:mx-0 justify-between w-24 mt-1" >
