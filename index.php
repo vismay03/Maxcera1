@@ -16,9 +16,9 @@
         include('comp/header.php');
     ?>
 
-    <!-- <section class="landing" >
+    <section class="landing" >
        
-    </section> -->
+    </section>
 
     <!-- ABOUT -->
 
