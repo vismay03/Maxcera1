@@ -60,7 +60,7 @@ header('Cache-Control: post-check=0, pre-check=0', false)
 
     <!-- PRODUCTS -->
 
-    <!-- <div class="flex flex-col justify-center mx-auto product pb-32">
+    <div class="flex flex-col justify-center mx-auto product pb-32">
         <h2 class="text-5xl product-title uppercase text-center">Premium Products</h2>
         <div class="mt-12 flex flex-col md:flex-row justify-around">
             <section class="flex flex-col w-auto justify-center mt-16">
@@ -75,7 +75,7 @@ header('Cache-Control: post-check=0, pre-check=0', false)
                 <img src="images/productImg.png" loading="lazy" class="self-center" alt="" />
             </section>
         </div>
-    </div> -->
+    </div>
 
     <!-- COMPANY FACTS -->
 
