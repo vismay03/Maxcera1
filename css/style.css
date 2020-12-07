@@ -6,6 +6,7 @@
   --bg-color: #1c1818;
   --hover-color: #9e2c2c;
   --black: #010101;
+  --light-color: #debf9d;
 }
 
 body {
@@ -118,7 +119,7 @@ nav li:last-child a .active {
 }
 
 .about-content h2 {
-  color: #debf9d;
+  color: var(--light-color);
   font-family: var(--exo2);
 }
 
@@ -127,14 +128,14 @@ nav li:last-child a .active {
 }
 
 .collection .collection-title {
-  color: #debf9d;
+  color: var(--light-color);
   font-family: var(--exo2);
 }
 
 .collection img {
   width: 325px;
   height: 325px;
-  border: 5px solid #debf9d;
+  border: 5px solid var(--light-color);
   border-radius: 50%;
 }
 
@@ -143,14 +144,14 @@ nav li:last-child a .active {
 }
 
 .product .product-title {
-  color: #debf9d;
+  color: var(--light-color);
   font-family: var(--exo2);
 }
 
 .product img {
   width: 250px;
   height: 500px;
-  border: 5px solid #debf9d;
+  border: 5px solid var(--light-color);
 }
 
 .company-facts {
@@ -175,21 +176,22 @@ nav li:last-child a .active {
 
 .enquiry section,
 .enquiry a {
-  color: #debf9d;
+  color: var(--light-color);
   font-family: var(--poppins);
 }
 
 .enquiry a {
-  border: 1px solid #debf9d;
+  border: 1px solid var(--light-color);
 }
 
 .enquiry a:hover {
-  background: #debf9d;
+  background: var(--light-color);
 }
 
 footer h3 {
   font-family: var(--exo2);
   text-transform: uppercase;
+  color: var(--light-color);
 }
 
 footer h2, footer a {
@@ -198,11 +200,11 @@ footer h2, footer a {
 }
 
 footer h2:hover:not(h2), footer a:hover:not(h2) {
-  color: #debf9d;
+  color: var(--light-color);
 }
 
 footer .company-link {
-  border-bottom: 2px solid #debf9d;
+  border-bottom: 2px solid var(--light-color);
 }
 
 footer .social svg {
@@ -210,7 +212,7 @@ footer .social svg {
 }
 
 footer .social svg:hover {
-  background: #debf9d;
+  background: var(--light-color);
 }
 
 @media (max-width: 800px) {

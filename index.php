@@ -122,13 +122,13 @@
 
     <!-- FOOTER -->
 
-    <footer class="flex pt-10 flex-col">
-        <div class="flex justify-around" >
+    <footer class="flex justify-center pt-10 flex-col  sm:p-0 sm:w-full">
+        <div class="flex flex-col pl-5 sm:flex-row justify-around" >
         <section class="text-white ">
-        <img src="images/Maxcera-logo.png" class="logo" alt="logo" />
-            <h3 class="mt-3" >Follow us on:</h3>
+        <img src="images/Maxcera-logo.png" class="logo mx-auto sm:mx-0" alt="logo" />
+            <h3 class="mt-3 text-center sm:text-left" >Follow us on:</h3>
 
-            <section class="flex social justify-between w-24 mt-1" >
+            <section class="flex social mx-auto sm:mx-0 justify-between w-24 mt-1" >
                 <svg width="20" height="20" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M283.334 33.3359H116.667C70.6436 33.3359 33.334 70.6455 33.334 116.669V283.336C33.334 329.36 70.6436 366.669 116.667 366.669H283.334C329.358 366.669 366.667 329.36 366.667 283.336V116.669C366.667 70.6455 329.358 33.3359 283.334 33.3359Z" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" />
                     <path d="M266.663 189.505C268.72 203.376 266.351 217.542 259.892 229.989C253.434 242.435 243.216 252.529 230.69 258.833C218.165 265.137 203.971 267.332 190.126 265.104C176.282 262.876 163.492 256.34 153.577 246.424C143.662 236.509 137.125 223.72 134.898 209.875C132.67 196.031 134.864 181.837 141.169 169.311C147.473 156.786 157.566 146.567 170.013 140.109C182.459 133.651 196.626 131.281 210.496 133.338C224.645 135.436 237.744 142.029 247.858 152.143C257.972 162.258 264.565 175.356 266.663 189.505Z" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" />
@@ -145,7 +145,7 @@
             </section>
 
 
-            <section class="flex flex-col">
+            <section class="flex flex-col mt-3 sm:mt-0">
 
                 <h3 class="mt-3 flex items-end">
                     <svg width="20" height="20" class="self-end" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -183,21 +183,21 @@
 
             </section>
         </section>
-        <section class="text-white flex flex-col">
+        <section class="text-white flex flex-col mt-3 sm:mt-0">
 
             <h3>Sanitaryware</h3>
-            <hr class="mt-2">
-            <a class="text-sm mt-3" href="#">commods</a>
-            <a class="text-sm mt-1" href="#">washbasin</a>
-            <a class="text-sm mt-1" href="#">urinals & other</a>
+          
+            <a class="text-sm sm:mt-3" href="#">commods</a>
+            <a class="text-sm sm:mt-1" href="#">washbasin</a>
+            <a class="text-sm sm:mt-1" href="#">urinals & other</a>
 
         </section>
-        <section class="text-white flex flex-col">
+        <section class="text-white flex flex-col mt-3 sm:mt-0">
 
             <h3>Useful links</h3>
-            <hr class="mt-2">
-            <a class="text-sm mt-3" href="#">about us</a>
-            <a class="text-sm mt-1" href="#">contact us</a>
+           
+            <a class="text-sm sm:mt-3" href="#">about us</a>
+            <a class="text-sm sm:mt-1" href="#">contact us</a>
 
         </section>
 
@@ -206,9 +206,9 @@
         <hr class="mt-10 mb-1" >
 
 
-        <section class="text-white flex justify-around text-sm py-2" >
+        <section class="text-white flex text-center flex-wrap justify-center sm:justify-around text-xs sm:text-sm py-2" >
             <h2>&copy; copyright maxcera sanitaryware. All rights reserved.</h2>
-            <h2>Design and developed by <a class="company-link" href="#">  Virtual Spark Technologies </a></h2>
+            <h2 class="mt-1 sm:mt-0" >Design and developed by <a class="company-link" href="#">  Virtual Spark Technologies </a></h2>
         </section>
 
 

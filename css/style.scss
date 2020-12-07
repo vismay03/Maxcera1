@@ -6,6 +6,7 @@
   --bg-color: #1c1818;
   --hover-color: #9e2c2c;
   --black: #010101;
+  --light-color: #debf9d;
 }
 body {
   background-color: var(--bg-color);
@@ -102,7 +103,7 @@ nav {
     font-family: var(--poppins);
   }
   h2 {
-    color: #debf9d;
+    color: var(--light-color);
     font-family: var(--exo2);
   }
 }
@@ -114,13 +115,13 @@ nav {
     font-family: var(--poppins);
   }
   .collection-title {
-    color: #debf9d;
+    color: var(--light-color);
     font-family: var(--exo2);
   }
   img {
     width: 325px;
     height: 325px;
-    border: 5px solid #debf9d;
+    border: 5px solid var(--light-color);
     border-radius: 50%;
   }
 }
@@ -132,13 +133,13 @@ nav {
     font-family: var(--poppins);
   }
   .product-title {
-    color: #debf9d;
+    color: var(--light-color);
     font-family: var(--exo2);
   }
   img {
     width: 250px;
     height: 500px;
-    border: 5px solid #debf9d;
+    border: 5px solid var(--light-color);
   }
 }
 
@@ -168,13 +169,13 @@ nav {
 .enquiry {
   section,
   a {
-    color: #debf9d;
+    color: var(--light-color);
     font-family: var(--poppins);
   }
   a {
-    border: 1px solid #debf9d;
+    border: 1px solid var(--light-color);
     &:hover {
-      background: #debf9d;
+      background: var(--light-color);
     }
   }
 }
@@ -185,24 +186,25 @@ footer {
   h3 {
     font-family: var(--exo2);
     text-transform: uppercase;
+    color: var(--light-color);
   }
   h2, a {
     font-family: var(--poppins);
     font-weight: normal;
     &:hover:not(h2){
-      color: #debf9d;
+      color: var(--light-color);
     }
   }
 
   .company-link {
-    border-bottom: 2px solid #debf9d;
+    border-bottom: 2px solid var(--light-color);
   }
   
   .social {
     svg {
       padding: 1px;
       &:hover {
-        background: #debf9d;
+        background: var(--light-color);
 
       }
     }
