@@ -35,7 +35,7 @@
 
     <!-- COLLECTION -->
 
-    <div class="flex flex-col justify-center mx-auto collection pb-32">
+    <!-- <div class="flex flex-col justify-center mx-auto collection pb-32">
         <h2 class="text-5xl collection-title uppercase text-center"> Our COLLECTION</h2>
         <div class="mt-12 flex flex-wrap justify-around">
             <section class="flex flex-col w-auto justify-center mt-16">
@@ -51,7 +51,7 @@
                 <h3 class="uppercase text-white text-center text-2xl mt-5">URINAL OR OTHER</h3>
             </section>
         </div>
-    </div>
+    </div> -->
 
     <!-- PRODUCTS -->
 
