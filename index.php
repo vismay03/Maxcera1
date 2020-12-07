@@ -79,7 +79,7 @@ header('Cache-Control: post-check=0, pre-check=0', false)
 
     <!-- COMPANY FACTS -->
 
-    <div class="company-facts flex flex-col sm:flex-row justify-around">
+    <!-- <div class="company-facts flex flex-col sm:flex-row justify-around">
         <section class="facts-content flex flex-wrap h-full justify-center w-full">
             <div class="sm:w-1/2 w-full self-center flex justify-center text-center">
 
@@ -114,7 +114,7 @@ header('Cache-Control: post-check=0, pre-check=0', false)
                     </section>
                 </div>
         </section>
-    </div>
+    </div> -->
 
     <!-- ENQUIRY -->
 
