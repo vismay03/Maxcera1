@@ -13,7 +13,7 @@ body {
 }
 
 .landing {
-  background: url(../images/aboutImg.png) no-repeat center;
+  background: url(../images/landingImg.png) no-repeat center;
   background-size: cover;
   height: 100vh;
 }
@@ -152,7 +152,7 @@ nav {
 // COMPANY FACTS
 
 .company-facts {
-  background: url(../images/aboutImg.png) no-repeat center;
+  background: url(../images/cusImg.png) no-repeat center;
   position: relative;
   width: 100%;
   height: 400px;
@@ -302,7 +302,7 @@ footer {
     background-size: cover;
   }
 .landing {
-  height: 100%;
+  height: 260px;
   background-size: contain;
   background-position: 0 0;
 }
