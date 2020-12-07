@@ -79,7 +79,7 @@ header('Cache-Control: post-check=0, pre-check=0', false)
 
     <!-- COMPANY FACTS -->
 
-    <!-- <div class="company-facts flex flex-col sm:flex-row justify-around">
+    <div class="company-facts flex flex-col sm:flex-row justify-around">
         <section class="facts-content flex flex-wrap h-full justify-center w-full">
             <div class="sm:w-1/2 w-full self-center flex justify-center text-center">
 
@@ -114,21 +114,21 @@ header('Cache-Control: post-check=0, pre-check=0', false)
                     </section>
                 </div>
         </section>
-    </div> -->
+    </div>
 
     <!-- ENQUIRY -->
 
-    <!-- <div class="flex justify-around w-full flex-col sm:flex-row flex-wrap enquiry bg-black text-white py-6">
+    <div class="flex justify-around w-full flex-col sm:flex-row flex-wrap enquiry bg-black text-white py-6">
         <section class="text-center">
             <h2>Have Questions? Call Us: +91 90161 61636</h2>
             <p>Or mail us on info@maxcerasanitarywear.com</p>
         </section>
         <a class="py-2 px-4 hover:text-white self-center mt-5 sm:mt-0" href="contact.php">Send An Enquiry</a>
-    </div> -->
+    </div>
 
     <!-- FOOTER -->
 
-    <!-- <footer class="flex justify-center pt-10 flex-col  sm:p-0 sm:w-full">
+    <footer class="flex justify-center pt-10 flex-col  sm:p-0 sm:w-full">
         <div class="flex flex-col pl-5 sm:flex-row justify-around" >
         <section class="text-white ">
         <img src="images/Maxcera-logo.png" class="logo mx-auto sm:mx-0" alt="logo" />
@@ -218,7 +218,7 @@ header('Cache-Control: post-check=0, pre-check=0', false)
         </section>
 
 
-    </footer> -->
+    </footer>
 
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script> -->
 </body>
