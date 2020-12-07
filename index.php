@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
     <link  rel="stylesheet" href="css/style.css">
    
 </head>
 
 <body>
     <!-- NAVBAR -->
-   
+    <?php
+    include('comp/header.php');
+    ?>
 
     <section class="landing" >
        
