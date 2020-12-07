@@ -12,17 +12,14 @@
 
 <body>
     <!-- NAVBAR -->
-    <?php
-    include('comp/header.php');
-    ?>
-
+   
     <section class="landing" >
        
     </section>
 
     <!-- ABOUT -->
 
-    <!-- <div class="flex justify-center about py-2">
+    <div class="flex justify-center about py-2">
         <img src="images/aboutImg.png" loading="lazy" class="about-img" alt="" />
         <div class="about-content self-center text-white">
             <h2 class=" text-5xl uppercase">About us</h2>
@@ -31,7 +28,7 @@
             <p class="text-lg mt-3">We are feeling very happy to introduce our new venture SOCCA SANITARYWARE with a wide range of SanitaryWare products and accessories.
             </p>
         </div>
-    </div> -->
+    </div>
 
     <!-- COLLECTION -->
 
