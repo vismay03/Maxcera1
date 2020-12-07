@@ -23,7 +23,7 @@
     <!-- ABOUT -->
 
     <div class="flex justify-center about py-2">
-        <img src="images/aboutImg.png" loading="lazy" class="about-img" alt="" />
+        <img src="images/aboutImg.png" class="about-img" alt="" />
         <div class="about-content self-center text-white">
             <h2 class=" text-5xl uppercase">About us</h2>
             <p class="text-lg mt-8">SOCCA SanitaryWares is a modernized enterprise integrated with R&D, manufacturing, sales and services, having a complete set of integrated sales team, applying brand strategy. Setting up enterprise image, and being the advocate and Pioneer in the field of Ceramics.
