@@ -309,11 +309,8 @@ footer .social svg:hover {
             justify-content: center;
   }
   .company-facts {
-    background: url(../images/cusImg.png) no-repeat center;
-    position: relative;
     width: auto;
     height: 600px;
-    background-size: cover;
   }
   .landing {
     height: 274px;
