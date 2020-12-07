@@ -1,5 +1,5 @@
 
-    <nav class="shadow flex justify-between items-center py-4 px-8" >
+    <nav class="shadow flex justify-between items-center py-4 px-5" >
         <a href="index.php">
             <img src="images/Maxcera-logo.png" class="logo" alt="logo" />
         </a>
@@ -11,7 +11,7 @@
             <li><a class="nav-link <?php active('') ?>" href="http://www.maxcerasanitaryware.com">Home</a></li>
             <li><a class="nav-link" href="">Sanitarware</a></li>
             <li><a class="nav-link" href="">Dowloads</a></li>
-            <li><a class="nav-link <?php active('#about') ?>" href="index.php#about">About us</a></li>
+            <li><a class="nav-link <?php active('#about') ?>" href="#about">About us</a></li>
             <li><a class="nav-link <?php active('contact.php') ?>" href="contact.php">Contact us</a></li>
         </ul>
     </nav>

@@ -36,12 +36,13 @@ nav {
       top: 3rem;
       left: 10rem;
     }
-    &:nth-last-child(1) {
+    &:last-child {
       a {
         background-color: var(--hover-color);
         padding: 8px 13px;
         color: var(--white);
-        &:hover {
+        &:hover,
+        .active {
           border-bottom: 1px solid var(--white);
           color: var(--bg-color);
         }
@@ -86,28 +87,128 @@ nav {
   }
 }
 
-
 // ABOUT
 
 .about-img {
-    width: 24rem;
-    margin-right: 1.25rem;
-    box-shadow: -10px 10px 0 10px rgba(71, 62, 62, 0.35),
-                -20px 20px 0 20px rgba(32, 28, 28, 1);
+  width: 30rem;
+  margin-right: 1.25rem;
+  box-shadow: -10px 10px 0 10px rgba(71, 62, 62, 0.35),
+    -20px 20px 0 20px rgba(32, 28, 28, 1);
+}
+.about-content {
+  width: 30rem;
+  margin-left: 1.25rem;
+  p {
+    font-family: var(--poppins);
   }
-  .about-content {
-    width: 25rem;
-    margin-left: 1.25rem;
-    p{ font-family: var(--poppins); }
-    h2{
-        color: #DEBF9D;
-        font-family: var(--exo2);
+  h2 {
+    color: #debf9d;
+    font-family: var(--exo2);
+  }
+}
+
+// COLLECTION
+
+.collection {
+  h3 {
+    font-family: var(--poppins);
+  }
+  .collection-title {
+    color: #debf9d;
+    font-family: var(--exo2);
+  }
+  img {
+    width: 325px;
+    height: 325px;
+    border: 5px solid #debf9d;
+    border-radius: 50%;
+  }
+}
+
+// PRODUCTS
+
+.product {
+  h3 {
+    font-family: var(--poppins);
+  }
+  .product-title {
+    color: #debf9d;
+    font-family: var(--exo2);
+  }
+  img {
+    width: 250px;
+    height: 500px;
+    border: 5px solid #debf9d;
+  }
+}
+
+// COMPANY FACTS
+
+.company-facts {
+  background: url(../images/cusImg.png) no-repeat center;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  .facts-content {
+    position: absolute;
+    z-index: 2;
+    font-family: var(--poppins);
+
+    .facts-title {
+      width: 280px;
+      background-color: rgba(222, 191, 157, 0.49);
+      font-family: var(--exo2);
     }
   }
-  .about {
-      width: 50rem;
+}
+
+// Enquiry
+
+.enquiry {
+  section,
+  a {
+    color: #debf9d;
+    font-family: var(--poppins);
+  }
+  a {
+    border: 1px solid #debf9d;
+    &:hover {
+      background: #debf9d;
+    }
+  }
+}
+
+// FOOTER
+
+footer {
+  h3 {
+    font-family: var(--exo2);
+    text-transform: uppercase;
+  }
+  h2, a {
+    font-family: var(--poppins);
+    font-weight: normal;
+    &:hover:not(h2){
+      color: #debf9d;
+    }
+  }
+
+  .company-link {
+    border-bottom: 2px solid #debf9d;
   }
   
+  .social {
+    svg {
+      padding: 1px;
+      &:hover {
+        background: #debf9d;
+
+      }
+    }
+  }
+
+}
 
 @media (max-width: 800px) {
   .nav-list {
@@ -139,7 +240,7 @@ nav {
         }
       }
     }
-    &:nth-last-child(1) {
+    &:last-child {
       a {
         background-color: var(--black);
 
@@ -171,18 +272,25 @@ nav {
   }
   .about-img {
     width: 90%;
-     margin-right: 0;
+    margin-right: 0;
   }
   .about-content {
-     width: 90%;
-      margin-left: 0;
-      margin-top: 4rem;
-      text-align: center;
+    width: 90%;
+    margin-left: 0;
+    margin-top: 4rem;
+    text-align: center;
   }
   .about {
-      box-sizing: border-box;   
-      flex-wrap: wrap;
-      width: 100%;
-      justify-content: center;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+  .company-facts {
+    background: url(../images/cusImg.png) no-repeat center;
+    position: relative;
+    width: auto;
+    height: 600px;
+    background-size: cover;
   }
 }
