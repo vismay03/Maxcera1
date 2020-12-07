@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link  rel="stylesheet" href="css/style.css">
+   
 </head>
 
 <body>
@@ -15,8 +16,8 @@
     include('comp/header.php');
     ?>
 
-    <section>
-        <img src="images/landingImg.png" loading="lazy" alt="" />
+    <section class="landing" >
+       
     </section>
 
     <!-- ABOUT -->
