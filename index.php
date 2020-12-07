@@ -23,7 +23,7 @@
     <!-- ABOUT -->
 
     <div class="flex justify-center about py-2">
-        <!-- <img src="images/aboutImg.png" loading="lazy" class="about-img" alt="" /> -->
+        <!-- <img src="images/aboutImg.png"  class="about-img" alt="" /> -->
         <div class="about-content self-center text-white">
             <h2 class=" text-5xl uppercase">About us</h2>
             <p class="text-lg mt-8">SOCCA SanitaryWares is a modernized enterprise integrated with R&D, manufacturing, sales and services, having a complete set of integrated sales team, applying brand strategy. Setting up enterprise image, and being the advocate and Pioneer in the field of Ceramics.
@@ -39,15 +39,15 @@
         <h2 class="text-5xl collection-title uppercase text-center"> Our COLLECTION</h2>
         <div class="mt-12 flex flex-wrap justify-around">
             <section class="flex flex-col w-auto justify-center mt-16">
-                <img src="images/aboutImg.png" class="self-center" loading="lazy" alt="" />
+                <img src="images/aboutImg.png" class="self-center"   alt="" />
                 <h3 class="uppercase text-white text-center text-2xl mt-8">COmmodes</h3>
             </section>
             <section class="flex flex-col w-auto justify-center mt-16">
-                <img src="images/aboutImg.png" class="self-center" loading="lazy" alt="" />
+                <img src="images/aboutImg.png" class="self-center"   alt="" />
                 <h3 class="uppercase text-white text-center text-2xl mt-5">wash basin</h3>
             </section>
             <section class="flex flex-col w-auto justify-center mt-16">
-                <img src="images/aboutImg.png" class="self-center" loading="lazy" alt="" />
+                <img src="images/aboutImg.png" class="self-center"   alt="" />
                 <h3 class="uppercase text-white text-center text-2xl mt-5">URINAL OR OTHER</h3>
             </section>
         </div>
@@ -59,15 +59,15 @@
         <h2 class="text-5xl product-title uppercase text-center">Premium Products</h2>
         <div class="mt-12 flex flex-col md:flex-row justify-around">
             <section class="flex flex-col w-auto justify-center mt-16">
-                <img src="images/productImg.png" loading="lazy" class="self-center" alt="" />
+                <img src="images/productImg.png"   class="self-center" alt="" />
 
             </section>
             <section class="flex flex-col w-auto justify-center mt-16">
-                <img src="images/productImg.png" loading="lazy" class="self-center" alt="" />
+                <img src="images/productImg.png"   class="self-center" alt="" />
 
             </section>
             <section class="flex flex-col w-auto justify-center mt-16">
-                <img src="images/productImg.png" loading="lazy" class="self-center" alt="" />
+                <img src="images/productImg.png"   class="self-center" alt="" />
             </section>
         </div>
     </div>
@@ -86,24 +86,24 @@
             <div class="sm:w-1/2 w-full self-center">
                 <div class="flex justify-around align-center">
                     <section class="flex flex-col w-28 text-center">
-                        <img src="images/icons/1.png" class="w-24 h-24 self-center" loading="lazy" alt="" />
+                        <img src="images/icons/1.png" class="w-24 h-24 self-center"   alt="" />
                         <h2>215+</h2>
                         <h2>Happy Clients</h2>
                     </section>
                     <section class="flex flex-col w-28 text-center">
-                        <img src="images/icons/2.png" class="w-24 h-24 self-center" loading="lazy" alt="" />
+                        <img src="images/icons/2.png" class="w-24 h-24 self-center"   alt="" />
                         <h2>215+</h2>
                         <h2>Happy Clients</h2>
                     </section>
                 </div>
                 <div class="flex justify-around mt-8">
                     <section class="flex flex-col w-28 text-center">
-                        <img src="images/icons/3.png" class="w-32 h-24 self-center" loading="lazy" alt="" />
+                        <img src="images/icons/3.png" class="w-32 h-24 self-center"   alt="" />
                         <h2>215+</h2>
                         <h2>Happy Clients</h2>
                     </section>
                     <section class="flex flex-col w-28 text-center">
-                        <img src="images/icons/4.png" class="w-24 h-24 self-center" loading="lazy" alt="" />
+                        <img src="images/icons/4.png" class="w-24 h-24 self-center"   alt="" />
                         <h2>215+</h2>
                         <h2>Happy Clients</h2>
                     </section>
