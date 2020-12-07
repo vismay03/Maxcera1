@@ -12,11 +12,11 @@ body {
   background-color: var(--bg-color);
 }
 
-// .landing {
-//   background: url(../images/landingImg.png) no-repeat center;
-//   background-size: cover;
-//   height: 100vh;
-// }
+.landing {
+  background: url(../images/landingImg.png) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+}
 
 // NAVBAR
 
@@ -152,11 +152,11 @@ nav {
 // COMPANY FACTS
 
 .company-facts {
-  // background: url(../images/cusImg.png) no-repeat center;
+  background: url(../images/cusImg.png) no-repeat center;
   position: relative;
   width: 100%;
   height: 400px;
-  // background-size: cover;
+  background-size: cover;
   .facts-content {
     position: absolute;
     z-index: 2;
@@ -295,15 +295,14 @@ footer {
     justify-content: center;
   }
   .company-facts {
-    // background: url(../images/cusImg.png) no-repeat center;
-    // position: relative;
+    background: url(../images/cusImg.png) no-repeat center;
+    position: relative;
     width: auto;
     height: 600px;
-    // background-size: cover;
+    background-size: cover;
   }
 .landing {
   height: 274px;
-  background-position: top;
   background-size: contain;
 }
 

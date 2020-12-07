@@ -23,7 +23,7 @@
     <!-- ABOUT -->
 
     <div class="flex justify-center about py-2">
-        <!-- <img src="images/aboutImg.png"  class="about-img" alt="" /> -->
+        <img src="images/aboutImg.png" loading="lazy" class="about-img" alt="" />
         <div class="about-content self-center text-white">
             <h2 class=" text-5xl uppercase">About us</h2>
             <p class="text-lg mt-8">SOCCA SanitaryWares is a modernized enterprise integrated with R&D, manufacturing, sales and services, having a complete set of integrated sales team, applying brand strategy. Setting up enterprise image, and being the advocate and Pioneer in the field of Ceramics.
@@ -39,15 +39,15 @@
         <h2 class="text-5xl collection-title uppercase text-center"> Our COLLECTION</h2>
         <div class="mt-12 flex flex-wrap justify-around">
             <section class="flex flex-col w-auto justify-center mt-16">
-                <!-- <img src="images/aboutImg.png" class="self-center" loading="lazy" alt="" /> -->
+                <img src="images/aboutImg.png" class="self-center" loading="lazy" alt="" />
                 <h3 class="uppercase text-white text-center text-2xl mt-8">COmmodes</h3>
             </section>
             <section class="flex flex-col w-auto justify-center mt-16">
-                <!-- <img src="images/aboutImg.png" class="self-center" loading="lazy" alt="" /> -->
+                <img src="images/aboutImg.png" class="self-center" loading="lazy" alt="" />
                 <h3 class="uppercase text-white text-center text-2xl mt-5">wash basin</h3>
             </section>
             <section class="flex flex-col w-auto justify-center mt-16">
-                <!-- <img src="images/aboutImg.png" class="self-center" loading="lazy" alt="" /> -->
+                <img src="images/aboutImg.png" class="self-center" loading="lazy" alt="" />
                 <h3 class="uppercase text-white text-center text-2xl mt-5">URINAL OR OTHER</h3>
             </section>
         </div>
@@ -55,26 +55,26 @@
 
     <!-- PRODUCTS -->
 
-    <div class="flex flex-col justify-center mx-auto product pb-32">
+    <!-- <div class="flex flex-col justify-center mx-auto product pb-32">
         <h2 class="text-5xl product-title uppercase text-center">Premium Products</h2>
         <div class="mt-12 flex flex-col md:flex-row justify-around">
             <section class="flex flex-col w-auto justify-center mt-16">
-                <!-- <img src="images/productImg.png" loading="lazy" class="self-center" alt="" /> -->
+                <img src="images/productImg.png" loading="lazy" class="self-center" alt="" />
 
             </section>
             <section class="flex flex-col w-auto justify-center mt-16">
-                <!-- <img src="images/productImg.png" loading="lazy" class="self-center" alt="" /> -->
+                <img src="images/productImg.png" loading="lazy" class="self-center" alt="" />
 
             </section>
             <section class="flex flex-col w-auto justify-center mt-16">
-                <!-- <img src="images/productImg.png" loading="lazy" class="self-center" alt="" /> -->
+                <img src="images/productImg.png" loading="lazy" class="self-center" alt="" />
             </section>
         </div>
-    </div>
+    </div> -->
 
     <!-- COMPANY FACTS -->
 
-    <div class="company-facts flex flex-col sm:flex-row justify-around">
+    <!-- <div class="company-facts flex flex-col sm:flex-row justify-around">
         <section class="facts-content flex flex-wrap h-full justify-center w-full">
             <div class="sm:w-1/2 w-full self-center flex justify-center text-center">
 
@@ -86,47 +86,47 @@
             <div class="sm:w-1/2 w-full self-center">
                 <div class="flex justify-around align-center">
                     <section class="flex flex-col w-28 text-center">
-                        <!-- <img src="images/icons/1.png" class="w-24 h-24 self-center" loading="lazy" alt="" /> -->
+                        <img src="images/icons/1.png" class="w-24 h-24 self-center" loading="lazy" alt="" />
                         <h2>215+</h2>
                         <h2>Happy Clients</h2>
                     </section>
                     <section class="flex flex-col w-28 text-center">
-                        <!-- <img src="images/icons/2.png" class="w-24 h-24 self-center" loading="lazy" alt="" /> -->
+                        <img src="images/icons/2.png" class="w-24 h-24 self-center" loading="lazy" alt="" />
                         <h2>215+</h2>
                         <h2>Happy Clients</h2>
                     </section>
                 </div>
                 <div class="flex justify-around mt-8">
                     <section class="flex flex-col w-28 text-center">
-                        <!-- <img src="images/icons/3.png" class="w-32 h-24 self-center" loading="lazy" alt="" /> -->
+                        <img src="images/icons/3.png" class="w-32 h-24 self-center" loading="lazy" alt="" />
                         <h2>215+</h2>
                         <h2>Happy Clients</h2>
                     </section>
                     <section class="flex flex-col w-28 text-center">
-                        <!-- <img src="images/icons/4.png" class="w-24 h-24 self-center" loading="lazy" alt="" /> -->
+                        <img src="images/icons/4.png" class="w-24 h-24 self-center" loading="lazy" alt="" />
                         <h2>215+</h2>
                         <h2>Happy Clients</h2>
                     </section>
                 </div>
         </section>
-    </div>
+    </div> -->
 
     <!-- ENQUIRY -->
-
+<!-- 
     <div class="flex justify-around w-full flex-col sm:flex-row flex-wrap enquiry bg-black text-white py-6">
         <section class="text-center">
             <h2>Have Questions? Call Us: +91 90161 61636</h2>
             <p>Or mail us on info@maxcerasanitarywear.com</p>
         </section>
         <a class="py-2 px-4 hover:text-white self-center mt-5 sm:mt-0" href="contact.php">Send An Enquiry</a>
-    </div>
+    </div> -->
 
     <!-- FOOTER -->
 
-    <footer class="flex justify-center pt-10 flex-col  sm:p-0 sm:w-full">
+    <!-- <footer class="flex justify-center pt-10 flex-col  sm:p-0 sm:w-full">
         <div class="flex flex-col pl-5 sm:flex-row justify-around" >
         <section class="text-white ">
-        <!-- <img src="images/Maxcera-logo.png" class="logo mx-auto sm:mx-0" alt="logo" /> -->
+        <img src="images/Maxcera-logo.png" class="logo mx-auto sm:mx-0" alt="logo" />
             <h3 class="mt-3 text-center sm:text-left" >Follow us on:</h3>
 
             <section class="flex social mx-auto sm:mx-0 justify-between w-24 mt-1" >
@@ -213,7 +213,7 @@
         </section>
 
 
-    </footer>
+    </footer> -->
 
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script> -->
 </body>
