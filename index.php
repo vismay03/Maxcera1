@@ -21,9 +21,9 @@ header('Cache-Control: post-check=0, pre-check=0', false)
         include('comp/header.php');
     ?>
 
-    <!-- <section class="landing" >
+    <section class="landing" >
        
-    </section> -->
+    </section>
 
     <!-- ABOUT -->
 
