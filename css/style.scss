@@ -6,19 +6,25 @@
   --bg-color: #1c1818;
   --hover-color: #9e2c2c;
   --black: #010101;
-  --light-color: #debf9d;
+  --light-color: #8BD8BD;
 }
 body {
   background-color: var(--bg-color);
 }
 
-.landing {
-  background: url(../images/landingImg.png) no-repeat center;
-  background-size: cover;
-  height: 100vh;
-}
+
+  .landing {
+    background: url(../images/landingImg.png) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+  }
 
 // NAVBAR
+
+.active {
+  transition: all 0.5s;
+  opacity: .6;
+}
 
 nav {
   background-color: var(--bg-color);
@@ -29,11 +35,10 @@ nav {
       font-family: var(--poppins);
       color: var(--white);
       transition: all 0.3s;
-      &:hover,
-      .active {
-        color: var(--hover-color);
-        transition: all 0.3s;
-        border-bottom: 1px solid var(--hover-color);
+      &:hover
+       {
+        transition: all 0.5s;
+        opacity: .6;
       }
     }
     &::after {
@@ -47,12 +52,6 @@ nav {
       a {
         background-color: var(--hover-color);
         padding: 8px 13px;
-        color: var(--white);
-        &:hover,
-        .active {
-          border-bottom: 1px solid var(--white);
-          color: var(--bg-color);
-        }
       }
     }
   }
@@ -107,16 +106,16 @@ nav {
   margin-left: 1.25rem;
   p {
     font-family: var(--poppins);
+    color: #f1f1f1
   }
   h2 {
     color: var(--light-color);
     font-family: var(--exo2);
     // text-shadow: 0 -5px 0 var(--hover-color)
-                //  0 2px 0 var(--white),
-                //  0 3px 0 var(--white),
-                //  0 4px 0 var(--white),
-                //  0 5px 1px var(--white)
-                
+    //  0 2px 0 var(--white),
+    //  0 3px 0 var(--white),
+    //  0 4px 0 var(--white),
+    //  0 5px 1px var(--white)
   }
 }
 
@@ -179,6 +178,7 @@ nav {
 // Enquiry
 
 .enquiry {
+  background-color: var(--hover-color);
   section,
   a {
     color: var(--light-color);
@@ -186,8 +186,10 @@ nav {
   }
   a {
     border: 1px solid var(--light-color);
+    transition: 0.3s;
     &:hover {
-      background: var(--light-color);
+      background: var(--bg-color);
+
     }
   }
 }
@@ -195,36 +197,59 @@ nav {
 // FOOTER
 
 footer {
+  
   h3 {
     font-family: var(--exo2);
     text-transform: uppercase;
-    color: var(--light-color);
+    color: var(--white);
+    font-weight: bolder;
+    svg {
+      path {
+      fill: var(--light-color);
+      }
+    }
   }
-  h2, a {
+
+  h2,
+  a {
     font-family: var(--poppins);
     font-weight: normal;
-    &:hover:not(h2){
-      color: var(--light-color);
+    color: var(--light-color);
+    text-transform: lowercase;
+    transition: opacity .5s;
+    &:hover:not(h2) {
+      opacity: .7;
     }
   }
 
   .company-link {
     border-bottom: 2px solid var(--light-color);
   }
-  
+
   .social {
     svg {
       padding: 1px;
-      &:hover {
-        background: var(--light-color);
-
+      fill: var(--light-color);
+      transition: all .5s;
+      &:hover{
+        opacity: 0.5;
       }
     }
+    svg:first-child{
+      fill: none;
+    }
   }
-
 }
 
 @media (max-width: 800px) {
+  // NAVBAR MOBILE
+
+  .active {
+    transform: scale(1.3);
+    transition: all 0.3s;
+    border: 0;
+  }
+
   .nav-list {
     position: fixed;
     top: 0;
@@ -247,7 +272,7 @@ footer {
         margin: 1px;
         transition: all 0.3s;
         &:hover,
-        .active {
+         {
           transform: scale(1.3);
           transition: all 0.3s;
           border: 0;
@@ -284,6 +309,10 @@ footer {
   #humberger-toggle:checked ~ .humberger .bar::after {
     transform: rotate(-45deg);
   }
+
+  // ABOUT MOBILE
+
+
   .about-img {
     width: 90%;
     margin-right: 0;
@@ -292,25 +321,29 @@ footer {
     width: 90%;
     margin-left: 0;
     margin-top: 4rem;
-    text-align: center;
   }
   .about {
     box-sizing: border-box;
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
+    
   }
+
+  // COMPANY FACTS MOBILE
+
   .company-facts {
-    background: url(../images/cusImg.png) no-repeat center;
+  
     position: relative;
     width: auto;
     height: 600px;
     background-size: cover;
   }
-.landing {
-  height: 260px;
-  background-size: contain;
-  background-position: 0 0;
-}
+
+  // WELCOME IMAGE MOBILE
+  
+    .landing {
+      height: 350px;
+    }
 
 }

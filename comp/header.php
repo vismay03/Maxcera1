@@ -1,5 +1,5 @@
 
-    <nav class="shadow flex justify-between w-full fixed top-0 items-center py-4 px-5" >
+    <nav class="shadow flex justify-between z-10 w-full fixed top-0 items-center py-4 px-5" >
         <a href="index.php">
             <img src="images/Maxcera-logo.png" class="logo" alt="logo" />
         </a>
@@ -21,7 +21,14 @@
             $url_array = explode('/', $_SERVER['REQUEST_URI']);
             $url = end($url_array);
             if ($current_page == $url) {
-                echo 'active';
-            } 
+                if($current_page == 'contact.php') {
+                    echo 'contact-active';
+                }
+                else {
+                    echo 'active';
+                }
+            }
+
+            
         }
     ?>
