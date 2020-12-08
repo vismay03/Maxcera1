@@ -31,10 +31,10 @@ header('Cache-Control: post-check=0, pre-check=0', false)
         <img src="images/aboutImg.png" class="about-img" alt="" />
         <div class="about-content self-center text-white">
             <h2 class="text-4xl uppercase text-">About us</h2>
-            <p class="text-md mt-8">SOCCA SanitaryWares is a modernized enterprise integrated with R&D, manufacturing, sales and services, having a complete set of integrated sales team, applying brand strategy. Setting up enterprise image, and being the advocate and Pioneer in the field of Ceramics.
+            <p class="text-md mt-8">Maxcera sanitaryware is a Proprietership firm manufacturing an excellent quality range of Bathroom Sanitaryware like Water Closets, Designer Basins, Toilet Pans and Seat Covers etc </p>
+            <p class="text-md mt-3">These products are sourced from reliable market vendors and can be availed by our clients at resonable prices.
             </p>
-            <p class="text-md mt-3">We are feeling very happy to introduce our new venture SOCCA SANITARYWARE with a wide range of SanitaryWare products and accessories.
-            </p>
+            <p>Under the guidences of our mentor "Mr. Mitesh, Who holds profound knowledge and experience in this domain, we have been able to aptly satisfy our clients.</p>
         </div>
     </div>
 
