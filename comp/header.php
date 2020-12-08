@@ -21,12 +21,7 @@
             $url_array = explode('/', $_SERVER['REQUEST_URI']);
             $url = end($url_array);
             if ($current_page == $url) {
-                if($current_page == 'contact.php') {
-                    echo 'contact-active';
-                }
-                else {
                     echo 'active';
-                }
             }
 
             

@@ -27,7 +27,7 @@ header('Cache-Control: post-check=0, pre-check=0', false)
 
     <!-- ABOUT -->
 
-    <div id="about" class="flex justify-center about py-32">
+    <div id="about" class="flex justify-center about py-16 sm:py-32">
         <img src="images/aboutImg.png" class="about-img" alt="" />
         <div class="about-content self-center text-white">
             <h2 class="text-4xl uppercase text-">About us</h2>
@@ -40,7 +40,7 @@ header('Cache-Control: post-check=0, pre-check=0', false)
 
     <!-- COLLECTION -->
 
-    <div class="flex flex-col justify-center mx-auto collection py-32">
+    <div class="flex flex-col justify-center mx-auto collection py-16 sm:py-32">
         <h2 class="text-4xl collection-title uppercase text-center"> Our COLLECTION</h2>
         <div class=" flex flex-wrap justify-around">
             <section class="flex flex-col w-auto justify-center mt-16">
@@ -60,7 +60,7 @@ header('Cache-Control: post-check=0, pre-check=0', false)
 
     <!-- PRODUCTS -->
 
-    <div class="flex flex-col justify-center mx-auto product py-32">
+    <div class="flex flex-col justify-center mx-auto product py-16 sm:py-32">
         <h2 class="text-4xl product-title uppercase text-center">Premium Products</h2>
         <div class=" flex flex-col md:flex-row justify-around">
             <section class="flex flex-col w-auto justify-center mt-16">
