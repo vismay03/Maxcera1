@@ -1,0 +1,59 @@
+:root {
+  --exo2: "Exo 2", sans-serif;
+  --poppins: "Poppins", sans-serif;
+  --white: #fff;
+  --bg-color: #1c1818;
+  --hover-color: #9e2c2c;
+  --black: #010101;
+  --light-color: #8bd8bd;
+}
+
+footer {
+  background-color: var(--bg-color);
+}
+
+footer h3 {
+  font-family: var(--exo2);
+  text-transform: uppercase;
+  color: var(--white);
+  font-weight: bolder;
+}
+
+footer h3 svg path {
+  fill: var(--light-color);
+}
+
+footer h2,
+footer a {
+  font-family: var(--poppins);
+  font-weight: normal;
+  color: var(--light-color);
+  text-transform: lowercase;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+footer h2:hover:not(h2),
+footer a:hover:not(h2) {
+  opacity: 0.7;
+}
+
+footer .company-link {
+  border-bottom: 2px solid var(--light-color);
+}
+
+footer .social svg {
+  padding: 1px;
+  fill: var(--light-color);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+footer .social svg:hover {
+  opacity: 0.5;
+}
+
+footer .social svg:first-child {
+  fill: none;
+}
+/*# sourceMappingURL=footer.css.map */

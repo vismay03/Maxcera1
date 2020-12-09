@@ -1,0 +1,165 @@
+:root {
+  --exo2: "Exo 2", sans-serif;
+  --poppins: "Poppins", sans-serif;
+  --white: #fff;
+  --bg-color: #1c1818;
+  --hover-color: #9e2c2c;
+  --black: #010101;
+  --light-color: #8bd8bd;
+}
+
+.active {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0.6;
+}
+
+nav {
+  background-color: var(--bg-color);
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav li a {
+  font-family: var(--poppins);
+  color: var(--white);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+nav li a:hover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0.6;
+}
+
+nav li::after {
+  content: "";
+  background-color: var(--hover-color);
+  position: absolute;
+  top: 3rem;
+  left: 10rem;
+}
+
+nav li:last-child a {
+  background-color: var(--hover-color);
+  padding: 8px 13px;
+}
+
+.humberger {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  position: absolute;
+  right: 2rem;
+  display: none;
+}
+
+.humberger .bar {
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.humberger .bar::before, .humberger .bar::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.humberger .bar::before {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.humberger .bar::after {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+@media (max-width: 800px) {
+  .nav-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+  }
+  .nav-list li {
+    margin: 10px 0;
+  }
+  .nav-list li a {
+    display: inline-block;
+    font-size: 20px;
+    padding: 8px 20px;
+    margin: 1px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .nav-list:last-child a {
+    background-color: var(--black);
+  }
+  .nav-list:last-child a:hover {
+    border: 0;
+    color: var(--hover-color);
+  }
+  .humberger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 999;
+  }
+  #humberger-toggle:checked ~ .nav-list {
+    -webkit-transform: none;
+            transform: none;
+  }
+  #humberger-toggle:checked ~ .humberger .bar::before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  #humberger-toggle:checked ~ .humberger .bar {
+    background-color: transparent;
+  }
+  #humberger-toggle:checked ~ .humberger .bar::after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+}
+/*# sourceMappingURL=header.css.map */

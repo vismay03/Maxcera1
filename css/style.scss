@@ -6,91 +6,16 @@
   --bg-color: #1c1818;
   --hover-color: #9e2c2c;
   --black: #010101;
-  --light-color: #8BD8BD;
+  --light-color: #8bd8bd;
 }
 body {
   background-color: var(--bg-color);
 }
 
-
-  .landing {
-    background: url(../images/landingImg.png) no-repeat center;
-    background-size: cover;
-    height: 100vh;
-  }
-
-// NAVBAR
-
-.active {
-  transition: all 0.5s;
-  opacity: .6;
-}
-
-nav {
-  background-color: var(--bg-color);
-  li {
-    margin-left: 20px;
-
-    a {
-      font-family: var(--poppins);
-      color: var(--white);
-      transition: all 0.3s;
-      &:hover
-       {
-        transition: all 0.5s;
-        opacity: .6;
-      }
-    }
-    &::after {
-      content: "";
-      background-color: var(--hover-color);
-      position: absolute;
-      top: 3rem;
-      left: 10rem;
-    }
-    &:last-child {
-      a {
-        background-color: var(--hover-color);
-        padding: 8px 13px;
-      }
-    }
-  }
-}
-
-.humberger {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  position: absolute;
-  right: 2rem;
-  display: none;
-  .bar {
-    display: inline-block;
-    width: 30px;
-    height: 2px;
-    background-color: #fff;
-    position: relative;
-    transition: all 0.3s;
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: #fff;
-      transition: all 0.3s;
-    }
-
-    &::before {
-      transform: translateY(-10px);
-    }
-    &::after {
-      transform: translateY(10px);
-    }
-  }
+.landing {
+  background: url(../images/landingImg.png) no-repeat center;
+  background-size: cover;
+  height: 100vh;
 }
 
 // ABOUT
@@ -106,7 +31,7 @@ nav {
   margin-left: 1.25rem;
   p {
     font-family: var(--poppins);
-    color: #f1f1f1
+    color: #f1f1f1;
   }
   h2 {
     color: var(--light-color);
@@ -179,7 +104,7 @@ nav {
 
 .enquiry {
   background-color: var(--hover-color);
-  
+
   section,
   a {
     color: var(--light-color);
@@ -190,124 +115,18 @@ nav {
     transition: 0.3s;
     &:hover {
       background: var(--bg-color);
-
-    }
-  }
-}
-
-// FOOTER
-
-footer {
-  
-  h3 {
-    font-family: var(--exo2);
-    text-transform: uppercase;
-    color: var(--white);
-    font-weight: bolder;
-    svg {
-      path {
-      fill: var(--light-color);
-      }
-    }
-  }
-
-  h2,
-  a {
-    font-family: var(--poppins);
-    font-weight: normal;
-    color: var(--light-color);
-    text-transform: lowercase;
-    transition: opacity .5s;
-    &:hover:not(h2) {
-      opacity: .7;
-    }
-  }
-
-  .company-link {
-    border-bottom: 2px solid var(--light-color);
-  }
-
-  .social {
-    svg {
-      padding: 1px;
-      fill: var(--light-color);
-      transition: all .5s;
-      &:hover{
-        opacity: 0.5;
-      }
-    }
-    svg:first-child{
-      fill: none;
     }
   }
 }
 
 @media (max-width: 800px) {
+  // WELCOME IMAGE MOBILE
 
-   // WELCOME IMAGE MOBILE
-  
-   .landing {
+  .landing {
     height: 350px;
   }
 
-  // NAVBAR MOBILE
-
-  .nav-list {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--black);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(-100%);
-    transition: transform 0.3s;
-    li {
-      margin: 10px 0;
-      a {
-        display: inline-block;
-        font-size: 20px;
-        padding: 8px 20px;
-        margin: 1px;
-        transition: all 0.3s;
-      }
-    }
-    &:last-child {
-      a {
-        background-color: var(--black);
-
-        &:hover {
-          border: 0;
-          color: var(--hover-color);
-        }
-      }
-    }
-  }
-
-  .humberger {
-    display: flex;
-    z-index: 999;
-  }
-
-  #humberger-toggle:checked ~ .nav-list {
-    transform: none;
-  }
-
-  #humberger-toggle:checked ~ .humberger .bar::before {
-    transform: rotate(45deg);
-  }
-  #humberger-toggle:checked ~ .humberger .bar {
-    background-color: transparent;
-  }
-  #humberger-toggle:checked ~ .humberger .bar::after {
-    transform: rotate(-45deg);
-  }
-
   // ABOUT MOBILE
-
 
   .about-img {
     width: 90%;
@@ -323,15 +142,11 @@ footer {
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
-    
   }
-
-
 
   // COMPANY FACTS MOBILE
 
   .company-facts {
-  
     position: relative;
     width: auto;
     height: 600px;
@@ -341,7 +156,4 @@ footer {
   .enquiry {
     margin-top: -5.3px;
   }
-
- 
-
 }

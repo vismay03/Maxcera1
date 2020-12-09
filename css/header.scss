@@ -1,0 +1,138 @@
+// NAVBAR
+:root {
+  --exo2: "Exo 2", sans-serif;
+  --poppins: "Poppins", sans-serif;
+  --white: #fff;
+  --bg-color: #1c1818;
+  --hover-color: #9e2c2c;
+  --black: #010101;
+  --light-color: #8bd8bd;
+}
+.active {
+  transition: all 0.5s;
+  opacity: 0.6;
+}
+
+nav {
+  background-color: var(--bg-color);
+  li {
+    margin-left: 20px;
+
+    a {
+      font-family: var(--poppins);
+      color: var(--white);
+      transition: all 0.3s;
+      &:hover {
+        transition: all 0.5s;
+        opacity: 0.6;
+      }
+    }
+    &::after {
+      content: "";
+      background-color: var(--hover-color);
+      position: absolute;
+      top: 3rem;
+      left: 10rem;
+    }
+    &:last-child {
+      a {
+        background-color: var(--hover-color);
+        padding: 8px 13px;
+      }
+    }
+  }
+}
+
+.humberger {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  right: 2rem;
+  display: none;
+  .bar {
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    position: relative;
+    transition: all 0.3s;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      transition: all 0.3s;
+    }
+
+    &::before {
+      transform: translateY(-10px);
+    }
+    &::after {
+      transform: translateY(10px);
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  // NAVBAR MOBILE
+
+  .nav-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+    li {
+      margin: 10px 0;
+      a {
+        display: inline-block;
+        font-size: 20px;
+        padding: 8px 20px;
+        margin: 1px;
+        transition: all 0.3s;
+      }
+    }
+    &:last-child {
+      a {
+        background-color: var(--black);
+
+        &:hover {
+          border: 0;
+          color: var(--hover-color);
+        }
+      }
+    }
+  }
+
+  .humberger {
+    display: flex;
+    z-index: 999;
+  }
+
+  #humberger-toggle:checked ~ .nav-list {
+    transform: none;
+  }
+
+  #humberger-toggle:checked ~ .humberger .bar::before {
+    transform: rotate(45deg);
+  }
+  #humberger-toggle:checked ~ .humberger .bar {
+    background-color: transparent;
+  }
+  #humberger-toggle:checked ~ .humberger .bar::after {
+    transform: rotate(-45deg);
+  }
+}

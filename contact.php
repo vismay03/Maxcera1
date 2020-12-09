@@ -7,6 +7,8 @@
     <title>Contact</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
 <!-- NAVBAR -->
