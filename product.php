@@ -20,73 +20,177 @@
 
   <!-- TITLE -->
 
-  <div class="title text-white flex justify-around">
+  <div class="title text-white flex flex-wrap py-20 items-center justify-around">
+
+    <!-- CATEGORY -->
     <section class="category">
-      <h2>COMMODES</h2>
+      <h2 class="uppercase text-3xl text-center py-5 font-bold">COMMODES</h2>
       <img src="images/commod.png" width="200" height="300" alt="" />
     </section>
-  
-      <div class="">
-        <nav class="tabs flex flex-col sm:flex-row">
-          <button data-target="panel-1" class="tab active text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none text-blue-500 border-b-2 font-medium border-blue-500">
-          double color one piece
-          </button><button data-target="panel-2" class="tab ext-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none">
-            Map and Street View
-          </button><button data-target="panel-3" class="tab text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none">
-            Other info
-          </button>
-        </nav>
-      </div>
 
+    <!-- TABS -->
+
+    <div class="mt-8 sm:mt-0">
+      <nav class="tabs flex flex-col sm:flex-row">
+        <button data-target="panel-1" class="tab uppercase active py-4 px-6 block focus:outline-none text-white font-medium">
+          double color one piece
+        </button><button data-target="panel-2" class="tab uppercase ext-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none">
+          Map and Street View
+        </button><button data-target="panel-3" class="tab uppercase text-white py-4 px-6 block hover:text-blue-500 focus:outline-none">
+          Other info
+        </button>
+      </nav>
      
-    
-   
+
+
+    </div>
+
   </div>
 
   <div id="panels" class="w-full">
-        <div class="panel-1 tab-content active py-5">
-          <section class="category">
-            <h2 class="uppercase text-3xl text-gray-300 text-center py-16" >double color one piece</h2>
+    <div class="panel-1 tab-content active py-5">
+      <section class="category">
+
+        <section class="text-gray-700 body-font">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-wrap w-4/5 mx-auto justify-around -m-4 ">
+
+              <div class="product-box">
+                <a class="relative rounded-t product-link overflow-hidden">
+                  <img alt="ecommerce" class="object-contain rounded-t object-center h-48" src="images/commod.png">
+                </a>
+                <div class="product-text py-2 pl-2">
+                  <h3 class="text-sm tracking-widest font-medium title-font mb-1"> <span class="font-semibold">Name: NAME</span></h3>
+                  <h2 class="title-font text-sm font-medium"> <span class="font-semibold">Model: 401</span></h2>
+                  <p class="mt-1 text-sm font-medium"> <span class="font-semibold">Size: 200 x 300</span></p>
+                </div>
+              </div>
+
+              <div class="product-box">
+                <a class="relative rounded-t product-link overflow-hidden">
+                  <img alt="ecommerce" class="object-contain rounded-t object-center h-48" src="images/commod.png">
+                </a>
+                <div class="product-text py-2 pl-2">
+                  <h3 class="text-sm tracking-widest font-medium title-font mb-1"> <span class="font-semibold">Name: NAME</span></h3>
+                  <h2 class="title-font text-sm font-medium"> <span class="font-semibold">Model: 401</span></h2>
+                  <p class="mt-1 text-sm font-medium"> <span class="font-semibold">Size: 200 x 300</span></p>
+                </div>
+              </div>
+
+              <div class="product-box">
+                <a class="relative rounded-t product-link overflow-hidden">
+                  <img alt="ecommerce" class="object-contain rounded-t object-center h-48" src="images/commod.png">
+                </a>
+                <div class="product-text py-2 pl-2">
+                  <h3 class="text-sm tracking-widest font-medium title-font mb-1"> <span class="font-semibold">Name: NAME</span></h3>
+                  <h2 class="title-font text-sm font-medium"> <span class="font-semibold">Model: 401</span></h2>
+                  <p class="mt-1 text-sm font-medium"> <span class="font-semibold">Size: 200 x 300</span></p>
+                </div>
+              </div>
+
+              <div class="product-box">
+                <a class="relative rounded-t product-link overflow-hidden">
+                  <img alt="ecommerce" class="object-contain rounded-t object-center h-48" src="images/commod.png">
+                </a>
+                <div class="product-text py-2 pl-2">
+                  <h3 class="text-sm tracking-widest font-medium title-font mb-1"> <span class="font-semibold">Name: NAME</span></h3>
+                  <h2 class="title-font text-sm font-medium"> <span class="font-semibold">Model: 401</span></h2>
+                  <p class="mt-1 text-sm font-medium"> <span class="font-semibold">Size: 200 x 300</span></p>
+                </div>
+              </div>
+
+            </div>
+        </section>
+
+
+      </section>
+    </div>
+    <div class="panel-2 tab-content py-5">
+    <section class="category">
 
 <section class="text-gray-700 body-font">
   <div class="container px-5 py-24 mx-auto">
-    <div class="flex flex-wrap -m-4">
-      <div class="w-40 h-64 bg-red-100 mx-auto">
-        <a class="block relative overflow-hidden bg-red-100">
-          <img alt="ecommerce" class="object-cover object-cente r block w-40 h-48" src="images/commod.png">
-          
+    <div class="flex flex-wrap w-4/5 mx-auto justify-around -m-4 ">
+
+      <div class="product-box">
+        <a class="relative rounded-t product-link overflow-hidden">
+          <img alt="ecommerce" class="object-contain rounded-t object-center h-48" src="images/commod.png">
         </a>
-        <div class="">
-          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-          <h2 class="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
-          <p class="mt-1">$16.00</p>
+        <div class="product-text py-2 pl-2">
+          <h3 class="text-sm tracking-widest font-medium title-font mb-1"> <span class="font-semibold">Name: NAME</span></h3>
+          <h2 class="title-font text-sm font-medium"> <span class="font-semibold">Model: 401</span></h2>
+          <p class="mt-1 text-sm font-medium"> <span class="font-semibold">Size: 200 x 300</span></p>
         </div>
       </div>
-      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-        <a class="block relative h-48 rounded overflow-hidden">
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/421x261">
+
+      <div class="product-box">
+        <a class="relative rounded-t product-link overflow-hidden">
+          <img alt="ecommerce" class="object-contain rounded-t object-center h-48" src="images/commod.png">
         </a>
-        <div class="mt-4">
-          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-          <h2 class="text-gray-900 title-font text-lg font-medium">Shooting Stars</h2>
-          <p class="mt-1">$21.15</p>
+        <div class="product-text py-2 pl-2">
+          <h3 class="text-sm tracking-widest font-medium title-font mb-1"> <span class="font-semibold">Name: NAME</span></h3>
+          <h2 class="title-font text-sm font-medium"> <span class="font-semibold">Model: 401</span></h2>
+          <p class="mt-1 text-sm font-medium"> <span class="font-semibold">Size: 200 x 300</span></p>
         </div>
       </div>
-     
+
+      <div class="product-box">
+        <a class="relative rounded-t product-link overflow-hidden">
+          <img alt="ecommerce" class="object-contain rounded-t object-center h-48" src="images/commod.png">
+        </a>
+        <div class="product-text py-2 pl-2">
+          <h3 class="text-sm tracking-widest font-medium title-font mb-1"> <span class="font-semibold">Name: NAME</span></h3>
+          <h2 class="title-font text-sm font-medium"> <span class="font-semibold">Model: 401</span></h2>
+          <p class="mt-1 text-sm font-medium"> <span class="font-semibold">Size: 200 x 300</span></p>
+        </div>
+      </div>
+
+      
+
+    </div>
+</section>
+
+
+</section>
+    </div>
+    <div class="panel-3 tab-content py-5">
+    <section class="category">
+
+<section class="text-gray-700 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap w-4/5 mx-auto justify-around -m-4 ">
+
+      <div class="product-box">
+        <a class="relative rounded-t product-link overflow-hidden">
+          <img alt="ecommerce" class="object-contain rounded-t object-center h-48" src="images/commod.png">
+        </a>
+        <div class="product-text py-2 pl-2">
+          <h3 class="text-sm tracking-widest font-medium title-font mb-1"> <span class="font-semibold">Name: NAME</span></h3>
+          <h2 class="title-font text-sm font-medium"> <span class="font-semibold">Model: 401</span></h2>
+          <p class="mt-1 text-sm font-medium"> <span class="font-semibold">Size: 200 x 300</span></p>
+        </div>
+      </div>
+
+      <div class="product-box">
+        <a class="relative rounded-t product-link overflow-hidden">
+          <img alt="ecommerce" class="object-contain rounded-t object-center h-48" src="images/commod.png">
+        </a>
+        <div class="product-text py-2 pl-2">
+          <h3 class="text-sm tracking-widest font-medium title-font mb-1"> <span class="font-semibold">Name: NAME</span></h3>
+          <h2 class="title-font text-sm font-medium"> <span class="font-semibold">Model: 401</span></h2>
+          <p class="mt-1 text-sm font-medium"> <span class="font-semibold">Size: 200 x 300</span></p>
+        </div>
+      </div>
+
+    
+
+    </div>
+</section>
+
+
+</section>
     </div>
   </div>
-</section>
-GitHub
-         
-          </section>
-        </div>
-        <div class="panel-2 tab-content py-5">
-          Map here
-        </div>
-        <div class="panel-3 tab-content py-5">
-          other info
-        </div>
-      </div>
 
   <!-- FOOTER -->
 

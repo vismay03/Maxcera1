@@ -1,6 +1,6 @@
  <!-- FOOTER -->
 
- <footer class="flex justify-center flex-col  sm:p-0 sm:w-full">
+ <footer class="flex justify-center flex-col shadow-xs sm:p-0 sm:w-full">
         <div class="flex flex-col sm:flex-row justify-around pt-10">
             <section class="text-white flex items-baseline flex-col">
                 <img src="images/Maxcera-logo.png" class="logo mx-auto sm:mx-0" alt="logo" />

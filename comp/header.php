@@ -1,5 +1,5 @@
 
-    <nav class="shadow-2xl flex justify-between z-10 w-full fixed top-0 items-center py-4 px-5" >
+    <nav class="shadow-md flex justify-between z-10 w-full fixed top-0 items-center py-4 px-5" >
         <a href="index.php">
             <img src="images/Maxcera-logo.png" class="logo" alt="logo" />
         </a>
