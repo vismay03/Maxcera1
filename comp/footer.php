@@ -1,7 +1,7 @@
  <!-- FOOTER -->
 
- <footer class="flex justify-center flex-col shadow-xs sm:p-0 sm:w-full">
-        <div class="flex flex-col sm:flex-row justify-around pt-10">
+ <footer class="flex justify-center flex-col sm:p-0 sm:w-full">
+        <div class="footer-first-part flex flex-col sm:flex-row justify-around py-10">
             <section class="text-white flex items-baseline flex-col">
                 <img src="images/Maxcera-logo.png" class="logo mx-auto sm:mx-0" alt="logo" />
                 <h3 class="pt-5 text-center sm:text-left mx-auto sm:mx-0"> <b> Follow us on: </b></h3>
@@ -82,12 +82,12 @@
 
         </div>
 
-        <hr class="mt-10 mb-1 opacity-30">
+    
 
 
-        <section class="text-white flex text-center flex-wrap justify-center uppercase sm:justify-around text-sm">
-            <h2>&copy; copyright maxcera sanitaryware. All rights reserved.</h2>
-            <h2 class="mt-1 sm:mt-0">Design and developed by <a class="company-link" href="#"> Virtual Spark Technologies </a></h2>
+        <section class="text-white flex py-1 text-center flex-wrap justify-center uppercase sm:justify-around text-sm">
+            <h2 class="capitalize" >&copy; copyright maxcera sanitaryware. All rights reserved.</h2>
+            <h2 class="mt-1 capitalize sm:mt-0">Design and developed by <a class="company-link" href="#"> Virtual Spark Technologies </a></h2>
         </section>
 
 

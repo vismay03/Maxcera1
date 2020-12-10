@@ -10,7 +10,11 @@
 
 footer {
   background-color: var(--bg-color);
-  border-top: 1px solid #f1f2f521;
+  border-top: 1px solid #f1f2f50c;
+}
+
+footer .footer-first-part {
+  border-bottom: 1px solid #f1f2f50c;
 }
 
 footer h3 {

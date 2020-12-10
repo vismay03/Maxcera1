@@ -12,7 +12,10 @@
 
 footer {
     background-color: var(--bg-color);
-    border-top: 1px solid #f1f2f521;
+    border-top: 1px solid #f1f2f50c;
+    .footer-first-part{
+      border-bottom: 1px solid #f1f2f50c;
+    }
     h3 {
       font-family: var(--exo2);
       text-transform: uppercase;

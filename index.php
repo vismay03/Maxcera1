@@ -58,6 +58,16 @@ header('Cache-Control: post-check=0, pre-check=0', false)
                 <h3 class="uppercase text-white text-center text-2xl mt-5">URINAL OR OTHER</h3>
             </section>
         </div>
+        <div class=" flex flex-wrap justify-around">
+        <section class="flex flex-col w-auto justify-center mt-16">
+                <img src="images/aboutImg.png" class="self-center" loading="lazy" alt="" />
+                <h3 class="uppercase text-white text-center text-2xl mt-8">COmmodes</h3>
+            </section>
+            <section class="flex flex-col w-auto justify-center mt-16">
+                <img src="images/aboutImg.png" class="self-center" loading="lazy" alt="" />
+                <h3 class="uppercase text-white text-center text-2xl mt-5">wash basin</h3>
+            </section>
+        </div>
     </div>
 
     <!-- PRODUCTS -->

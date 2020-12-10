@@ -15,6 +15,8 @@ html {
 
 .active {
   color: var(--hover-color);
+
+
 }
 
 // TITLE
@@ -31,6 +33,15 @@ html {
       font-family: var(--exo2);
       color: var(--light-color);
     }
+    img{
+  border: 5px solid #F3F4F6;
+  padding: 5px;
+  background: #E5E7EB;
+  outline: 5px solid #D1D5DB;
+  box-shadow:
+      0 0 0 10px #9CA3AF,
+      0 0 0 15px #6B7280;
+    }
   }
 
   // TABS
@@ -40,6 +51,7 @@ html {
     background: linear-gradient(145deg, #191616, #1e1a1a);
     box-shadow:  10px 10px 10px #181414, 
                  -10px -10px 10px #201c1c;
+   
   }
 }
 
@@ -47,6 +59,8 @@ html {
 
 .tab-content {
   display: none;
+
+ 
 }
 
 .tab-content.active {
@@ -59,10 +73,20 @@ html {
   background: linear-gradient(145deg, #191616, #1e1a1a);
   box-shadow:  10px 10px 10px #181414, 
                -10px -10px 10px #201c1c;
+               transition: all .5s;
                h3 {
                  color: var(--light-color);
                }
                h2,p{
                  color: var(--white);
                }
+              
+               &:hover{
+                 box-shadow: inset 20px 20px 30px #181414, 
+                inset -20px -20px 30px #201c1c;
+                
+               }
+
+               
+               
 }
