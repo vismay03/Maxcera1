@@ -29,20 +29,11 @@ html {
   color: var(--light-color);
 }
 
-.title .category img {
-  border: 5px solid #F3F4F6;
-  padding: 5px;
-  background: #E5E7EB;
-  outline: 5px solid #D1D5DB;
-  -webkit-box-shadow: 0 0 0 10px #9CA3AF, 0 0 0 15px #6B7280;
-          box-shadow: 0 0 0 10px #9CA3AF, 0 0 0 15px #6B7280;
-}
-
 .title .tabs {
   border-radius: 50px;
   background: linear-gradient(145deg, #191616, #1e1a1a);
-  -webkit-box-shadow: 10px 10px 10px #181414,  -10px -10px 10px #201c1c;
-          box-shadow: 10px 10px 10px #181414,  -10px -10px 10px #201c1c;
+  -webkit-box-shadow: 10px 10px 10px #181414, -10px -10px 10px #201c1c;
+          box-shadow: 10px 10px 10px #181414, -10px -10px 10px #201c1c;
 }
 
 .tab-content {
@@ -55,22 +46,48 @@ html {
 
 .product-box {
   background: linear-gradient(145deg, #191616, #1e1a1a);
-  -webkit-box-shadow: 10px 10px 10px #181414,  -10px -10px 10px #201c1c;
-          box-shadow: 10px 10px 10px #181414,  -10px -10px 10px #201c1c;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-box-shadow: 10px 10px 10px #181414, -10px -10px 10px #201c1c;
+          box-shadow: 10px 10px 10px #181414, -10px -10px 10px #201c1c;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .product-box h3 {
   color: var(--light-color);
 }
 
-.product-box h2, .product-box p {
+.product-box h2,
+.product-box p {
   color: var(--white);
 }
 
 .product-box:hover {
-  -webkit-box-shadow: inset 20px 20px 30px #181414,  inset -20px -20px 30px #201c1c;
-          box-shadow: inset 20px 20px 30px #181414,  inset -20px -20px 30px #201c1c;
+  -webkit-box-shadow: inset 20px 20px 30px #181414, inset -20px -20px 30px #201c1c;
+          box-shadow: inset 20px 20px 30px #181414, inset -20px -20px 30px #201c1c;
+}
+
+@media (max-width: 640px) {
+  .tabs-container label {
+    border: 1px solid #f1f2f50c;
+  }
+  .tabs-container label::after {
+    content: "+";
+    font-weight: bold;
+    margin-left: 4rem;
+  }
+  .tabs-container input:checked + label::after {
+    content: "-";
+    font-weight: bold;
+    margin-left: 4rem;
+  }
+  .tabs-container .tabs {
+    display: none;
+  }
+  .tabs-container input:checked ~ .tabs {
+    display: block;
+    -webkit-box-shadow: 0 0 0;
+            box-shadow: 0 0 0;
+    background: var(--bg-color);
+  }
 }
 /*# sourceMappingURL=product.css.map */
