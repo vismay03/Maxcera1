@@ -16,7 +16,6 @@ var closeProductBtn = document.getElementById("closeAddFormBtn");
 // When the user clicks on <span> (x), close the modal
 
 closeProductBtn.onclick = ()=> {
-  console.log('66');
   productAddForm.style.display = "none";
 };
 

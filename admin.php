@@ -124,23 +124,24 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
 
                                 <div id="categoryEditForm<?php echo $subcategory['id']; ?>" class="categoryEditForm absolute flex justify-center   top-0 left-0">
                                     <div class="bg-gray-300 px-12 py-8 absolute top-2/4 left-2/4 transform -translate-y-2/4 -translate-x-2/4">
-                                        <form action="database/updateSubcategory.php" method="post" enctype="multipart/form-data">
+                                        <form action="database/updateCategory.php" method="post" enctype="multipart/form-data">
 
-                                            <!-- CLOSE SUBCATEGORY EDIT FORM BUTTON -->
+                                            <!-- CLOSE CATEGORY EDIT FORM BUTTON -->
                                             <section class="closeCategoryEditFormBtn text-right w-full text-4xl cursor-pointer">&times;</section>
 
 
                                             <label class="">
-                                                <input type="text" name="subcategory" value='<?php
-                                                                                                echo $category['SName']; ?>' class="w-full form-input border-2 border-gray-200 pl-2  mt-3  " placeholder="Name">
+                                                <input type="text" name="Category" value='<?php
+                                                                                            echo $category['CName']; ?>' class="w-full form-input border-2 border-gray-200 pl-2  mt-3  " placeholder="Name">
                                             </label>
 
+                                            <input type="text" name="id" value="<?php echo $category['CName']; ?>" hidden>
 
                                             <label class=" mt-3">
                                                 <input type="file" name="Image" value='<?php echo $category['Image']; ?>' class="w-full form-input border-2 border-gray-200 pl-2  mt-3 block" placeholder="Image">
                                             </label>
                                             <label class="text-center mt-3">
-                                                <input type="submit" name="updateSubcategory" class="w-full bg-gray-700 text-white round mt-3 py-1" value="Update">
+                                                <input type="submit" name="updateCategory" class="w-full bg-gray-700 text-white round mt-3 py-1" value="Update">
                                             </label>
                                         </form>
                                     </div>
@@ -567,7 +568,7 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
 
     <!-- CATEGORY ADD, EDIT, DELETE -->
     <script src="js/addCategoryModel.js"></script>
-
+    <script src="js/editCategoryModel.js"></script>
     <script src="js/adminPanelTabs.js"></script>
 
 

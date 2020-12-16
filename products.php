@@ -41,8 +41,8 @@
       <nav class="tabs flex overflow-hidden mt-5 sm:flex-row">
 
         <?php
-  $sql_get_subcategory_query = "SELECT * FROM subcategory WHERE CName='$category'";
-  $sql_get_subcategory_query_result = $connection->query($sql_get_subcategory_query);
+        $sql_get_subcategory_query = "SELECT * FROM subcategory WHERE CName='$category'";
+        $sql_get_subcategory_query_result = $connection->query($sql_get_subcategory_query);
         if ($sql_get_subcategory_query_result->num_rows > 0) {
 
           while ($subcategory = $sql_get_subcategory_query_result->fetch_assoc()) {
@@ -72,8 +72,8 @@
 
     <!-- PANEL -->
     <?php
-  $sql_get_subcategory_query = "SELECT * FROM subcategory WHERE CName='$category'";
-  $sql_get_subcategory_query_result = $connection->query($sql_get_subcategory_query);
+    $sql_get_subcategory_query = "SELECT * FROM subcategory WHERE CName='$category'";
+    $sql_get_subcategory_query_result = $connection->query($sql_get_subcategory_query);
     if ($sql_get_subcategory_query_result->num_rows > 0) {
 
       while ($subcategory = $sql_get_subcategory_query_result->fetch_assoc()) {
@@ -93,19 +93,19 @@
                   if ($sql_get_query_result->num_rows > 0) {
                     while ($rows = $sql_get_query_result->fetch_assoc()) {
                       if ($rows['Subcategory'] == $subcategory['SName']) {
+                  ?>
 
-
-                        echo ' <div class="product-box mt-6 sm:mt-0">
-                <a class="relative rounded-t product-link">
-                  <img alt="" class="object-contain rounded-t object-center h-64 hover:scale-110" src="uploads/' . $rows['Image'] . '">
-                </a>
-                <div class="product-text py-2 pl-2">
-                  <h3 class="text-sm tracking-widest font-medium title-font mb-1"> <span class="font-semibold">Name: ' . $rows['Name'] . '</span></h3>
-                  <h2 class="title-font text-sm font-medium"> <span class="font-semibold">Model: ' . $rows['Model'] . '</span></h2>
-                  <p class="mt-1 text-sm font-medium"> <span class="font-semibold">Size: ' . $rows['Size'] . '</span></p>
-                </div>
-              </div>
-                        ';
+                        <div class="product-box mt-6 sm:mt-0">
+                          <a class="relative rounded-t product-link">
+                            <img alt="" class="object-contain rounded-t object-center h-64 hover:scale-110" src="uploads/<?= $rows['Image'] ?>">
+                          </a>
+                          <div class="product-text py-2 pl-2">
+                            <h3 class="text-sm tracking-widest font-medium title-font mb-1"> <span class="font-semibold">Name: <?= $rows['Name'] ?></span></h3>
+                            <h2 class="title-font text-sm font-medium"> <span class="font-semibold">Model: <?= $rows['Model'] ?></span></h2>
+                            <p class="mt-1 text-sm font-medium"> <span class="font-semibold">Size: <?= $rows['Size'] ?></span></p>
+                          </div>
+                        </div>
+                  <?php
                       }
                     }
                   }

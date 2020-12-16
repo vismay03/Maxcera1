@@ -50,6 +50,8 @@ html {
           box-shadow: 10px 10px 10px #181414, -10px -10px 10px #201c1c;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  width: 240px;
+  height: 350px;
 }
 
 .product-box h3 {
