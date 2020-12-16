@@ -68,7 +68,7 @@ html {
 
 @media (max-width: 640px) {
   .tabs-container label {
-    border: 1px solid #f1f2f50c;
+    border: 2px solid #f1f2f50c;
   }
   .tabs-container label::after {
     content: "+";

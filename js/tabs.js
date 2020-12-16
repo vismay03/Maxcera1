@@ -5,6 +5,12 @@ const tabs = document.querySelectorAll(".tabs");
 const tab = document.querySelectorAll(".tab");
 const panel = document.querySelectorAll(".tab-content");
 
+const firstTab = document.getElementsByClassName('tab')[0];
+console.log(firstTab.classList.add('active'));
+
+const firstTabContent = document.getElementsByClassName("tab-content")[0];
+console.log(firstTabContent.classList.add("active"));
+
 function onTabClick(event) {
 
   // deactivate existing active tabs and panel

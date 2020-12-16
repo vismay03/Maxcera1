@@ -1,0 +1,117 @@
+:root {
+  --exo2: "Exo 2", sans-serif;
+  --poppins: "Poppins", sans-serif;
+  --white: #fff;
+  --bg-color:  linear-gradient(180deg, #F3F0F8 0%, rgba(255, 255, 255, 0.94) 100%);
+  --hover-color: #9e2c2c;
+  --black: #1E4059;
+  --light-color: #8bd8bd;
+}
+ @font-face {
+        font-family: 'Carrois Gothic Regular';
+        src: url('../css/CarroisGothic-Regular.ttf');
+ }
+// Navbar
+body{
+       font-family: 'Carrois Gothic Regular';
+}
+nav {
+    color: var(--black);
+   font-family: 'Carrois Gothic Regular';
+
+}
+
+th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+    padding: 10px 15px;
+  text-align: center;
+}
+
+  // PRODUCT ADD, EDIT, DELETE 
+
+.productAddForm
+{
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+}
+ .productEditForm {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+}
+.productDeleteForm {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+}
+.subcategoryDeleteForm {
+    display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+}
+
+// CATEGORY ADD, EDIT, DELETE 
+
+.categoryAddForm
+{
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+}
+.categoryEditForm {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+}
+.categoryDeleteForm {
+    display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+}
+
+// SUBCATEGORY ADD, EDIT, DELETE 
+
+.subcategoryAddForm {
+   display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+}
+.subcategoryEditForm {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+}
+.subcategoryDeleteForm {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+}
+// SIDEBAR TABLES
+
+.table-content {
+  display: none;
+}
+
+.table-content.active {
+  display: block;
+}
+
+
+@media (max-width: 600px){
+    th, td{
+        padding: 1px;
+        text-align: center;
+    }
+}
