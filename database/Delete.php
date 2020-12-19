@@ -1,17 +1,21 @@
 <?php
 include('../database/connection.php');
+
 if (isset($_POST['Delete'])) {
 
-
+    session_start();
     $id =  $_POST['id'];
-   
+   $image = $_POST['image'];
+   echo $image;
+    $target_file = "../uploads/product/" .$image;
+   unlink($target_file);
     $delete_product_query = "DELETE FROM product WHERE id='$id'";
 
     $delete_product_result = $connection->query($delete_product_query);
     if ($delete_product_result) {
-        echo "Success";
+        $_SESSION['status'] =  "Product Deleted Successfully";
     } else {
-        echo $connection->error;
+        $_SESSION['status'] =  $connection->error;
     }
     
 }

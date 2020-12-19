@@ -7,7 +7,6 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
 }
 
 
-
 ?>
 
 <!DOCTYPE html>
@@ -45,17 +44,21 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
                     </button>
                 </div>
                 <nav :class="{'block': open, 'hidden': !open}" class="flex-grow md:block px-4 pb-4 md:pb-0 md:overflow-y-auto">
-                    <a data-target="category-table" class="table active  block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Category</a>
-                    <a data-target="subcategory-table" class="table block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Subcategory</a>
-                    <a data-target="product-table" class="table block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Product</a>
+                    <a data-target="category-table" class="table active  block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#category-table">Category</a>
+                    <a data-target="subcategory-table" class="table block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#subcategory-table">Subcategory</a>
+                    <a data-target="product-table" class="table block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#product-table">Product</a>
+                    <a data-target="premium-table" class="table block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#premium-table">Premium</a>
                 </nav>
             </div>
         </div>
 
         <div id="tables" class="w-full flex justify-center">
+
+            <!-- ************************************************************************************************************************ -->
+
             <!-- CATEGORY TABLE -->
 
-            <div class="category-table active table-content">
+            <div id="category-table" class="category-table active table-content">
                 <!-- CATEGORY ADD BUTTON -->
                 <h3 class="text-center text-3xl font-medium text-gray-900 w-full py-8">CATEGORY TABLE</h3>
                 <button id="categoryAddBtn" class="categoryAddBtn mb-5 px-3   bg-black text-white  text-center text-xl cursor-pointer">add +</button>
@@ -69,11 +72,11 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
                             <section id="closeAddCategoryBtn" class="closeAddCategoryBtn text-right w-full text-4xl cursor-pointer">&times;</section>
 
                             <label class="">
-                                <input type="text" name="category" value='' class="w-full form-input border-2 border-gray-200 pl-2  mt-3  " placeholder="Category">
+                                <input type="text" name="category" value='' class="w-full form-input border-2 border-gray-200 pl-2  mt-3  " placeholder="Category" required>
                             </label>
 
                             <label class=" mt-3">
-                                <input type="file" name="image" value='' class="w-full form-input border-2 border-gray-200 pl-2  mt-3 block" placeholder="Image">
+                                <input type="file" name="image" value='' class="w-full form-input border-2 border-gray-200 pl-2  mt-3 block" placeholder="Image" required>
                             </label>
 
                             <label class="text-center mt-3">
@@ -101,7 +104,7 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
 
                     ?>
 
-                            <!-- SUBCATEGORY FROM DATABASE -->
+                            <!-- CATEGORY FROM DATABASE -->
                             <tbody>
 
                                 <td><?php echo $category['CName']  ?></td>
@@ -136,6 +139,7 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
                                             </label>
 
                                             <input type="text" name="id" value="<?php echo $category['CName']; ?>" hidden>
+                                            <input type="text" name="existing_image" value="<?php echo $category['Image']; ?>" hidden>
 
                                             <label class=" mt-3">
                                                 <input type="file" name="Image" value='<?php echo $category['Image']; ?>' class="w-full form-input border-2 border-gray-200 pl-2  mt-3 block" placeholder="Image">
@@ -153,11 +157,12 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
                                     <div class="bg-gray-300 px-3 p-3 absolute w-64  top-2/4 left-2/4 transform -translate-y-2/4 -translate-x-2/4">
                                         <h3 class="text-3xl text-center">Are You Sure?</h3>
                                         <section class="flex justify-between w-full mt-8">
-                                            <form action="database/Delete.php" method="post">
+                                            <form action="database/deleteCategory.php" method="post">
+                                                <input type="hidden" name="Image" value="<?= $category['Image'] ?>">
                                                 <input value="<?php
-                                                                echo $category['CName']; ?>" type="text" name="id" hidden />
+                                                                echo $category['CName']; ?>" type="text" name="category" hidden />
                                                 <button class="closeCategoryDeleteFormBtn text-center px-3   text-2xl cursor-pointer">No</button>
-                                                <input type="submit" class="categoryDeleteSubmitBtn  px-3   bg-black text-white  text-center text-2xl cursor-pointer" value="Delete" name="Delete">
+                                                <input type="submit" class="categoryDeleteSubmitBtn  px-3   bg-black text-white  text-center text-2xl cursor-pointer" value="Delete" name="deleteCategory">
                                             </form>
                                         </section>
                                     </div>
@@ -178,9 +183,11 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
 
             </div>
 
+            <!-- ************************************************************************************************************************ -->
+
             <!-- SUBCATEGORY TABLE -->
 
-            <div class="subcategory-table table-content">
+            <div id="subcategory-table" class="subcategory-table table-content">
 
                 <!-- SUBCATEGORY TITLE -->
                 <h3 class="text-center text-3xl font-medium text-gray-900 w-full py-8">SUBCATEGORY TABLE</h3>
@@ -218,13 +225,13 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
                             </label>
 
                             <label class="">
-                                <input type="text" name="subcategory" value='' class="w-full form-input border-2 border-gray-200 pl-2  mt-3  " placeholder="Subcategory">
+                                <input type="text" name="subcategory" value='' class="w-full form-input border-2 border-gray-200 pl-2  mt-3  " placeholder="Subcategory" required>
                             </label>
 
 
 
                             <label class=" mt-3">
-                                <input type="file" name="image" value='' class="w-full form-input border-2 border-gray-200 pl-2  mt-3 block" placeholder="Image">
+                                <input type="file" name="image" value='' class="w-full form-input border-2 border-gray-200 pl-2  mt-3 block" placeholder="Image" required>
                             </label>
                             <label class="text-center mt-3">
                                 <input type="submit" name="addSubcategory" class="w-full bg-gray-700 text-white round mt-3 py-1" value="Add">
@@ -313,7 +320,7 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
                                                                                                 echo $subcategory['SName']; ?>' class="w-full form-input border-2 border-gray-200 pl-2  mt-3  " placeholder="Name">
                                             </label>
 
-
+                                            <input type="hidden" name="existing_image" value="<?php echo $subcategory['Image']; ?>">
                                             <label class=" mt-3">
                                                 <input type="file" name="Image" value='<?php echo $subcategory['Image']; ?>' class="w-full form-input border-2 border-gray-200 pl-2  mt-3 block" placeholder="Image">
                                             </label>
@@ -333,8 +340,10 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
                                             <form action="database/deleteSubcategory.php" method="post">
                                                 <input value="<?php
                                                                 echo $subcategory['id']; ?>" type="text" name="id" hidden />
+                                                <input type="hidden" name="Image" value="<?php echo $subcategory['Image'];  ?>">
+                                                <input type="hidden" name="subcategory" value="<?php echo $subcategory['SName'] ?>">
                                                 <button class="closeSubcategoryDeleteFormBtn text-center px-3   text-2xl cursor-pointer">No</button>
-                                                <input type="submit" class="subcategoryDeleteSubmitBtn  px-3   bg-black text-white  text-center text-2xl cursor-pointer" value="Delete" name="Delete">
+                                                <input type="submit" class="subcategoryDeleteSubmitBtn  px-3   bg-black text-white  text-center text-2xl cursor-pointer" value="Delete" name="deleteSubcategory">
                                             </form>
                                         </section>
                                     </div>
@@ -354,9 +363,10 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
                 </table>
 
             </div>
+            <!-- ************************************************************************************************************************ -->
 
             <!-- PRODUCT TABLE -->
-            <div class="product-table table-content">
+            <div id="product-table" class="product-table table-content">
 
                 <!-- PRODUCT TABLE TITLE -->
                 <h3 class="text-center text-3xl font-medium text-gray-900 w-full py-8">PRODUCT TABLE</h3>
@@ -397,17 +407,17 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
                             </label>
 
                             <label class="">
-                                <input type="text" name="Name" value='' class="w-full form-input border-2 border-gray-200 pl-2  mt-3  " placeholder="Name">
+                                <input type="text" name="Name" value='' class="w-full form-input border-2 border-gray-200 pl-2  mt-3  " placeholder="Name" required>
                             </label>
 
                             <label class="mt-3">
-                                <input type="text" name="Model" value='' class="w-full form-input border-2 border-gray-200 pl-2  mt-3 block" placeholder="Model">
+                                <input type="text" name="Model" value='' class="w-full form-input border-2 border-gray-200 pl-2  mt-3 block" placeholder="Model" required>
                             </label>
                             <label class="mt-3">
-                                <input type="text" name="Size" value="" class="w-full form-input border-2 border-gray-200 pl-2  mt-3 block " placeholder="Size">
+                                <input type="text" name="Size" value="" class="w-full form-input border-2 border-gray-200 pl-2  mt-3 block " placeholder="Size" required>
                             </label>
                             <label class=" mt-3">
-                                <input type="file" name="Image" value='' class="w-full form-input border-2 border-gray-200 pl-2  mt-3 block" placeholder="Image">
+                                <input type="file" name="Image" value='' class="w-full form-input border-2 border-gray-200 pl-2  mt-3 block" placeholder="Image" required>
                             </label>
                             <label class="text-center mt-3">
                                 <input type="submit" name="Add" class="w-full bg-gray-700 text-white round mt-3 py-1" value="Add">
@@ -415,6 +425,8 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
                         </form>
                     </div>
                 </div>
+
+                <!-- PRODUCT TABLE -->
 
                 <table class="table-auto text-xs sm:text-lg">
                     <thead>
@@ -492,6 +504,9 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
                                             </label>
                                             <input value="<?php
                                                             echo $product['id']; ?>" type="text" name="id" hidden />
+                                            <input value="<?php
+                                                            echo $product['Image']; ?>" type="text" name="existing_image" hidden />
+
                                             <label class="">
                                                 <input type="text" name="Name" value='<?php
                                                                                         echo $product['Name']; ?>' class="w-full form-input border-2 border-gray-200 pl-2  mt-3  " placeholder="Name">
@@ -508,7 +523,7 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
                                                 <input type="file" name="Image" value='<?php echo $product['Image']; ?>' class="w-full form-input border-2 border-gray-200 pl-2  mt-3 block" placeholder="Image">
                                             </label>
                                             <label class="text-center mt-3">
-                                                <input type="submit" name="Update" class="w-full bg-gray-700 text-white round mt-3 py-1" value="Update">
+                                                <input type="submit" name="updateProduct" class="w-full bg-gray-700 text-white round mt-3 py-1" value="Update">
                                             </label>
                                         </form>
                                     </div>
@@ -521,6 +536,7 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
                                         <h3 class="text-3xl text-center">Are You Sure?</h3>
                                         <section class="flex justify-between w-full mt-8">
                                             <form action="database/Delete.php" method="post">
+                                                <input type="text" name="image" value="<?php echo $product['Image'] ?>" hidden>
                                                 <input value="<?php
                                                                 echo $product['id']; ?>" type="text" name="id" hidden />
                                                 <button class="closeDeleteFormBtn text-center px-3   text-2xl cursor-pointer">No</button>
@@ -545,6 +561,125 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
 
 
             </div>
+            <!-- ************************************************************************************************************************ -->
+
+            <!-- PREMIUM PRODUCTS -->
+
+            <div id="premium-table" class="premium-table table-content">
+                <!-- PREMIUM TABLE TITLE -->
+                <h3 class="text-center text-3xl font-medium text-gray-900 w-full py-8">PREMIUM TABLE</h3>
+
+                <!-- PREMIUM ADD BUTTON -->
+                <button id="premiumAddBtn" class="premiumAddBtn mb-5 px-3 bg-black text-white  text-center text-xl cursor-pointer">add +</button>
+
+
+                <!-- PREMIUM ADD FORM -->
+
+                <div id="premiumAddForm" class="premiumAddForm absolute flex justify-center  top-0 left-0">
+                    <div class="bg-gray-300 px-12 py-8 absolute top-2/4 left-2/4 transform -translate-y-2/4 -translate-x-2/4">
+                        <form action="database/addPremium.php" method="post" enctype="multipart/form-data">
+
+                            <!-- CLOSE PREMIUM EDIT FORM BUTTON -->
+                            <section id="closeAddPremiumBtn" class="closeAddPremiumBtn text-right w-full text-4xl cursor-pointer">&times;</section>
+
+
+                            <label class=" mt-3">
+                                <input type="file" name="Image" value='' class="w-full form-input border-2 border-gray-200 pl-2  mt-3 block" placeholder="Image" required>
+                            </label>
+                            <label class="text-center mt-3">
+                                <input type="submit" name="addPremium" class="w-full bg-gray-700 text-white round mt-3 py-1" value="Add">
+                            </label>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- PREMIUM TABLE -->
+
+                <table class="table-auto text-xs sm:text-lg">
+                    <thead>
+                        <th>Id</th>
+
+                        <th>Image</th>
+
+                    </thead>
+                    <?php
+                    $sql_get_query = 'SELECT * FROM premium';
+                    $sql_get_query_result = $connection->query($sql_get_query);
+
+                    if ($sql_get_query_result->num_rows > 0) {
+
+                        while ($premium = $sql_get_query_result->fetch_assoc()) {
+
+
+                    ?>
+
+                            <!-- PREMIUM FROM DATABASE -->
+                            <tbody>
+                                <td><?php echo $premium['id'] ?></td>
+
+                                <td><?php echo $premium['Image']  ?></td>
+
+                                <td class="flex border-none">
+                                    <!--PREMIUM EDIT BUTTON  -->
+                                    <a href="#premiumEditForm<?php echo $premium['id']; ?>">
+                                        <img id="premiumEditBtn" class="premiumEditBtn mr-2 cursor-pointer" src="images/icons/Edit.svg" />
+                                    </a>
+                                    <!-- PREMIUM DELETE BUTTON  -->
+                                    <a href="#premiumDeleteForm<?php echo $premium['id']; ?>">
+                                        <img id="premiumDeleteBtn" class="premiumDeleteBtn mr-2 cursor-pointer" src="images/icons/Vector.svg" />
+                                    </a>
+
+                                </td>
+                                <!-- PREMIUM EDIT MODEL FORM -->
+
+                                <div id="premiumEditForm<?php echo $premium['id']; ?>" class="premiumEditForm absolute flex justify-center   top-0 left-0">
+                                    <div class="bg-gray-300 px-12 py-8 absolute top-2/4 left-2/4 transform -translate-y-2/4 -translate-x-2/4">
+                                        <form action="database/updatePremium.php" method="post" enctype="multipart/form-data">
+
+                                            <!-- CLOSE PREMIUM FORM BUTTON -->
+                                            <section class="closePremiumEditFormBtn text-right w-full text-4xl cursor-pointer">&times;</section>
+
+                                            <input value="<?php
+                                                            echo $premium['id']; ?>" type="text" name="id" hidden />
+                                            <input value="<?php
+                                                            echo $premium['Image']; ?>" type="text" name="existing_image" hidden />
+
+                                            <label class=" mt-3">
+                                                <input type="file" name="Image" value='<?php echo $premium['Image']; ?>' class="w-full form-input border-2 border-gray-200 pl-2  mt-3 block" placeholder="Image">
+                                            </label>
+                                            <label class="text-center mt-3">
+                                                <input type="submit" name="updatePremium" class="w-full bg-gray-700 text-white round mt-3 py-1" value="Update">
+                                            </label>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <!-- PREMIUM DELETE CONFIRMATION -->
+
+                                <div id="premiumDeleteForm<?php echo $premium['id']; ?>" class="premiumDeleteForm absolute    top-0 left-0">
+                                    <div class="bg-gray-300 px-3 p-3 absolute w-64  top-2/4 left-2/4 transform -translate-y-2/4 -translate-x-2/4">
+                                        <h3 class="text-3xl text-center">Are You Sure?</h3>
+                                        <section class="flex justify-between w-full mt-8">
+                                            <form action="database/deletePremium.php" method="post">
+                                                <input type="text" name="Image" value="<?php echo $premium['Image'] ?>" hidden>
+                                                <input value="<?php
+                                                                echo $premium['id']; ?>" type="text" name="id" hidden />
+                                                <button class="closeDeleteFormBtn text-center px-3   text-2xl cursor-pointer">No</button>
+                                                <input type="submit" class="productDeleteSubmitBtn  px-3   bg-black text-white  text-center text-2xl cursor-pointer" value="Delete" name="deletePremium">
+                                            </form>
+                                        </section>
+                                    </div>
+                                </div>
+
+                            </tbody>
+                    <?php }
+                    }
+                    ?>
+                </table>
+
+
+            </div>
+
 
         </div>
 
@@ -555,6 +690,12 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
 
 
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+    <script>
+        alert('<?php echo $_SESSION['status']  ?>');
+    </script>
+
+
 
     <!-- PRODUCT ADD, EDIT, DELETE -->
     <script src="js/editProductModel.js"></script>
@@ -569,9 +710,20 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
     <!-- CATEGORY ADD, EDIT, DELETE -->
     <script src="js/addCategoryModel.js"></script>
     <script src="js/editCategoryModel.js"></script>
+    <script src="js/deleteCategoryModel.js"></script>
+
+    <!-- PREMIUM ADD, EDIT, DELETE -->
+    <script src="js/addPremiumModel.js"></script>
+    <script src="js/editPremiumModel.js"></script>
+    <script src="js/deletePremiumModel.js"></script>
+
+    <!-- ADMIN PANEL SIDEBAR TABS -->
     <script src="js/adminPanelTabs.js"></script>
 
 
+    <?php
+    unset($_SESSION['status']);
+    ?>
 </body>
 
 </html>

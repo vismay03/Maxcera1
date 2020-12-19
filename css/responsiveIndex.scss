@@ -1,9 +1,10 @@
-
 @media (max-width: 800px) {
   // WELCOME IMAGE MOBILE
 
   .landing {
-    height: 350px;
+    img {
+      height: 350px;
+    }
   }
 
   // ABOUT MOBILE

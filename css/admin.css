@@ -99,6 +99,27 @@ th, td {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+.premiumAddForm {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.premiumEditForm {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.premiumDeleteForm {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
 .table-content {
   display: none;
 }

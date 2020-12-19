@@ -7,17 +7,41 @@
   --hover-color: #9e2c2c;
   --black: #010101;
   --light-color: #8bd8bd;
+  --gillory: "Gillory";
 }
 body {
   background-color: var(--bg-color);
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Gillory";
+  src: url("../images/Gilroy-FREE/Gilroy-Light.otf");
 }
 
 .landing {
-  background: url(../images/landingImg.png) no-repeat center;
-  background-size: cover;
-  height: 100vh;
+  overflow-x: hidden;
+  img {
+    height: 100vh;
+  }
+}
+.swing-in-top-fwd {
+  animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
 
+@keyframes swing-in-top-fwd {
+  0% {
+    transform: rotateX(-100deg);
+    transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg);
+    transform-origin: top;
+    opacity: 1;
+  }
+}
 // ABOUT
 
 .about-img {
@@ -35,7 +59,8 @@ body {
   }
   h2 {
     color: var(--light-color);
-    font-family: var(--exo2);
+    font-family: var(--gillory);
+    font-weight: 600;
     // text-shadow: 0 -5px 0 var(--hover-color)
     //  0 2px 0 var(--white),
     //  0 3px 0 var(--white),
@@ -45,20 +70,71 @@ body {
 }
 
 // COLLECTION
-
+h3 {
+  transition: all 0.5s;
+}
 .collection {
+  .wrapper {
+    input {
+      outline: none;
+    }
+  }
+  form {
+    width: auto;
+  }
+  .category-btn {
+    width: 325px;
+    height: 325px;
+    outline: none;
+    &:hover + h3 {
+      color: var(--light-color);
+      transform: translateX(30px);
+    }
+  }
+  .circle {
+    border: 5px solid #393d44;
+    border-top: 5px solid #ffffff73;
+    width: 335px;
+    height: 335px;
+    opacity: 0.8;
+    border-radius: 50%;
+    background-clip: content-box;
+    animation: spin 3s linear infinite;
+  }
+  @keyframes spin {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: rotateZ(360deg);
+      opacity: 1;
+    }
+  }
   h3 {
     font-family: var(--poppins);
   }
   .collection-title {
     color: var(--light-color);
-    font-family: var(--exo2);
+    font-family: var(--gillory);
+    font-weight: 600;
+    letter-spacing: 1px;
+    span {
+      padding: 5px 10px;
+    }
   }
+
   img {
-    width: 325px;
-    height: 325px;
-    border: 5px solid var(--light-color);
+    width: 323px;
+    height: 323px;
+    position: absolute;
+    top: 6px;
+    left: 6px;
     border-radius: 50%;
+    transition: 0.5s;
+    &:hover {
+      filter: blur(2px);
+      transform: rotate(-20deg);
+    }
   }
 }
 
@@ -70,12 +146,14 @@ body {
   }
   .product-title {
     color: var(--light-color);
-    font-family: var(--exo2);
+    font-family: var(--gillory);
+    font-weight: 600;
   }
-  img {
-    width: 250px;
-    height: 500px;
-    border: 5px solid var(--light-color);
+  .splide__list {
+    img {
+      width: 230px;
+      height: 440px;
+    }
   }
 }
 
@@ -95,7 +173,8 @@ body {
     .facts-title {
       width: 280px;
       background-color: rgba(222, 191, 157, 0.49);
-      font-family: var(--exo2);
+      font-family: var(--gillory);
+      font-weight: 600;
     }
   }
 }
@@ -115,6 +194,27 @@ body {
     transition: 0.3s;
     &:hover {
       background: var(--bg-color);
+    }
+  }
+}
+
+// ANIMATION
+
+[data-aos="slide-title"] {
+  opacity: 0;
+  letter-spacing: 1em;
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    opacity: 1;
+    letter-spacing: normal;
+  }
+
+  @media screen and (min-width: 768px) {
+    transform: translateX(200px);
+
+    &.aos-animate {
+      transform: translateX(0);
     }
   }
 }

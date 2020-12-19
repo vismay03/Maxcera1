@@ -7,16 +7,66 @@
   --hover-color: #9e2c2c;
   --black: #010101;
   --light-color: #8bd8bd;
+  --gillory: "Gillory";
 }
 
 body {
   background-color: var(--bg-color);
+  overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Gillory";
+  src: url("../images/Gilroy-FREE/Gilroy-Light.otf");
 }
 
 .landing {
-  background: url(../images/landingImg.png) no-repeat center;
-  background-size: cover;
+  overflow-x: hidden;
+}
+
+.landing img {
   height: 100vh;
+}
+
+.swing-in-top-fwd {
+  -webkit-animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+          animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+@-webkit-keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+
+@keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
 }
 
 .about-img {
@@ -38,7 +88,67 @@ body {
 
 .about-content h2 {
   color: var(--light-color);
-  font-family: var(--exo2);
+  font-family: var(--gillory);
+  font-weight: 600;
+}
+
+h3 {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.collection .wrapper input {
+  outline: none;
+}
+
+.collection form {
+  width: auto;
+}
+
+.collection .category-btn {
+  width: 325px;
+  height: 325px;
+  outline: none;
+}
+
+.collection .category-btn:hover + h3 {
+  color: var(--light-color);
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
+}
+
+.collection .circle {
+  border: 5px solid #393d44;
+  border-top: 5px solid #ffffff73;
+  width: 335px;
+  height: 335px;
+  opacity: 0.8;
+  border-radius: 50%;
+  background-clip: content-box;
+  -webkit-animation: spin 3s linear infinite;
+          animation: spin 3s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+    opacity: 1;
+  }
 }
 
 .collection h3 {
@@ -47,14 +157,31 @@ body {
 
 .collection .collection-title {
   color: var(--light-color);
-  font-family: var(--exo2);
+  font-family: var(--gillory);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.collection .collection-title span {
+  padding: 5px 10px;
 }
 
 .collection img {
-  width: 325px;
-  height: 325px;
-  border: 5px solid var(--light-color);
+  width: 323px;
+  height: 323px;
+  position: absolute;
+  top: 6px;
+  left: 6px;
   border-radius: 50%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.collection img:hover {
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
 }
 
 .product h3 {
@@ -63,13 +190,13 @@ body {
 
 .product .product-title {
   color: var(--light-color);
-  font-family: var(--exo2);
+  font-family: var(--gillory);
+  font-weight: 600;
 }
 
-.product img {
-  width: 250px;
-  height: 500px;
-  border: 5px solid var(--light-color);
+.product .splide__list img {
+  width: 230px;
+  height: 440px;
 }
 
 .company-facts {
@@ -89,7 +216,8 @@ body {
 .company-facts .facts-content .facts-title {
   width: 280px;
   background-color: rgba(222, 191, 157, 0.49);
-  font-family: var(--exo2);
+  font-family: var(--gillory);
+  font-weight: 600;
 }
 
 .enquiry {
@@ -110,5 +238,30 @@ body {
 
 .enquiry a:hover {
   background: var(--bg-color);
+}
+
+[data-aos="slide-title"] {
+  opacity: 0;
+  letter-spacing: 1em;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+}
+
+[data-aos="slide-title"].aos-animate {
+  opacity: 1;
+  letter-spacing: normal;
+}
+
+@media screen and (min-width: 768px) {
+  [data-aos="slide-title"] {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+  }
+  [data-aos="slide-title"].aos-animate {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 /*# sourceMappingURL=style.css.map */

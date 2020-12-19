@@ -98,6 +98,30 @@ th, td {
   height: 100vh;
   background-color: rgba(0,0,0,0.4);
 }
+
+// PREMIUM ADD, EDIT, DELETE 
+
+.premiumAddForm {
+   display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+}
+.premiumEditForm {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+}
+.premiumDeleteForm {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+}
+
+
+
 // SIDEBAR TABLES
 
 .table-content {
