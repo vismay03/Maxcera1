@@ -16,8 +16,9 @@ require('database/connection.php');
     <title>Home</title>
 
 
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
@@ -72,7 +73,7 @@ require('database/connection.php');
     <!-- ABOUT -->
 
     <div id=" about" class="flex justify-center about py-16 sm:py-32">
-        <img src="images/2.jpg" class="about-img" loading="lazy" data-aos="fade-right" alt="" />
+        <img src="images/2.jpg" class="about-img" loading="lazy" data-aos="fade-right" data-aos-offset="500" data-aos-duration="500" alt="" />
         <div class="about-content self-center text-white" data-aos="fade-left">
             <h2 class="text-4xl uppercase " data-aos="zoom-in-out" data-aos-delay="500">About us</h2>
             <p class="text-md mt-8">Maxcera sanitaryware is a Proprietorship firm manufacturing an excellent quality range of Bathroom Sanitaryware like Water Closets, Designer Basins, Toilet Pans and Seat Covers etc </p>
@@ -220,7 +221,9 @@ require('database/connection.php');
     include('comp/footer.php');
     ?>
 
-
+    <script>
+        AOS.init();
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js">
         $(function() {
@@ -240,7 +243,7 @@ require('database/connection.php');
         });
     </script>
 
-    </script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
 
     </script>
@@ -297,24 +300,7 @@ require('database/connection.php');
                 perPage: 1,
 
             }).mount();
-            // var welImg = document.querySelectorAll('.wel-img');
 
-            // var activeImage;
-            // var activeClass = 'swing-in-top-fwd';
-            // for (let i = 0, len = welImg.length; i < len; i++) {
-            //     var image = welImg[i];
-
-            //     splideImg.on('move', function() {
-            //         if (activeImage !== image) {
-            //             activeImage.classList.remove('swing-in-top-fwd');
-            //             image.classList.add('swing-in-top-fwd');
-            //             splide.go(i);
-            //             activeImage = image;
-            //         }
-            //     }, image);
-
-            // }
-            // splideImg.mount();
         });
     </script>
     <script script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
