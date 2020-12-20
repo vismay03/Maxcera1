@@ -1,6 +1,21 @@
 @media (max-width: 800px) {
-  .landing img {
-    height: 350px;
+  .landing .splide__slide {
+    height: 300px;
+  }
+  .collection form h3 {
+    width: 250px;
+  }
+  .collection .circle {
+    width: 260px;
+    height: 260px;
+  }
+  .collection .category-btn {
+    width: 250px;
+    height: 250px;
+  }
+  .collection .category-btn img {
+    width: 250px;
+    height: 250px;
   }
   .about-img {
     width: 90%;
@@ -27,8 +42,11 @@
     height: 600px;
     background-size: cover;
   }
-  .enquiry {
-    margin-top: -5.3px;
+}
+
+@media (min-width: 768px) and (max-width: 800px) {
+  .landing .splide__slide {
+    height: 400px;
   }
 }
 /*# sourceMappingURL=responsiveIndex.css.map */

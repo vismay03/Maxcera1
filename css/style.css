@@ -17,6 +17,53 @@ body {
           box-sizing: border-box;
 }
 
+.parallax-window {
+  min-height: 400px;
+  background: transparent;
+}
+
+.preloader {
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  z-index: 99;
+}
+
+.preloader button {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  height: 40px;
+  width: 40px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  border: 1px solid #1d9af2;
+  opacity: 1;
+  -webkit-animation: spinner4 800ms linear infinite;
+          animation: spinner4 800ms linear infinite;
+}
+
+@-webkit-keyframes spinner4 {
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes spinner4 {
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
 @font-face {
   font-family: "Gillory";
   src: url("../images/Gilroy-FREE/Gilroy-Light.otf");
@@ -26,8 +73,13 @@ body {
   overflow-x: hidden;
 }
 
-.landing img {
+.landing .splide__slide {
+  background-image: url("../images/1.jpg");
   height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .swing-in-top-fwd {
@@ -97,12 +149,16 @@ h3 {
   transition: all 0.5s;
 }
 
+.collection {
+  width: auto;
+}
+
 .collection .wrapper input {
   outline: none;
 }
 
-.collection form {
-  width: auto;
+.collection form h3 {
+  width: 325px;
 }
 
 .collection .category-btn {
@@ -167,11 +223,10 @@ h3 {
 }
 
 .collection img {
-  width: 323px;
-  height: 323px;
+  width: 325px;
+  height: 325px;
   position: absolute;
-  top: 6px;
-  left: 6px;
+  top: 5px;
   border-radius: 50%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -194,13 +249,16 @@ h3 {
   font-weight: 600;
 }
 
+.product .splide__list {
+  width: auto;
+}
+
 .product .splide__list img {
   width: 230px;
   height: 440px;
 }
 
 .company-facts {
-  background: url(../images/cusImg.png) no-repeat center;
   position: relative;
   width: 100%;
   height: 400px;
@@ -222,6 +280,7 @@ h3 {
 
 .enquiry {
   background-color: var(--hover-color);
+  margin-top: -6px;
 }
 
 .enquiry section,

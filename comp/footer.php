@@ -65,10 +65,27 @@
          <section class="text-white flex flex-col ml-3 sm:ml-0 mt-3 sm:mt-0">
 
              <h3 class="py-2"> <b> Sanitaryware </b></h3>
+  
+                <?php $sql_get_category_query = 'SELECT * FROM category';
+                $sql_get_category_query_result = $connection->query($sql_get_category_query);
 
-             <a class="text-sm sm:mt-3" href="#">commods</a>
-             <a class="text-sm mt-1" href="#">washbasin</a>
-             <a class="text-sm mt-1" href="#">urinals & other</a>
+                if ($sql_get_category_query_result->num_rows > 0) {
+                    while ($category = $sql_get_category_query_result->fetch_assoc()) {  ?>
+                        <form class="" action="products.php" method="get">
+                           
+                                    <input type="hidden" name="category" value="<?php echo $category['CName'] ?>">
+                                    <button type="submit">
+                                        <?php echo $category['CName'] ?>
+                                    </button>
+
+                               
+                        </form>
+
+                <?php
+                    }
+                }
+            
+           ?>
 
          </section>
          <section class="text-white flex flex-col ml-3 sm:ml-0 mt-3 sm:mt-0">

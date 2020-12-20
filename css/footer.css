@@ -29,6 +29,7 @@ footer h3 svg path {
 }
 
 footer h2,
+footer button,
 footer a {
   font-family: var(--poppins);
   font-weight: normal;
@@ -39,6 +40,7 @@ footer a {
 }
 
 footer h2:hover:not(h2),
+footer button:hover:not(h2),
 footer a:hover:not(h2) {
   opacity: 0.7;
 }

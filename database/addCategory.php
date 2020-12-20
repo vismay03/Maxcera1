@@ -6,39 +6,38 @@ if (isset($_POST['addCategory'])) {
    
     $category = $_POST['category'];
     $image = $_FILES['image']['name'];
+    $pageImg = $_FILES['pageImg']['name'];
+    echo $pageImg;
     $target_dir = "../uploads/category/";
-    $target_file = $target_dir . basename($_FILES["image"]["name"]);
-    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-    echo $imageFileType;
+    $target_file1 = $target_dir . basename($_FILES["image"]["name"]);
+    $target_file2 = $target_dir . basename($_FILES["pageImg"]["name"]);
+    $imageFileType1 = strtolower(pathinfo($target_file1, PATHINFO_EXTENSION));
+    $imageFileType2 = strtolower(pathinfo($target_file2, PATHINFO_EXTENSION));
 
-    $check = getimagesize($_FILES["image"]["tmp_name"]);
-    if ($check !== false) {
-        $_SESSION['status'] = "File is an image - " . $check["mime"] . ".";
+    
+    $checkImg = getimagesize($_FILES["image"]["tmp_name"]);
+    $checkPageImg = getimagesize($_FILES["pageImg"]["tmp_name"]);
+    if ($checkImg !== false && $checkPageImg !== false) {
+        $_SESSION['status'] = "File is an image - " . $checkImg["mime"] . ".";
     } else {
         $_SESSION['status'] =  "File is not an image.";
         header("Location: ../admin.php");
         exit;
     }
 
-    if (file_exists($target_file)) {
+    if (file_exists($target_file1) && file_exists($target_file2)) {
         $_SESSION['status'] = "Sorry, file already exists.";
 
         header("Location: ../admin.php");
         exit;
     }
 
-    // Check file size
-    if ($_FILES["image"]["size"] > 5000000) {
-        $_SESSION['status'] =  "Sorry, your file is too large.";
-
-        header("Location: ../admin.php");
-        exit;
-    }
+    
 
     //Allow certain file formats
     if (
-        $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-
+        $imageFileType1 != "jpg" && $imageFileType1 != "png" && $imageFileType1 != "jpeg" &&
+    $imageFileType2 != "jpg" && $imageFileType2 != "png" && $imageFileType2 != "jpeg"
     ) {
         $_SESSION['status'] = "Sorry, only JPG, JPEG, PNG  files are allowed.";
 
@@ -48,8 +47,8 @@ if (isset($_POST['addCategory'])) {
 
     // Check if $uploadOk is set to 0 by an error
 
-    if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-        $add_category_query = "INSERT INTO category (CName,  Image) VALUES ('$category','$image')";
+    if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file1) && move_uploaded_file($_FILES["pageImg"]["tmp_name"], $target_file2)) {
+        $add_category_query = "INSERT INTO category (CName,  Image, pageImg) VALUES ('$category','$image', '$pageImg')";
 
         $add_category_result = $connection->query($add_category_query);
         if ($add_category_result) {

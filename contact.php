@@ -50,39 +50,30 @@
 
       <div class="lg:w-1/3 md:w-1/2 bg-white px-10 flex flex-col w-full md:py-8 mt-8 md:mt-0">
         <h2 class="text-gray-100 text-2xl text-center  mb-8 font-bold title-font">Get In Touch</h2>
-        <p class="leading-relaxed mb-5 text-gray-300">Don't hesitate, feel free to contact us through our contact  form  </p>
-        <div class="relative mb-6">
+        <p class="leading-relaxed mb-5 text-gray-300">Don't hesitate, feel free to contact us through our contact form </p>
+        <form action="database/sendMail.php" method="post">
+          <div class="relative mb-6">
 
-          <input type="text" id="name" name="name" placeholder="Name" class="w-full placeholder-gray-500 text-xs bg-white  border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-        </div>
-        <div class="relative mb-6">
-
-          <input type="email" id="email" name="email" placeholder="Email" class="w-full placeholder-gray-500 text-xs  bg-white  border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-        </div>
-        <div class="relative mb-6">
-
-          <input type="tel" id="phone" name="phone" placeholder="Phone" class="w-full placeholder-gray-500 text-xs  bg-white  border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-        </div>
-        <div class="relative mb-6">
-
-          <textarea id="message" name="message" placeholder="Message" class="w-full placeholder-gray-500 text-x bg-white  border border-gray-300 focus:border-indigo-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
-        </div>
-        <button class="text-white bg-indigo-500 border-0 py-2 px-6 uppercase focus:outline-none hover:bg-indigo-600 rounded shadow-md  text-lg">Send Message</button>
-        <p class="text-xs text-gray-300 mt-3">Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p>
-      </div>
-      <div class=" bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-center justify-start relative">
-        <div class="bg-white relative flex flex-wrap py-6 add">
-          <div class="lg:w-1/2 px-6 ">
-            <h2 class="title-font font-medium text-gray-200 tracking-widest text-sm">ADDRESS</h2>
-            <p class="leading-relaxed text-gray-400">Photo booth tattooed prism, portland taiyaki hoodie neutra typewriter</p>
-
-            <h2 class="title-font mt-4 font-medium text-gray-200 tracking-widest text-sm">EMAIL</h2>
-            <a class="text-indigo-500 leading-relaxed mail">example@email.com</a>
-            <h2 class="title-font font-medium text-gray-200 tracking-widest text-sm mt-4">PHONE</h2>
-            <p class="leading-relaxed text-gray-400">123-456-7890</p>
+            <input type="text" id="name" name="name" placeholder="Name" class="w-full placeholder-gray-500 text-xs bg-white  border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
           </div>
-        </div>
+          <div class="relative mb-6">
+
+            <input type="email" id="email" name="email" placeholder="Email" class="w-full placeholder-gray-500 text-xs  bg-white  border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          </div>
+          <div class="relative mb-6">
+
+            <input type="tel" id="phone" name="phone" placeholder="Phone" class="w-full placeholder-gray-500 text-xs  bg-white  border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          </div>
+          <div class="relative mb-6">
+
+            <textarea id="message" name="message" placeholder="Message" class="w-full placeholder-gray-500 text-x bg-white  border border-gray-300 focus:border-indigo-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+          </div>
+          <button type="submit" class="text-white bg-indigo-500 border-0 py-2 px-6 uppercase focus:outline-none hover:bg-indigo-600 rounded shadow-md  text-lg">Send Message</button>
+        </form>
+        <p class="text-xs text-gray-300 mt-3">Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p>
+
       </div>
+
     </div>
   </section>
 

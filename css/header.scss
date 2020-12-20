@@ -15,6 +15,30 @@
 
 nav {
   background-color: var(--bg-color);
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu {
+    margin-top: 30px;
+    background-color: #9e2c2c;
+color: #fff;
+    text-align: left;
+    text-transform: capitalize;
+  
+    padding: 10px 20px 10px 0;
+  button {
+    outline: none;
+  }
+  }
+  form li a {
+    margin-top: 7px;
+  }
+  form li a:last-child {
+    background-color: transparent;
+
+    padding: 0;
+  }
   li {
     margin-left: 20px;
 
@@ -83,6 +107,13 @@ nav {
   // NAVBAR MOBILE
 
   .nav-list {
+   .dropdown{
+    display: flex;
+    }
+    .dropdown-menu{
+      text-align: center;
+      padding-left: 10px;
+    }
     position: fixed;
     top: 0;
     left: 0;
@@ -98,7 +129,7 @@ nav {
     li {
       margin: 10px 0;
       a {
-        display: inline-block;
+       
         font-size: 20px;
         padding: 8px 20px;
         margin: 1px;
@@ -107,11 +138,11 @@ nav {
     }
     &:last-child {
       a {
-        background-color: var(--black);
+     
 
         &:hover {
           border: 0;
-          color: var(--hover-color);
+         opacity: 0.6;
         }
       }
     }

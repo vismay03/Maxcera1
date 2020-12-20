@@ -28,7 +28,17 @@
     <!-- CATEGORY -->
     <section class="category relative">
       <h2 class="uppercase text-4xl text-center pb-16 font-bold"><?php echo $category; ?></h2>
-      <img src="images/commod.png" width="200" height="300" alt="" />
+       <?php
+        $sql_get_page_img_query = "SELECT pageImg FROM category WHERE CName='$category'";
+        $sql_get_page_img_query_result = $connection->query($sql_get_page_img_query);
+        if ($sql_get_page_img_query_result->num_rows > 0) {
+
+          while ($category = $sql_get_page_img_query_result->fetch_assoc()) {
+        ?>
+      <img src="uploads/category/<?php echo $category['pageImg']?>" width="200" height="300" alt="" />
+      <?php  
+          }}
+      ?>
     </section>
 
     <!-- TABS -->

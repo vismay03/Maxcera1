@@ -5,10 +5,12 @@ if (isset($_POST['deleteCategory'])) {
 
 
     $category =  $_POST['category'];
+    $pageImg = $_POST['pageImg'];
     $image = $_POST['Image'];
-    $target_file = "../uploads/category/".$image;
-    unlink($target_file);
-    
+    $target_file1 = "../uploads/category/".$image;
+    $target_file2 = "../uploads/category/" . $pageImg;
+    unlink($target_file1);
+    unlink($target_file2);
 
     $delete_subcategory_query = "DELETE FROM subcategory WHERE CName='$category'";
 

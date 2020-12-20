@@ -79,7 +79,14 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
                                 <input type="file" name="image" value='' class="w-full form-input border-2 border-gray-200 pl-2  mt-3 block" placeholder="Image" required>
                             </label>
 
-                            <label class="text-center mt-3">
+                            <div class="flex w-full items-center justify-center bg-grey-lighter">
+                                <label class="w-full form-input border-2 border-gray-200 pl-2  mt-3 block">
+
+                                    <span class="mt-2 text-base leading-normal">Select Page Image</span>
+                                    <input type='file' class="hidden" name="pageImg" />
+                                </label>
+                            </div>
+                            <label class="text-center mt-10">
                                 <input type="submit" name="addCategory" class="w-full bg-gray-700 text-white round mt-3 py-1" value="Add">
                             </label>
                         </form>
@@ -91,6 +98,7 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
 
                         <th>Category</th>
                         <th>Image</th>
+                        <th>Page Image</th>
 
                     </thead>
                     <?php
@@ -109,7 +117,7 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
 
                                 <td><?php echo $category['CName']  ?></td>
                                 <td><?php echo $category['Image']  ?></td>
-
+                                <td><?php echo $category['pageImg']  ?></td>
                                 <td class="flex border-none">
                                     <!--CATEGORY EDIT BUTTON  -->
                                     <a href="#categoryEditForm<?php echo $category['CName']; ?>">
@@ -140,10 +148,18 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
 
                                             <input type="text" name="id" value="<?php echo $category['CName']; ?>" hidden>
                                             <input type="text" name="existing_image" value="<?php echo $category['Image']; ?>" hidden>
+                                            <input type="text" name="existing_pageImage" value="<?php echo $category['pageImg']; ?>" hidden>
 
                                             <label class=" mt-3">
                                                 <input type="file" name="Image" value='<?php echo $category['Image']; ?>' class="w-full form-input border-2 border-gray-200 pl-2  mt-3 block" placeholder="Image">
                                             </label>
+                                            <div class="flex w-full items-center justify-center bg-grey-lighter">
+                                                <label class="w-full form-input border-2 border-gray-200 pl-2  mt-3 block">
+
+                                                    <span class="mt-2 text-base leading-normal">Select Page Image</span>
+                                                    <input type='file' class="hidden" name="pageImg" />
+                                                </label>
+                                            </div>
                                             <label class="text-center mt-3">
                                                 <input type="submit" name="updateCategory" class="w-full bg-gray-700 text-white round mt-3 py-1" value="Update">
                                             </label>
@@ -159,6 +175,7 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
                                         <section class="flex justify-between w-full mt-8">
                                             <form action="database/deleteCategory.php" method="post">
                                                 <input type="hidden" name="Image" value="<?= $category['Image'] ?>">
+                                                <input type="hidden" name="pageImg" value="<?= $category['pageImg'] ?>">
                                                 <input value="<?php
                                                                 echo $category['CName']; ?>" type="text" name="category" hidden />
                                                 <button class="closeCategoryDeleteFormBtn text-center px-3   text-2xl cursor-pointer">No</button>

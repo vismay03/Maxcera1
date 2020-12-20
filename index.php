@@ -4,9 +4,6 @@ header('Cache-Control: post-check=0, pre-check=0', false);
 
 require('database/connection.php');
 
-$sql_get_category_query = 'SELECT * FROM category';
-$sql_get_category_query_result = $connection->query($sql_get_category_query);
-
 
 ?>
 
@@ -17,19 +14,33 @@ $sql_get_category_query_result = $connection->query($sql_get_category_query);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsiveIndex.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
 
+
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+    <link rel="preload" as="style" href="css/footer.css" onload="this.rel='stylesheet'" />
+    <link rel="preload" as="style" href="css/style.css" onload="this.rel='stylesheet'" />
+    <link rel="preload" as="style" href="css/responsiveIndex.css" onload="this.rel='stylesheet'" />
+    <link rel="preload" as="style" href="css/header.css" onload="this.rel='stylesheet'" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 
     <link rel="stylesheet" href="css/Hover-Buttons-master/css/hoverbuttons.css">
+
+
 </head>
 
-<body>
+<body onload="load()">
+    <div class="preloader">
+        <button class=" text-black">
+
+        </button>
+    </div>
+
+
     <div id="wait" style="display:none;width:69px;height:89px;border:1px solid black;position:absolute;top:50%;left:50%;padding:2px;" class="text-white">Loading..</div>
 
 
@@ -39,13 +50,20 @@ $sql_get_category_query_result = $connection->query($sql_get_category_query);
     include('comp/header.php');
     ?>
 
-    <section id="landingImg-slider" class="landing splide sm:mb-32" data-aos="zoom-in">
-        <section class="flex justify-around   splide__track ">
+    <section id="landingImg-slider" class="landing splide sm:mb-32 w-full">
+        <section class=" splide__track ">
             <div class="splide__list">
+                <div class="splide__slide">
 
-                <img src=" images/landingImg.png" class="splide__slide w-full wel-img" alt="">
+                </div>
+                <div class="splide__slide">
 
-                <img src=" images/landingImg.png" class="splide__slide w-full wel-img" alt="">
+                </div>
+                <div class="splide__slide">
+
+                </div>
+
+
 
             </div>
         </section>
@@ -53,8 +71,8 @@ $sql_get_category_query_result = $connection->query($sql_get_category_query);
 
     <!-- ABOUT -->
 
-    <div id=" about" class="flex justify-center about py-16 sm:py-20">
-        <img src="images/aboutImg1.png" class="about-img" loading="lazy" alt="" data-aos="fade-right" />
+    <div id=" about" class="flex justify-center about py-16 sm:py-32">
+        <img src="images/2.jpg" class="about-img" loading="lazy" data-aos="fade-right" alt="" />
         <div class="about-content self-center text-white" data-aos="fade-left">
             <h2 class="text-4xl uppercase " data-aos="zoom-in-out" data-aos-delay="500">About us</h2>
             <p class="text-md mt-8">Maxcera sanitaryware is a Proprietorship firm manufacturing an excellent quality range of Bathroom Sanitaryware like Water Closets, Designer Basins, Toilet Pans and Seat Covers etc </p>
@@ -66,28 +84,35 @@ $sql_get_category_query_result = $connection->query($sql_get_category_query);
 
     <!-- COLLECTION -->
 
-    <div class="flex flex-col  justify-center  mx-auto collection   py-16 sm:py-32">
-        <h2 class="text-4xl collection-title uppercase text-center" data-aos="slide-title">Our COLLECTION</h2>
+    <div class="flex flex-col  justify-center  mx-auto collection   py-24 sm:py-32">
+        <h2 class="text-4xl collection-title uppercase text-center">Our COLLECTION</h2>
         <div id="card-slider" class="splide flex justify-center flex-wrap">
             <section class='splide__track py-10'>
-                <div class="splide__list">
+                <div class="splide__list w-full">
 
 
                     <?php
+                    $sql_get_category_query = 'SELECT * FROM category';
+                    $sql_get_category_query_result = $connection->query($sql_get_category_query);
+
 
                     if ($sql_get_category_query_result->num_rows > 0) {
                         while ($rows = $sql_get_category_query_result->fetch_assoc()) {
                     ?>
 
-                            <form action="products.php" method="get" class="splide__slide">
+                            <form action="products.php" method="get" class="splide__slide flex justify-center">
 
-                                <input type="text" name="category" value="<?php echo $rows['CName'];  ?>" hidden>
+                                <div class="">
+                                    <input type="text" name="category" value="<?php echo $rows['CName'];  ?>" hidden>
 
-                                <button type="submit" class="category-btn ml-20" value="">
-                                    <div class="circle"></div>
-                                    <img src='images/<?php echo $rows['Image']; ?>' class='self-center ml-20' loading='lazy' alt='' />
-                                </button>
-                                <h3 class='uppercase text-white  text-center text-2xl mt-8'> <?php echo $rows['CName'];  ?></h3>
+                                    <button type="submit" class="category-btn grid justify-center " value="">
+                                        <div class="circle"></div>
+                                        <img src='uploads/category/<?php echo $rows['Image']; ?>' class='self-center' loading='lazy' alt='' />
+
+                                    </button>
+                                    <h3 class='uppercase text-white  text-center text-2xl mt-8'> <?php echo $rows['CName'];  ?></h3>
+
+                                </div>
 
 
                             </form>
@@ -113,7 +138,7 @@ $sql_get_category_query_result = $connection->query($sql_get_category_query);
     <!-- PRODUCTS -->
 
     <div class=" flex flex-col justify-center mx-auto product py-16 sm:py-32">
-        <h2 class="text-4xl product-title uppercase text-center" data-aos="slide-title">Premium Products</h2>
+        <h2 class="text-4xl product-title uppercase text-center">Premium Products</h2>
         <div id="premium-slider" class="splide flex justify-center flex-wrap">
             <section class='splide__track py-10'>
                 <div class="splide__list ">
@@ -126,22 +151,11 @@ $sql_get_category_query_result = $connection->query($sql_get_category_query);
                         while ($premium = $sql_get_category_query_result->fetch_assoc()) {
                     ?>
 
-                            <div class="flex justify-center mt-16 splide__slide">
-                                <img class="hbtn hb-border-off3 " src="uploads/premium/<?= $premium['Image'] ?>" loading="lazy" class="self-center" alt="" />
+                            <div class="flex justify-center mt-16 splide__slide ">
+                                <img class="hbtn animate__animated animate__fadeInRightBig hb-border-off3 " src="uploads/premium/<?= $premium['Image'] ?>" loading="lazy" class="self-center" alt="" />
 
                             </div>
-                            <div class="flex justify-center mt-16 mx-10  splide__slide">
-                                <img class="hbtn hb-border-off3" src="uploads/premium/<?= $premium['Image'] ?>" loading="lazy" class="self-center" alt="" />
 
-                            </div>
-                            <div class="flex justify-center mt-16 splide__slide">
-                                <img class="hbtn hb-border-off3" src="uploads/premium/<?= $premium['Image'] ?>" loading="lazy" class="self-center" alt="" />
-
-                            </div>
-                            <div class="flex justify-center mt-16 splide__slide">
-                                <img class="hbtn hb-border-off3" src="uploads/premium/<?= $premium['Image'] ?>" loading="lazy" class="self-center" alt="" />
-
-                            </div>
 
                     <?php
                         }
@@ -154,7 +168,7 @@ $sql_get_category_query_result = $connection->query($sql_get_category_query);
 
     <!-- COMPANY FACTS -->
 
-    <div class="company-facts flex flex-col sm:flex-row justify-around">
+    <div data-parallax="scroll" data-image-src="images/cusImg.png" class="parallax-window company-facts flex flex-col sm:flex-row justify-around">
         <section class="facts-content flex flex-wrap h-full justify-center w-full">
             <div class="sm:w-1/2 w-full self-center flex justify-center text-center">
 
@@ -205,22 +219,40 @@ $sql_get_category_query_result = $connection->query($sql_get_category_query);
     <?php
     include('comp/footer.php');
     ?>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js">
-        $("#loading").ajaxStart(function() {
-            $(this).show();
-        });
 
-        $("#loading").ajaxStop(function() {
-            $(this).hide();
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js">
+        $(function() {
+            $.ajax({
+                url: 'index.php',
+                dataType: 'script',
+                beforeSend: function(evt) {
+                    if (!$('.preloader').is('.show')) $('.preloader').addClass('show');
+                },
+                complete: function(jqXHR, textStatus) {
+                    // disable either here or at the end
+                    $('.preloader').removeClass('show');
+
+                    // handle error and success
+                }
+            });
         });
+    </script>
+
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
 
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        $('.parallax-window').parallax({
+            imageSrc: 'images/cusImg.png'
+        });
+    </script>
 
-    <script src="js/ScrollAnim.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -228,11 +260,17 @@ $sql_get_category_query_result = $connection->query($sql_get_category_query);
                 perPage: 3,
                 rewind: true,
                 gap: '20px',
-
+                lazyLoad: 'nearby',
                 breakpoints: {
-                    600: {
+                    '768': {
                         perPage: 1,
-                    }
+
+                    },
+                    '480': {
+                        perPage: 1,
+
+                    },
+
                 }
             }).mount();
             new Splide('#premium-slider', {
@@ -241,35 +279,42 @@ $sql_get_category_query_result = $connection->query($sql_get_category_query);
                 gap: '20px',
 
                 breakpoints: {
-                    600: {
+                    768: {
                         perPage: 1,
                     }
                 }
             }).mount();
-            var welImg = document.getElementsByClassName('wel-img');
-            var activeImage;
-            var activeClass = 'swing-in-top-fwd';
-            for (let i = 0, len = welImg.length; i < len; i++) {
-                var image = welImg[i];
-            }
-            new Splide('#landingImg-slider', {
+
+
+
+
+            var splideImg = new Splide('#landingImg-slider', {
                 rewind: true,
-                cover: true,
+
                 autoplay: true,
                 type: 'loop',
-                gap: '20px',
+
                 perPage: 1,
 
-            }).mount().on('move', function() {
-                if (activeImage !== image) {
-                    activeImage.classList.remove('swing-in-top-fwd');
-                    image.classList.add('swing-in-top-fwd');
-                    splide.go(i);
-                    activeImage = image;
-                }
-            }, image);
+            }).mount();
+            // var welImg = document.querySelectorAll('.wel-img');
 
+            // var activeImage;
+            // var activeClass = 'swing-in-top-fwd';
+            // for (let i = 0, len = welImg.length; i < len; i++) {
+            //     var image = welImg[i];
 
+            //     splideImg.on('move', function() {
+            //         if (activeImage !== image) {
+            //             activeImage.classList.remove('swing-in-top-fwd');
+            //             image.classList.add('swing-in-top-fwd');
+            //             splide.go(i);
+            //             activeImage = image;
+            //         }
+            //     }, image);
+
+            // }
+            // splideImg.mount();
         });
     </script>
     <script script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
@@ -286,6 +331,14 @@ $sql_get_category_query_result = $connection->query($sql_get_category_query);
                 $("#txt").load("index.php");
             });
         });
+    </script>
+
+    <script>
+        var preloader = document.querySelector('.preloader');
+
+        function load() {
+            preloader.style.display = 'none';
+        }
     </script>
 
 </body>

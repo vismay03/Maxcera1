@@ -2,11 +2,31 @@
   // WELCOME IMAGE MOBILE
 
   .landing {
-    img {
-      height: 350px;
+    .splide__slide{
+      height: 300px;
     }
   }
-
+  
+  .collection {
+    form {
+   
+    h3 {
+      width: 250px;
+    }
+  }
+  .circle {
+    width: 260px;
+    height: 260px;
+  }
+  .category-btn {
+    width: 250px;
+    height: 250px;
+    img {
+      width: 250px;
+      height: 250px;
+    }
+  }
+}
   // ABOUT MOBILE
 
   .about-img {
@@ -34,7 +54,12 @@
     background-size: cover;
   }
 
-  .enquiry {
-    margin-top: -5.3px;
+ 
+}
+@media (min-width: 768px) and (max-width: 800px) {
+   .landing {
+    .splide__slide{
+      height: 400px;
+    }
   }
 }
