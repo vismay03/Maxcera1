@@ -48,6 +48,7 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
                     <a data-target="subcategory-table" class="table block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#subcategory-table">Subcategory</a>
                     <a data-target="product-table" class="table block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#product-table">Product</a>
                     <a data-target="premium-table" class="table block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#premium-table">Premium</a>
+                    <a data-target="mail-table" class="table block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#mail-table">Email</a>
                 </nav>
             </div>
         </div>
@@ -696,8 +697,41 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
 
 
             </div>
+            <div id="mail-table" class="mail-table table-content">
+                <h3 class="text-center text-3xl font-medium text-gray-900 w-full py-8">EMAIL TABLE</h3>
+                <table class="table-auto text-xs sm:text-lg">
+                    <thead>
+
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Message</th>
+                    </thead>
+                    <?php
+                    $sql_get_mail_query = 'SELECT * FROM mail';
+                    $sql_get_mail_query_result = $connection->query($sql_get_mail_query);
+
+                    if ($sql_get_mail_query_result->num_rows > 0) {
+
+                        while ($mail = $sql_get_mail_query_result->fetch_assoc()) {
 
 
+                    ?>
+
+                            <!-- CATEGORY FROM DATABASE -->
+                            <tbody>
+
+                                <td><?php echo $mail['Name']  ?></td>
+                                <td><?php echo $mail['Email']  ?></td>
+                                <td><?php echo $mail['Phone']  ?></td>
+                                <td><?php echo $mail['Message']  ?></td>
+                            </tbody>
+                    <?php
+                        }
+                    }
+                    ?>
+                </table>
+            </div>
         </div>
 
     </div>
