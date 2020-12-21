@@ -31,13 +31,7 @@ if (isset($_POST['addSubcategory'])) {
         exit;
     }
 
-    // Check file size
-    if ($_FILES["image"]["size"] > 5000000) {
-        $_SESSION['status'] =  "Sorry, your file is too large.";
 
-        header("Location: ../admin.php");
-        exit;
-    }
 
     //Allow certain file formats
     if (
@@ -67,7 +61,7 @@ if (isset($_POST['addSubcategory'])) {
 
 
 
-   
+    header("Location: ../admin.php"); 
     
 }
 
