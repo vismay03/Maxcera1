@@ -31,11 +31,12 @@
 
     .contact button {
       background-color: #4E4A4A;
-
+      
     }
 
-    .contact:hover {
-      opacity: .8;
+
+    .contact button:hover {
+      background-color: #3d3d3d;
     }
 
     .contact .mail {
