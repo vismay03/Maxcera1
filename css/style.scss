@@ -9,9 +9,23 @@
   --light-color: #8bd8bd;
   --gillory: "Gillory";
 }
+
+
+.splitting .char {
+  animation: slide-in 1s cubic-bezier(.5, 0, .5, 1) both;
+  animation-delay: calc(60ms * var(--char-index));
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-1em) rotate(-.5turn) scale(0.5);
+    opacity: 0;
+  }
+}
+
 body {
   background-color: var(--bg-color);
-  overflow-x: hidden;
+
   box-sizing: border-box;
 }
 .parallax-window {
@@ -86,7 +100,7 @@ body {
 // ABOUT
 
 .about-img {
-  width: 30rem;
+  width: 31rem;
   margin-right: 1.25rem;
   box-shadow: -10px 10px 0 10px rgba(71, 62, 62, 0.35),
     -20px 20px 0 20px rgba(32, 28, 28, 1);
@@ -112,7 +126,7 @@ body {
 
 // COLLECTION
 h3 {
-  transition: all 0.5s;
+  
 }
 .collection {
  width: auto;
@@ -133,7 +147,7 @@ h3 {
 
     &:hover + h3 {
       color: var(--light-color);
-      transform: translateX(30px);
+    
     }
   }
   .circle {
@@ -230,13 +244,14 @@ h3 {
 .enquiry {
   background-color: var(--hover-color);
   margin-top: -6px;
+  color: #fff;
   section,
   a {
-    color: var(--light-color);
+   
     font-family: var(--poppins);
   }
   a {
-    border: 1px solid var(--light-color);
+    border: 1px solid #fff;
     transition: 0.3s;
     &:hover {
       background: var(--bg-color);

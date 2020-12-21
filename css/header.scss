@@ -6,11 +6,11 @@
   --bg-color: #1c1818;
   --hover-color: #9e2c2c;
   --black: #010101;
-  --light-color: #8bd8bd;
+  --light-color: #95918F;
 }
 .active {
   transition: all 0.5s;
-  opacity: 0.6;
+  color: #95918F;
 }
 
 nav {
@@ -22,6 +22,8 @@ nav {
   .dropdown-menu {
     margin-top: 30px;
     background-color: #9e2c2c;
+    opacity: .9;
+    padding: 6px;
 color: #fff;
     text-align: left;
     text-transform: capitalize;
@@ -32,7 +34,11 @@ color: #fff;
   }
   }
   form li a {
+     &:hover {
+      transform: translateX(5px);
+    }
     margin-top: 7px;
+   
   }
   form li a:last-child {
     background-color: transparent;
@@ -41,13 +47,16 @@ color: #fff;
   }
   li {
     margin-left: 20px;
-
+&:hover {
+   transition: all 0.5s;
+       
+}
     a {
       font-family: var(--poppins);
       color: var(--white);
       transition: all 0.3s;
       &:hover {
-        transition: all 0.5s;
+     
         opacity: 0.6;
       }
     }
@@ -60,7 +69,12 @@ color: #fff;
     }
     &:last-child {
       a {
-        background-color: var(--hover-color);
+        // background-color: #b4d2a7;
+        //background-color: #3c4f76;
+        background-color: #4E4A4A;
+        
+        color: #ffffff;
+        font-weight: 500;
         padding: 8px 13px;
       }
     }
@@ -134,6 +148,9 @@ color: #fff;
         padding: 8px 20px;
         margin: 1px;
         transition: all 0.3s;
+        &:hover {
+         
+        }
       }
     }
     &:last-child {
@@ -142,7 +159,7 @@ color: #fff;
 
         &:hover {
           border: 0;
-         opacity: 0.6;
+         
         }
       }
     }

@@ -10,9 +10,31 @@
   --gillory: "Gillory";
 }
 
+.splitting .char {
+  -webkit-animation: slide-in 1s cubic-bezier(0.5, 0, 0.5, 1) both;
+          animation: slide-in 1s cubic-bezier(0.5, 0, 0.5, 1) both;
+  -webkit-animation-delay: calc(60ms * var(--char-index));
+          animation-delay: calc(60ms * var(--char-index));
+}
+
+@-webkit-keyframes slide-in {
+  from {
+    -webkit-transform: translateY(-1em) rotate(-0.5turn) scale(0.5);
+            transform: translateY(-1em) rotate(-0.5turn) scale(0.5);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    -webkit-transform: translateY(-1em) rotate(-0.5turn) scale(0.5);
+            transform: translateY(-1em) rotate(-0.5turn) scale(0.5);
+    opacity: 0;
+  }
+}
+
 body {
   background-color: var(--bg-color);
-  overflow-x: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -122,7 +144,7 @@ body {
 }
 
 .about-img {
-  width: 30rem;
+  width: 31rem;
   margin-right: 1.25rem;
   -webkit-box-shadow: -10px 10px 0 10px rgba(71, 62, 62, 0.35), -20px 20px 0 20px #201c1c;
           box-shadow: -10px 10px 0 10px rgba(71, 62, 62, 0.35), -20px 20px 0 20px #201c1c;
@@ -142,11 +164,6 @@ body {
   color: var(--light-color);
   font-family: var(--gillory);
   font-weight: 600;
-}
-
-h3 {
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
 }
 
 .collection {
@@ -169,8 +186,6 @@ h3 {
 
 .collection .category-btn:hover + h3 {
   color: var(--light-color);
-  -webkit-transform: translateX(30px);
-          transform: translateX(30px);
 }
 
 .collection .circle {
@@ -281,16 +296,16 @@ h3 {
 .enquiry {
   background-color: var(--hover-color);
   margin-top: -6px;
+  color: #fff;
 }
 
 .enquiry section,
 .enquiry a {
-  color: var(--light-color);
   font-family: var(--poppins);
 }
 
 .enquiry a {
-  border: 1px solid var(--light-color);
+  border: 1px solid #fff;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }

@@ -5,13 +5,13 @@
   --bg-color: #1c1818;
   --hover-color: #9e2c2c;
   --black: #010101;
-  --light-color: #8bd8bd;
+  --light-color: #95918F;
 }
 
 .active {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  opacity: 0.6;
+  color: #95918F;
 }
 
 nav {
@@ -25,6 +25,8 @@ nav .dropdown:hover .dropdown-menu {
 nav .dropdown-menu {
   margin-top: 30px;
   background-color: #9e2c2c;
+  opacity: .9;
+  padding: 6px;
   color: #fff;
   text-align: left;
   text-transform: capitalize;
@@ -39,6 +41,11 @@ nav form li a {
   margin-top: 7px;
 }
 
+nav form li a:hover {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
 nav form li a:last-child {
   background-color: transparent;
   padding: 0;
@@ -46,6 +53,11 @@ nav form li a:last-child {
 
 nav li {
   margin-left: 20px;
+}
+
+nav li:hover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 nav li a {
@@ -56,8 +68,6 @@ nav li a {
 }
 
 nav li a:hover {
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
   opacity: 0.6;
 }
 
@@ -70,7 +80,9 @@ nav li::after {
 }
 
 nav li:last-child a {
-  background-color: var(--hover-color);
+  background-color: #4E4A4A;
+  color: #ffffff;
+  font-weight: 500;
   padding: 8px 13px;
 }
 
@@ -169,7 +181,6 @@ nav li:last-child a {
   }
   .nav-list:last-child a:hover {
     border: 0;
-    opacity: 0.6;
   }
   .humberger {
     display: -webkit-box;

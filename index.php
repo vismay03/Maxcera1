@@ -20,7 +20,6 @@ require('database/connection.php');
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 
     <link rel="preload" as="style" href="css/footer.css" onload="this.rel='stylesheet'" />
@@ -28,8 +27,11 @@ require('database/connection.php');
     <link rel="preload" as="style" href="css/responsiveIndex.css" onload="this.rel='stylesheet'" />
     <link rel="preload" as="style" href="css/header.css" onload="this.rel='stylesheet'" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/Hover-Buttons-master/css/hoverbuttons.css">
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
 </head>
@@ -73,9 +75,9 @@ require('database/connection.php');
     <!-- ABOUT -->
 
     <div id=" about" class="flex justify-center about py-16 sm:py-32">
-        <img src="images/2.jpg" class="about-img" loading="lazy" data-aos="fade-right" data-aos-offset="500" data-aos-duration="500" alt="" />
-        <div class="about-content self-center text-white" data-aos="fade-left">
-            <h2 class="text-4xl uppercase " data-aos="zoom-in-out" data-aos-delay="500">About us</h2>
+        <img src="images/2.jpg" class="about-img" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="300" data-aos-easing="linear" loading="lazy" alt="" />
+        <div class="about-content self-center text-white" data-aos="fade-left" data-aos-offset="300" data-aos-duration="1000" data-aos-easing="linear">
+            <h2 class="text-4xl uppercase " data-aos-delay="1000" data-aos="flip-up">About us</h2>
             <p class="text-md mt-8">Maxcera sanitaryware is a Proprietorship firm manufacturing an excellent quality range of Bathroom Sanitaryware like Water Closets, Designer Basins, Toilet Pans and Seat Covers etc </p>
             <p class="text-md mt-3">These products are sourced from reliable market vendors and can be availed by our clients at reasonable prices.
             </p>
@@ -85,8 +87,8 @@ require('database/connection.php');
 
     <!-- COLLECTION -->
 
-    <div class="flex flex-col  justify-center  mx-auto collection   py-24 sm:py-32">
-        <h2 class="text-4xl collection-title uppercase text-center">Our COLLECTION</h2>
+    <div class="flex flex-col  justify-center  mx-auto collection   py-24 sm:py-32" data-aos="fade-left" data-aos-duration="2000" data-aos-easing="linear">
+        <h2 class="text-4xl collection-title  uppercase text-center" data-aos="fade-up" data-aos-delay="500" data-aos-anchor-placement="top-center">Our COLLECTION</h2>
         <div id="card-slider" class="splide flex justify-center flex-wrap">
             <section class='splide__track py-10'>
                 <div class="splide__list w-full">
@@ -138,8 +140,8 @@ require('database/connection.php');
 
     <!-- PRODUCTS -->
 
-    <div class=" flex flex-col justify-center mx-auto product py-16 sm:py-32">
-        <h2 class="text-4xl product-title uppercase text-center">Premium Products</h2>
+    <div class=" flex flex-col justify-center mx-auto product my-16 sm:py-32" data-aos="fade-left" data-aos-duration="2000" data-aos-easing="linear">
+        <h2 class="text-4xl product-title uppercase text-center mt-16" data-aos="fade-up" data-aos-duration="500" data-aos-anchor-placement="top-center">Premium Products</h2>
         <div id="premium-slider" class="splide flex justify-center flex-wrap">
             <section class='splide__track py-10'>
                 <div class="splide__list ">
@@ -178,7 +180,7 @@ require('database/connection.php');
                     Some of Our Company’s Real Facts</h2>
 
             </div>
-            <div class="sm:w-1/2 w-full self-center" data-aos="zoom-in">
+            <div class="sm:w-1/2 w-full self-center">
                 <div class="flex justify-around align-center">
                     <section class="flex flex-col w-28 text-center">
                         <img src="images/icons/1.png" class="w-24 h-24 self-center" loading="lazy" alt="" />
@@ -209,9 +211,9 @@ require('database/connection.php');
     <!-- ENQUIRY -->
 
     <div class="flex justify-around w-full flex-col sm:flex-row flex-wrap-reverse enquiry text-white py-6">
-        <section class="text-center">
-            <h2>Have Questions? Call Us: +91 90161 61636</h2>
-            <p>Or mail us on info@maxcerasanitarywear.com</p>
+        <section class="text-center ">
+            <h2 class="text-center ">Have Questions? Call Us: +91 90161 61636</h2>
+            <p class="text-center">Or mail us on info@maxcerasanitarywear.com</p>
         </section>
         <a class="py-2 px-4 hover:text-white self-center mt-5 sm:mt-0 hbtn hb-fill-middle2-bg" href="contact.php">Send An Enquiry</a>
     </div>
@@ -221,9 +223,7 @@ require('database/connection.php');
     include('comp/footer.php');
     ?>
 
-    <script>
-        AOS.init();
-    </script>
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js">
         $(function() {
@@ -243,12 +243,21 @@ require('database/connection.php');
         });
     </script>
 
+    </script>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
 
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
 
     <script>
         $('.parallax-window').parallax({
@@ -305,19 +314,7 @@ require('database/connection.php');
     </script>
     <script script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
     </script>
-    <script>
-        $(document).ready(function() {
-            $(document).ajaxStart(function() {
-                $("#wait").css("display", "block");
-            });
-            $(document).ajaxComplete(function() {
-                $("#wait").css("display", "none");
-            });
-            $("button").click(function() {
-                $("#txt").load("index.php");
-            });
-        });
-    </script>
+
 
     <script>
         var preloader = document.querySelector('.preloader');
@@ -326,7 +323,9 @@ require('database/connection.php');
             preloader.style.display = 'none';
         }
     </script>
-
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
