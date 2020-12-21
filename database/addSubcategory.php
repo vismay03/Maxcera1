@@ -43,7 +43,7 @@ if (isset($_POST['addSubcategory'])) {
 
 
     if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-        $add_premium_query = "INSERT INTO subcategory (Category, Subcategory,Image) VALUES ('$category', '$subcategory', '$image')";
+        $add_premium_query = "INSERT INTO subcategory (CName, SName,Image) VALUES ('$category', '$subcategory', '$image')";
 
         $add_premium_result = $connection->query($add_premium_query);
         if ($add_premium_result) {
