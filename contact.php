@@ -30,7 +30,12 @@
     }
 
     .contact button {
-      background-color: #9e2c2c;
+      background-color: #4E4A4A;
+
+    }
+
+    .contact:hover {
+      opacity: .8;
     }
 
     .contact .mail {
@@ -68,9 +73,9 @@
 
             <textarea id="message" name="message" placeholder="Message" class="w-full placeholder-gray-500 text-x bg-white  border border-gray-300 focus:border-indigo-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
           </div>
-          <button type="submit" class="text-white bg-indigo-500 border-0 py-2 px-6 uppercase focus:outline-none hover:bg-indigo-600 rounded shadow-md  text-lg">Send Message</button>
+          <button type="submit" class="w-full text-white border-0 py-2 px-6 uppercase focus:outline-none mt-2  rounded shadow-md  text-lg">Send Message</button>
         </form>
-       
+
       </div>
 
     </div>
