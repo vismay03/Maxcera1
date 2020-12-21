@@ -23,7 +23,7 @@ require('database/connection.php');
 
 
     <link rel="preload" as="style" href="css/footer.css" onload="this.rel='stylesheet'" />
-    <link rel="preload" as="style" href="css/style.min.css" onload="this.rel='stylesheet'" />
+    <link rel="preload" as="style" href="css/style.css" onload="this.rel='stylesheet'" />
     <link rel="preload" as="style" href="css/responsiveIndex.css" onload="this.rel='stylesheet'" />
     <link rel="preload" as="style" href="css/header.css" onload="this.rel='stylesheet'" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
@@ -32,6 +32,7 @@ require('database/connection.php');
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
 
 </head>
@@ -89,6 +90,7 @@ require('database/connection.php');
     <!-- SVG -->
 
     <img src="images/d.svg" class="svg-right absolute w-64 h-64 mb-6 -z-10 opacity-25  right-0" />
+    <img src="images/2.svg" class="svg-left absolute w-64 h-64 mb-6 -z-10 opacity-25  -left-14" />
 
     <!-- COLLECTION -->
 
@@ -142,10 +144,12 @@ require('database/connection.php');
         </div>
 
     </div>
+    <img src="images/d.svg" class="svg-2-right absolute w-64 h-64 mb-6 -z-10 opacity-25  right-0" />
+    <img src="images/2.svg" class="svg-2-left absolute  w-64 h-64 mb-6 -z-20 opacity-25" />
 
     <!-- PRODUCTS -->
 
-    <div class=" flex flex-col justify-center mx-auto product my-16 sm:py-32" data-aos="fade-left" data-aos-duration="2000" data-aos-easing="linear">
+    <div class=" flex flex-col justify-center mx-auto product my-16 sm:py-16" data-aos="fade-left" data-aos-duration="2000" data-aos-easing="linear">
         <h2 class="text-4xl product-title uppercase text-center mt-16" data-aos="fade-up" data-aos-duration="500" data-aos-anchor-placement="top-center">Premium Products</h2>
         <div id="premium-slider" class="splide flex justify-center flex-wrap">
             <section class='splide__track py-10'>
@@ -270,6 +274,7 @@ require('database/connection.php');
         $('.parallax-window').parallax({
             imageSrc: 'images/cusImg.png'
         });
+       
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>

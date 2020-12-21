@@ -293,6 +293,15 @@ body {
   font-weight: 600;
 }
 
+.svg-left {
+  top: 93rem;
+}
+
+.svg-2-left {
+  top: 140rem;
+  left: -3rem;
+}
+
 .enquiry {
   background-color: var(--hover-color);
   margin-top: -6px;
