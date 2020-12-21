@@ -70,8 +70,7 @@
           </div>
           <button type="submit" class="text-white bg-indigo-500 border-0 py-2 px-6 uppercase focus:outline-none hover:bg-indigo-600 rounded shadow-md  text-lg">Send Message</button>
         </form>
-        <p class="text-xs text-gray-300 mt-3">Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p>
-
+       
       </div>
 
     </div>
