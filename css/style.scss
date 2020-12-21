@@ -1,24 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@500&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Andika+New+Basic&family=JetBrains+Mono&family=Montserrat&display=swap");
 :root {
-  --exo2: "Exo 2", sans-serif;
+  --exo2: "Andika New Basic", sans-serif;
   --poppins: "Poppins", sans-serif;
+
   --white: #fff;
   --bg-color: #1c1818;
   --hover-color: #9e2c2c;
   --black: #010101;
   --light-color: #8bd8bd;
-  --gillory: "Gillory";
-}
-
-
-.splitting .char {
-  animation: slide-in 1s cubic-bezier(.5, 0, .5, 1) both;
-  animation-delay: calc(60ms * var(--char-index));
+  --gillory: "Andika New Basic", sans-serif;
 }
 
 @keyframes slide-in {
   from {
-    transform: translateY(-1em) rotate(-.5turn) scale(0.5);
+    transform: translateY(-1em) rotate(-0.5turn) scale(0.5);
     opacity: 0;
   }
 }
@@ -30,13 +26,13 @@ body {
 }
 .parallax-window {
   height: 400px;
-    background: transparent;
+  background: transparent;
 }
 .preloader {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background: #fff;
- 
+
   margin: 0;
   padding: 0;
 
@@ -44,9 +40,9 @@ body {
   z-index: 99;
   button {
     position: fixed;
-     top: 50%;
-      transform: translate(-50%, -50%);
-  left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
     height: 40px;
     width: 40px;
     background: rgba(0, 0, 0, 0.8);
@@ -113,7 +109,7 @@ body {
     color: #f1f1f1;
   }
   h2 {
-    color: var(--light-color);
+    color: var(--white);
     font-family: var(--gillory);
     font-weight: 600;
     // text-shadow: 0 -5px 0 var(--hover-color)
@@ -126,10 +122,18 @@ body {
 
 // COLLECTION
 h3 {
-  
 }
+
+.svg-left {
+  height: 600px;
+  position: absolute;
+}
+
 .collection {
- width: auto;
+  width: auto;
+  .splide__track {
+    width: 80%;
+  }
   .wrapper {
     input {
       outline: none;
@@ -147,33 +151,31 @@ h3 {
 
     &:hover + h3 {
       color: var(--light-color);
-    
     }
   }
   .circle {
-    border: 5px solid #393d44;
-    border-top: 5px solid #ffffff73;
+    border: 6px dashed #ffffff;
+
     width: 335px;
     height: 335px;
     opacity: 0.8;
     border-radius: 50%;
     background-clip: content-box;
-    animation: spin 3s linear infinite;
+    animation: spin 9s linear infinite;
   }
   @keyframes spin {
-    0% {
-      opacity: 0.5;
+    from {
+      -webkit-transform: rotate(0deg);
     }
-    100% {
-      transform: rotateZ(360deg);
-      opacity: 1;
+    to {
+      -webkit-transform: rotate(360deg);
     }
   }
   h3 {
     font-family: var(--poppins);
   }
   .collection-title {
-    color: var(--light-color);
+    color: var(--white);
     font-family: var(--gillory);
     font-weight: 600;
     letter-spacing: 1px;
@@ -187,12 +189,15 @@ h3 {
     height: 325px;
     position: absolute;
     top: 5px;
-
+    z-index: 99;
     border-radius: 50%;
     transition: 0.5s;
+    opacity: 0.6;
     &:hover {
-      filter: blur(2px);
-      transform: rotate(-20deg);
+      opacity: 1;
+    }
+    &:hover + .circle {
+      border: 6px solid #fff;
     }
   }
 }
@@ -204,15 +209,21 @@ h3 {
     font-family: var(--poppins);
   }
   .product-title {
-    color: var(--light-color);
+    color: var(--white);
     font-family: var(--gillory);
     font-weight: 600;
   }
-  .splide__list {
-    width: auto;
-    img {
-      width: 230px;
-      height: 440px;
+  .splide__track {
+    width: 80%;
+    .splide__list {
+      .splide__slide {
+        width: 260px;
+
+        img {
+          width: 230px;
+          height: 500px;
+        }
+      }
     }
   }
 }
@@ -220,7 +231,6 @@ h3 {
 // COMPANY FACTS
 
 .company-facts {
- 
   position: relative;
   width: 100%;
   height: 400px;
@@ -232,22 +242,21 @@ h3 {
 
     .facts-title {
       width: 280px;
-      background-color: rgba(222, 191, 157, 0.49);
+      background: #4e4a4a71;
+      color: var(--white);
       font-family: var(--gillory);
-      font-weight: 600;
+      font-weight: 400;
     }
   }
 }
 
 //SVG-RIGHT
 
-.svg-left{
+.svg-left {
   top: 93rem;
 }
 
 .svg-2-left {
-
-
   top: 140rem;
   left: -3rem;
 }
@@ -255,12 +264,13 @@ h3 {
 // Enquiry
 
 .enquiry {
-  background-color: var(--hover-color);
+  background-color: #4e4a4a;
+
   margin-top: -6px;
-  color: #fff;
+
   section,
   a {
-   
+    color: #fff;
     font-family: var(--poppins);
   }
   a {

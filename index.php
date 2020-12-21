@@ -97,7 +97,7 @@ require('database/connection.php');
     <div class="flex flex-col  justify-center  mx-auto collection   py-24 sm:py-32" data-aos="fade-left" data-aos-duration="2000" data-aos-easing="linear">
         <h2 class="text-4xl collection-title  uppercase text-center" data-aos="fade-up" data-aos-delay="500" data-aos-anchor-placement="top-center">Our COLLECTION</h2>
         <div id="card-slider" class="splide flex justify-center flex-wrap">
-            <section class='splide__track py-10'>
+            <section class='splide__track py-20'>
                 <div class="splide__list w-full">
 
 
@@ -116,9 +116,9 @@ require('database/connection.php');
                                     <input type="text" name="category" value="<?php echo $rows['CName'];  ?>" hidden>
 
                                     <button type="submit" class="category-btn grid justify-center " value="">
-                                        <div class="circle"></div>
-                                        <img src='uploads/category/<?php echo $rows['Image']; ?>' class='self-center' loading='lazy' alt='' />
 
+                                        <img src='uploads/category/<?php echo $rows['Image']; ?>' class='self-center' loading='lazy' alt='' />
+                                        <div class="circle"></div>
                                     </button>
                                     <h3 class='uppercase text-white  text-center text-2xl mt-8'> <?php echo $rows['CName'];  ?></h3>
 
@@ -150,9 +150,9 @@ require('database/connection.php');
     <!-- PRODUCTS -->
 
     <div class=" flex flex-col justify-center mx-auto product my-16 sm:py-16" data-aos="fade-left" data-aos-duration="2000" data-aos-easing="linear">
-        <h2 class="text-4xl product-title uppercase text-center mt-16" data-aos="fade-up" data-aos-duration="500" data-aos-anchor-placement="top-center">Premium Products</h2>
+        <h2 class="text-4xl product-title uppercase text-center" data-aos="fade-up" data-aos-duration="500" data-aos-anchor-placement="top-center">Premium Products</h2>
         <div id="premium-slider" class="splide flex justify-center flex-wrap">
-            <section class='splide__track py-10'>
+            <section class='splide__track py-20'>
                 <div class="splide__list ">
 
                     <?php
@@ -226,7 +226,7 @@ require('database/connection.php');
             <h2 class="text-center ">Have Questions? Call Us: +91 90161 61636</h2>
             <p class="text-center">Or mail us on info@maxcerasanitarywear.com</p>
         </section>
-        <a class="py-2 px-4 hover:text-white self-center mt-5 sm:mt-0 hbtn hb-fill-middle2-bg" href="contact.php">Send An Enquiry</a>
+        <a class="py-2 px-4 hover:text-white self-center mt-10  sm:mt-0 hbtn hb-fill-middle2-bg" href="contact.php">Send An Enquiry</a>
     </div>
     <!-- FOOTER -->
 
@@ -274,7 +274,6 @@ require('database/connection.php');
         $('.parallax-window').parallax({
             imageSrc: 'images/cusImg.png'
         });
-       
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
@@ -300,7 +299,7 @@ require('database/connection.php');
             new Splide('#premium-slider', {
                 perPage: 3,
                 rewind: true,
-                gap: '20px',
+              
 
                 breakpoints: {
                     768: {

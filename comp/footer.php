@@ -4,7 +4,7 @@
      <div class="footer-first-part flex flex-col sm:flex-row justify-around py-10">
          <section class="text-white flex items-baseline flex-col">
              <img src="images/Maxcera-logo.png" class="logo mx-auto sm:mx-0" alt="logo" />
-             <h3 class="pt-5 text-center sm:text-left mx-auto sm:mx-0"> <b> Follow us on: </b></h3>
+             <h3 class="pt-5 text-center sm:text-left mx-auto sm:mx-0"> Follow us on: </h3>
 
              <section class="flex social mx-auto sm:mx-0 justify-between w-24 mt-1">
                  <svg width="20" height="20" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">

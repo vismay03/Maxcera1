@@ -1,5 +1,5 @@
 :root {
-  --exo2: "Exo 2", sans-serif;
+  --exo2: 'Andika New Basic', sans-serif;
   --poppins: "Poppins", sans-serif;
   --white: #fff;
   --bg-color: #1c1818;
@@ -20,8 +20,17 @@ footer .footer-first-part {
 footer h3 {
   font-family: var(--exo2);
   text-transform: uppercase;
+  letter-spacing: 3px;
   color: var(--white);
   font-weight: bolder;
+}
+
+footer h3:nth-child(3) {
+  letter-spacing: normal;
+}
+
+footer h3:nth-child(5) {
+  letter-spacing: normal;
 }
 
 footer h3 svg path {
