@@ -40,7 +40,7 @@ body {
 }
 
 .parallax-window {
-  min-height: 400px;
+  height: 400px;
   background: transparent;
 }
 
@@ -291,6 +291,11 @@ body {
   background-color: rgba(222, 191, 157, 0.49);
   font-family: var(--gillory);
   font-weight: 600;
+}
+
+.svg-right {
+  position: absolute;
+  top: 60rem;
 }
 
 .enquiry {

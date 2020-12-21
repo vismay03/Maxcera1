@@ -23,7 +23,7 @@ require('database/connection.php');
 
 
     <link rel="preload" as="style" href="css/footer.css" onload="this.rel='stylesheet'" />
-    <link rel="preload" as="style" href="css/style.css" onload="this.rel='stylesheet'" />
+    <link rel="preload" as="style" href="css/style.min.css" onload="this.rel='stylesheet'" />
     <link rel="preload" as="style" href="css/responsiveIndex.css" onload="this.rel='stylesheet'" />
     <link rel="preload" as="style" href="css/header.css" onload="this.rel='stylesheet'" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
@@ -84,6 +84,9 @@ require('database/connection.php');
             <p class="text-md mt-3">Under the guidances of our mentor "Mr. Mitesh, Who holds profound knowledge and experience in this domain, we have been able to aptly satisfy our clients.</p>
         </div>
     </div>
+
+
+    <img src="images/d.svg" class="svg-right absolute w-64 h-64 mb-6 z-10 opacity-25  right-0" />
 
     <!-- COLLECTION -->
 
@@ -190,19 +193,21 @@ require('database/connection.php');
                     <section class="flex flex-col w-28 text-center">
                         <img src="images/icons/2.png" class="w-24 h-24 self-center" loading="lazy" alt="" />
                         <h2>215+</h2>
-                        <h2>Happy Clients</h2>
+                        <h2>Creative Products</h2>
                     </section>
                 </div>
                 <div class="flex justify-around mt-8">
                     <section class="flex flex-col w-28 text-center">
                         <img src="images/icons/3.png" class="w-32 h-24 self-center" loading="lazy" alt="" />
                         <h2>215+</h2>
-                        <h2>Happy Clients</h2>
+                        <h2>24 * 7
+                            Customer Support</h2>
                     </section>
                     <section class="flex flex-col w-28 text-center">
                         <img src="images/icons/4.png" class="w-24 h-24 self-center" loading="lazy" alt="" />
                         <h2>215+</h2>
-                        <h2>Happy Clients</h2>
+                        <h2>25+
+                            diligent employees</h2>
                     </section>
                 </div>
         </section>
