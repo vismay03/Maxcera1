@@ -86,7 +86,9 @@ require('database/connection.php');
     </div>
 
 
-    <img src="images/d.svg" class="svg-right absolute w-64 h-64 mb-6 z-10 opacity-25  right-0" />
+    <!-- SVG -->
+
+    <img src="images/d.svg" class="svg-right absolute w-64 h-64 mb-6 -z-10 opacity-25  right-0" />
 
     <!-- COLLECTION -->
 
