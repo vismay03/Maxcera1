@@ -16,13 +16,13 @@ if (isset($_POST['addSubcategory'])) {
     
 
     $check = getimagesize($_FILES["image"]["tmp_name"]);
-    if ($check !== false) {
-        $_SESSION['status'] = "File is an image - " . $check["mime"] . ".";
-    } else {
-        $_SESSION['status'] =  "File is not an image.";
-        header("Location: ../admin.php");
-        exit;
-    }
+    // if ($check !== false) {
+    //     $_SESSION['status'] = "File is an image - " . $check["mime"] . ".";
+    // } else {
+    //     $_SESSION['status'] =  "File is not an image.";
+    //     header("Location: ../admin.php");
+    //     exit;
+    // }
 
     if (file_exists($target_file)) {
         $_SESSION['status'] = "Sorry, file already exists.";
