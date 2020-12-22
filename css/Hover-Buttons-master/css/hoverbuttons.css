@@ -1691,10 +1691,10 @@
 }
 
 .hbtn.hb-border-off3 {
-  border-color:#8bd8bd;
+  border-color:#aaaaaa;
   transition-duration: .3s;
   padding: 0;
-  border: 5px solid #8bd8bd;
+  border: 5px solid #aaaaaa;
   border-radius: 10px;
 }
 
