@@ -1,5 +1,5 @@
 :root {
-  --exo2: 'Andika New Basic', sans-serif;
+  --exo2: 'Spectral', serif;
   --poppins: "Poppins", sans-serif;
   --white: #fff;
   --bg-color: #1c1818;
@@ -21,7 +21,7 @@ footer h3 {
   font-family: var(--exo2);
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: var(--light-color);
+  color: #fff;
   font-weight: bolder;
 }
 
@@ -34,7 +34,7 @@ footer h3:nth-child(5) {
 }
 
 footer h3 svg path {
-  fill: var(--light-color);
+  fill: #ffffffe1;
 }
 
 footer h2,
@@ -42,7 +42,7 @@ footer button,
 footer a {
   font-family: var(--poppins);
   font-weight: normal;
-  color: var(--white);
+  color: #ffffffe1;
   text-transform: lowercase;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
@@ -60,7 +60,7 @@ footer .company-link {
 
 footer .social svg {
   padding: 1px;
-  fill: var(--light-color);
+  fill: #ffffffe1;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }

@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@500&family=Poppins&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Andika+New+Basic&family=JetBrains+Mono&family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spectral&display=swap");
 :root {
-  --exo2: "Andika New Basic", sans-serif;
+  --exo2: 'Spectral', serif;
   --poppins: "Poppins", sans-serif;
   --white: #fff;
   --bg-color: #1c1818;
   --hover-color: #9e2c2c;
   --black: #010101;
   --light-color: #8bd8bd;
-  --gillory: "Andika New Basic", sans-serif;
+  --gillory: 'Spectral', serif;
 }
 
 @-webkit-keyframes slide-in {
@@ -159,6 +159,7 @@ body {
   color: var(--white);
   font-family: var(--gillory);
   font-weight: 600;
+  letter-spacing: 3px;
 }
 
 .svg-left {
@@ -229,7 +230,7 @@ body {
   color: var(--white);
   font-family: var(--gillory);
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
 }
 
 .collection .collection-title span {

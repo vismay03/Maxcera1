@@ -26,12 +26,12 @@
              <section class="flex flex-col mt-5 ml-3 sm:ml-0 sm:mt-0">
 
                  <h3 class="mt-4 flex items-end">&nbsp;
-                     <svg width="20" height="20" class="self-end" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <svg width="20" height="20" class="self-end -ml-2 mr-1" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                          <path d="M6 6.49606C6 5.66924 6.67183 4.99738 7.5 4.99738C8.32817 4.99738 9 5.66924 9 6.49606C9 7.3229 8.32816 7.99478 7.5 7.99478C6.67184 7.99478 6 7.3229 6 6.49606Z" fill="#F2F2F2" />
                          <path fill-rule="evenodd" clip-rule="evenodd" d="M1 6.49606C1 2.90877 3.91117 0 7.5 0C11.0888 0 14 2.90877 14 6.49606C14 9.1701 12.6617 11.2886 11.2284 12.7209C10.5102 13.4387 9.75773 13.9953 9.11325 14.3751C8.79117 14.5649 8.49017 14.7141 8.22849 14.8174C7.98144 14.9149 7.72211 14.9909 7.5 14.9909C7.27789 14.9909 7.01856 14.9149 6.77151 14.8174C6.50983 14.7141 6.20883 14.5649 5.88675 14.3751C5.24227 13.9953 4.48984 13.4387 3.77156 12.7209C2.33829 11.2886 1 9.1701 1 6.49606ZM7.5 3.99738C6.12017 3.99738 5 5.11633 5 6.49606C5 7.87579 6.12016 8.99478 7.5 8.99478C8.87984 8.99478 10 7.87579 10 6.49606C10 5.11633 8.87983 3.99738 7.5 3.99738Z" fill="#F2F2F2" />
                      </svg>
-                     <b>
-                         Maxcera Sanitaryware</b></h3>
+                     
+                         Maxcera Sanitaryware</h3>
 
                  <h2 class="text-md w-64 py-2">
 
@@ -55,37 +55,51 @@
                          <path d="M364.167 54.5H72.8337C52.8045 54.5 36.5991 66.7625 36.5991 81.75L36.417 245.25C36.417 260.237 52.8045 272.5 72.8337 272.5H364.167C384.196 272.5 400.584 260.237 400.584 245.25V81.75C400.584 66.7625 384.196 54.5 364.167 54.5ZM364.167 109L218.5 177.125L72.8337 109V81.75L218.5 149.875L364.167 81.75V109Z" fill="white" />
                      </svg>
                      <a class="text-sm pl-3 tracking-normal">
-                         maxceratradelinks@gmail.com
+                         info@maxcerasanitaryware.com
                      </a>
                      <h3>
-
+                         <h3 class="mt-5 leading-none flex items-end">
+                             <svg width="18" height="18" viewBox="0 0 437 327" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M364.167 54.5H72.8337C52.8045 54.5 36.5991 66.7625 36.5991 81.75L36.417 245.25C36.417 260.237 52.8045 272.5 72.8337 272.5H364.167C384.196 272.5 400.584 260.237 400.584 245.25V81.75C400.584 66.7625 384.196 54.5 364.167 54.5ZM364.167 109L218.5 177.125L72.8337 109V81.75L218.5 149.875L364.167 81.75V109Z" fill="white" />
+                             </svg>
+                             <a class="text-sm pl-3 tracking-normal">
+                                 marketing@maxcerasanitaryware.com
+                             </a>
+                             <h3>
+                                 <h3 class="mt-5 leading-none flex items-end">
+                                     <svg width="18" height="18" viewBox="0 0 437 327" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                         <path d="M364.167 54.5H72.8337C52.8045 54.5 36.5991 66.7625 36.5991 81.75L36.417 245.25C36.417 260.237 52.8045 272.5 72.8337 272.5H364.167C384.196 272.5 400.584 260.237 400.584 245.25V81.75C400.584 66.7625 384.196 54.5 364.167 54.5ZM364.167 109L218.5 177.125L72.8337 109V81.75L218.5 149.875L364.167 81.75V109Z" fill="white" />
+                                     </svg>
+                                     <a class="text-sm pl-3 tracking-normal">
+support@maxcerasanitaryware.com                                     </a>
+                                     <h3>
 
              </section>
          </section>
          <section class="text-white flex flex-col ml-3 sm:ml-0 mt-3 sm:mt-0">
 
              <h3 class="py-2"> <b> Sanitaryware </b></h3>
-  
-                <?php $sql_get_category_query = 'SELECT * FROM category';
+
+             <?php $sql_get_category_query = 'SELECT * FROM category';
                 $sql_get_category_query_result = $connection->query($sql_get_category_query);
 
                 if ($sql_get_category_query_result->num_rows > 0) {
                     while ($category = $sql_get_category_query_result->fetch_assoc()) {  ?>
-                        <form class="" action="products.php" method="get">
-                           
-                                    <input type="hidden" name="category" value="<?php echo $category['CName'] ?>">
-                                    <button type="submit">
-                                        <?php echo $category['CName'] ?>
-                                    </button>
+                     <form class="" action="products.php" method="get">
 
-                               
-                        </form>
+                         <input type="hidden" name="category" value="<?php echo $category['CName'] ?>">
+                         <button type="submit">
+                             <?php echo $category['CName'] ?>
+                         </button>
 
-                <?php
+
+                     </form>
+
+             <?php
                     }
                 }
-            
-           ?>
+
+                ?>
 
          </section>
          <section class="text-white flex flex-col ml-3 sm:ml-0 mt-3 sm:mt-0">

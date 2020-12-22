@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@500&family=Poppins&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Andika+New+Basic&family=JetBrains+Mono&family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Spectral&display=swap');
 :root {
-  --exo2: "Andika New Basic", sans-serif;
+  --exo2: 'Spectral', serif;
   --poppins: "Poppins", sans-serif;
 
   --white: #fff;
@@ -9,7 +9,7 @@
   --hover-color: #9e2c2c;
   --black: #010101;
   --light-color: #8bd8bd;
-  --gillory: "Andika New Basic", sans-serif;
+  --gillory: 'Spectral', serif;
 }
 
 @keyframes slide-in {
@@ -112,6 +112,7 @@ overflow-x: hidden;
     color: var(--white);
     font-family: var(--gillory);
     font-weight: 600;
+    letter-spacing: 3px;
     // text-shadow: 0 -5px 0 var(--hover-color)
     //  0 2px 0 var(--white),
     //  0 3px 0 var(--white),
@@ -178,7 +179,7 @@ h3 {
     color: var(--white);
     font-family: var(--gillory);
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     span {
       padding: 5px 10px;
     }

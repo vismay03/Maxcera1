@@ -38,11 +38,7 @@ require('database/connection.php');
 </head>
 
 <body onload="load()">
-    <div class="preloader">
-        <button class=" text-black">
-
-        </button>
-    </div>
+   
 
 
     <div id="wait" style="display:none;width:69px;height:89px;border:1px solid black;position:absolute;top:50%;left:50%;padding:2px;" class="text-white">Loading..</div>
@@ -206,7 +202,7 @@ require('database/connection.php');
                     <section class="flex flex-col w-28 text-center">
                         <img src="images/icons/3.png" class="w-32 h-24 self-center" loading="lazy" alt="" />
                         <h2>215+</h2>
-                        <h2>24 * 7 Customer Support</h2>
+                        <h2 class="w-32"  >24 * 7 Customer Support</h2>
                     </section>
                     <section class="flex flex-col w-28 text-center">
                         <img src="images/icons/4.png" class="w-24 h-24 self-center" loading="lazy" alt="" />
