@@ -20,7 +20,8 @@ footer {
       font-family: var(--exo2);
       text-transform: uppercase;
       letter-spacing: 3px;
-      color: var(--white);
+       color: var(--white);
+
       font-weight: bolder;
       &:nth-child(3) {
         letter-spacing: normal;
@@ -40,7 +41,7 @@ footer {
     a {
       font-family: var(--poppins);
       font-weight: normal;
-      color: var(--light-color);
+    
       text-transform: lowercase;
       transition: opacity 0.5s;
       &:hover:not(h2) {

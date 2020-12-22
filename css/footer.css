@@ -42,7 +42,6 @@ footer button,
 footer a {
   font-family: var(--poppins);
   font-weight: normal;
-  color: var(--light-color);
   text-transform: lowercase;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
