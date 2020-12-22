@@ -21,7 +21,7 @@ footer h3 {
   font-family: var(--exo2);
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: var(--white);
+  color: var(--light-color);
   font-weight: bolder;
 }
 
@@ -42,6 +42,7 @@ footer button,
 footer a {
   font-family: var(--poppins);
   font-weight: normal;
+  color: var(--white);
   text-transform: lowercase;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
