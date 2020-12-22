@@ -18,15 +18,32 @@ nav {
   background-color: var(--bg-color);
 }
 
+nav .logo {
+  width: 180px;
+}
+
+nav li {
+  padding: 5px 0;
+}
+
+nav .dropdown {
+  position: relative;
+  z-index: 0;
+}
+
 nav .dropdown:hover .dropdown-menu {
-  display: block;
+  visibility: visible;
+  opacity: .9;
 }
 
 nav .dropdown-menu {
-  margin-top: 30px;
+  position: absolute;
+  z-index: 9;
+  opacity: 0;
+  cursor: pointer;
+  top: 2rem;
   background-color: var(--bg-color);
-  opacity: .9;
-  padding: 6px;
+  padding: 4px;
   color: #fff;
   text-align: left;
   text-transform: capitalize;
@@ -38,6 +55,8 @@ nav .dropdown-menu button {
 }
 
 nav form li a {
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
   margin-top: 7px;
 }
 
@@ -55,16 +74,9 @@ nav li {
   margin-left: 20px;
 }
 
-nav li:hover {
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
 nav li a {
   font-family: var(--poppins);
   color: var(--white);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
 
 nav li a:hover {

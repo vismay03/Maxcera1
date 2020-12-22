@@ -206,8 +206,7 @@ require('database/connection.php');
                     <section class="flex flex-col w-28 text-center">
                         <img src="images/icons/3.png" class="w-32 h-24 self-center" loading="lazy" alt="" />
                         <h2>215+</h2>
-                        <h2>24 * 7
-                            Customer Support</h2>
+                        <h2>24 * 7 Customer Support</h2>
                     </section>
                     <section class="flex flex-col w-28 text-center">
                         <img src="images/icons/4.png" class="w-24 h-24 self-center" loading="lazy" alt="" />

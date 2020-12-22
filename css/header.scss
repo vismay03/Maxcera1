@@ -15,27 +15,45 @@
 
 nav {
   background-color: var(--bg-color);
+  .logo {
+    width: 180px;
+    
+  }
+  li {
+    padding: 5px 0;
+  }
+  .dropdown {
+    position: relative;
+    z-index: 0;
+  }
   .dropdown:hover .dropdown-menu {
-    display: block;
+    visibility: visible;
+    opacity: .9;
   }
 
   // DROPDOWN MENU
 
   .dropdown-menu {
-    margin-top: 30px;
+    position: absolute;
+    z-index: 9;
+    opacity: 0;
+    cursor: pointer;
+    top: 2rem;
     background-color: var(--bg-color);
-    opacity: .9;
-    padding: 6px;
+    
+    padding:  4px;
+   
 color: #fff;
     text-align: left;
     text-transform: capitalize;
-  
+
     padding: 10px 20px 10px 0;
   button {
     outline: none;
   }
   }
   form li a {
+    transition: all .3s ease-in;
      &:hover {
       transform: translateX(5px);
     }
@@ -49,14 +67,15 @@ color: #fff;
   }
   li {
     margin-left: 20px;
+
 &:hover {
-   transition: all 0.5s;
+  
        
 }
     a {
       font-family: var(--poppins);
       color: var(--white);
-      transition: all 0.3s;
+    
       &:hover {
      
         opacity: 0.6;
