@@ -29,6 +29,7 @@
 
 body {
   background-color: var(--bg-color);
+  overflow-x: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
