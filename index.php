@@ -38,7 +38,7 @@ require('database/connection.php');
 </head>
 
 <body onload="load()">
-   
+
 
 
     <div id="wait" style="display:none;width:69px;height:89px;border:1px solid black;position:absolute;top:50%;left:50%;padding:2px;" class="text-white">Loading..</div>
@@ -187,29 +187,32 @@ require('database/connection.php');
             </div>
             <div class="sm:w-1/2 w-full self-center">
                 <div class="flex justify-around align-center">
-                    <section class="flex flex-col w-28 text-center">
+                    <section class="flex flex-col w-40 text-center">
                         <img src="images/icons/1.png" class="w-24 h-24 self-center" loading="lazy" alt="" />
                         <h2>215+</h2>
                         <h2>Happy Clients</h2>
                     </section>
-                    <section class="flex flex-col w-28 text-center">
+
+                    <section class="flex flex-col w-40 text-center">
                         <img src="images/icons/2.png" class="w-24 h-24 self-center" loading="lazy" alt="" />
-                        <h2>215+</h2>
-                        <h2>Creative Products</h2>
+                        <h2>24 x 7</h2>
+                        <h2> Customer Support</h2>
                     </section>
                 </div>
                 <div class="flex justify-around mt-8">
-                    <section class="flex flex-col w-28 text-center">
-                        <img src="images/icons/3.png" class="w-32 h-24 self-center" loading="lazy" alt="" />
-                        <h2>215+</h2>
-                        <h2 class="w-32"  >24 * 7 Customer Support</h2>
-                    </section>
-                    <section class="flex flex-col w-28 text-center">
+                    <section class="flex flex-col justify-center  w-40 text-center">
                         <img src="images/icons/4.png" class="w-24 h-24 self-center" loading="lazy" alt="" />
-                        <h2>215+</h2>
-                        <h2>25+
-                            diligent employees</h2>
+                        <h2>675+</h2>
+                        <h2>
+                            Creative Produts</h2>
                     </section>
+                    <section class="flex flex-col w-40 text-center">
+                        <img src="images/icons/3.png" class="w-32 h-24 self-center" loading="lazy" alt="" />
+                        <h2>25+
+                        </h2>
+                        <h2>diligent employees</h2>
+                    </section>
+
                 </div>
         </section>
     </div>
@@ -294,7 +297,7 @@ require('database/connection.php');
             new Splide('#premium-slider', {
                 perPage: 3,
                 rewind: true,
-              
+
 
                 breakpoints: {
                     768: {
