@@ -28,36 +28,7 @@ overflow-x: hidden;
   height: 400px;
   background: transparent;
 }
-.preloader {
-  width: 100vw;
-  height: 100vh;
-  background: #fff;
 
-  margin: 0;
-  padding: 0;
-
-  position: fixed;
-  z-index: 99;
-  button {
-    position: fixed;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    height: 40px;
-    width: 40px;
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 50%;
-    border: 1px solid #1d9af2;
-    opacity: 1;
-    animation: spinner4 800ms linear infinite;
-  }
-  @keyframes spinner4 {
-    to {
-      transform: scale(1.5);
-      opacity: 0;
-    }
-  }
-}
 
 @font-face {
   font-family: "Gillory";

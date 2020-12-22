@@ -3,7 +3,7 @@
  <footer class="flex justify-center flex-col sm:p-0 sm:w-full">
      <div class="footer-first-part flex flex-col sm:flex-row justify-around py-10">
          <section class="text-white flex items-baseline flex-col">
-             <img src="images/Maxcera-logo.png" class="logo mx-auto sm:mx-0" alt="logo" />
+             <img src="images/logo.png" style="width: 180px;"  class="logo mx-auto sm:mx-0" alt="logo" />
              <h3 class="pt-5 text-center sm:text-left mx-auto sm:mx-0"> Follow us on: </h3>
 
              <section class="flex social mx-auto sm:mx-0 justify-between w-24 mt-1">
