@@ -59,7 +59,7 @@ body {
 
 .landing img, .landing .btns {
   width: 100%;
-  height: 100Vh;
+  height: calc(100Vh - 68.84px);
 }
 
 .swing-in-top-fwd {

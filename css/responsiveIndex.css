@@ -53,10 +53,10 @@
 
 @media (max-width: 400px) {
   .landing {
-    height: 300px;
+    height: 250px;
   }
   .landing img, .landing .btns {
-    height: 300px;
+    height: 250px;
   }
 }
 /*# sourceMappingURL=responsiveIndex.css.map */

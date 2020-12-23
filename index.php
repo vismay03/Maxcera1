@@ -52,13 +52,13 @@ require('database/connection.php');
 
 
     <div id="landingImg-slider" class="landing sm:mb-32 w-full">
-        <img class=" mySlides animate__animated animate__fadeInTopRight" src="images/1.jpg" style="width:100%">
-        <img class="mySlides animate__animated animate__zoomInRight" src="images/1.jpg" style="width:100%">
-        <img class="mySlides animate__animated animate__flipInY" src="images/1.jpg" style="width:100%">
+        <img class=" mySlides animate__animated animate__fadeInTopRight" src="images/1.jpg" loading="lazy" style="width:100%">
+        <img class="mySlides animate__animated animate__zoomInRight" src="images/1.jpg" loading="lazy" style="width:100%">
+        <img class="mySlides animate__animated animate__flipInY" src="images/1.jpg" loading="lazy" style="width:100%">
 
         <div class="flex absolute w-full btns top-0 px-2">
-            <button class="text-white left mr-auto focus:outline-none text-2xl" onclick="plusDivs(-1)">&#10094;</button>
-            <button class="right text-white ml-auto focus:outline-none text-2xl" onclick="plusDivs(1)">&#10095;</button>
+            <button class="text-white left mr-auto focus:outline-none text-3xl" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="right text-white ml-auto focus:outline-none text-3xl" onclick="plusDivs(1)">&#10095;</button>
         </div>
         <!-- <div style="text-align:center dots">
             <span class="dot" onclick="currentSlide(1)"></span>
