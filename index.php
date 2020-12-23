@@ -56,7 +56,7 @@ require('database/connection.php');
         <img class="mySlides animate__animated animate__zoomInRight" src="images/1.jpg" style="width:100%">
         <img class="mySlides animate__animated animate__flipInY" src="images/1.jpg" style="width:100%">
 
-        <div class="flex absolute w-full btns top-0">
+        <div class="flex absolute w-full btns top-0 px-2">
             <button class="text-white left mr-auto focus:outline-none text-2xl" onclick="plusDivs(-1)">&#10094;</button>
             <button class="right text-white ml-auto focus:outline-none text-2xl" onclick="plusDivs(1)">&#10095;</button>
         </div>
