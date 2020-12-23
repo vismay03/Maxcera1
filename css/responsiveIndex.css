@@ -1,6 +1,9 @@
 @media (max-width: 800px) {
-  .landing .splide__slide {
-    height: 300px;
+  .landing {
+    height: 400px;
+  }
+  .landing img, .landing .btns {
+    height: 400px;
   }
   .collection form h3 {
     width: 250px;
@@ -48,9 +51,12 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 800px) {
-  .landing .splide__slide {
-    height: 400px;
+@media (max-width: 400px) {
+  .landing {
+    height: 300px;
+  }
+  .landing img, .landing .btns {
+    height: 300px;
   }
 }
 /*# sourceMappingURL=responsiveIndex.css.map */

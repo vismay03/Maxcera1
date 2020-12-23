@@ -32,7 +32,7 @@ require('database/connection.php');
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
 </head>
@@ -50,25 +50,22 @@ require('database/connection.php');
     include('comp/header.php');
     ?>
 
-    <section id="landingImg-slider" class="landing splide sm:mb-32 w-full">
-        <section class=" splide__track ">
-            <div class="splide__list">
-                <div class="splide__slide">
 
-                </div>
-                <div class="splide__slide">
+    <div id="landingImg-slider" class="landing sm:mb-32 w-full">
+        <img class=" mySlides animate__animated animate__fadeInTopRight" src="images/1.jpg" style="width:100%">
+        <img class="mySlides animate__animated animate__zoomInRight" src="images/1.jpg" style="width:100%">
+        <img class="mySlides animate__animated animate__flipInY" src="images/1.jpg" style="width:100%">
 
-                </div>
-                <div class="splide__slide">
-
-                </div>
-
-
-
-            </div>
-        </section>
-    </section>
-
+        <div class="flex absolute w-full btns top-0">
+            <button class="text-white left mr-auto focus:outline-none text-2xl" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="right text-white ml-auto focus:outline-none text-2xl" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        <!-- <div style="text-align:center dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div> -->
+    </div>
     <!-- ABOUT -->
 
     <div id=" about" class="flex justify-center about py-16 sm:py-32">
@@ -280,16 +277,19 @@ require('database/connection.php');
             new Splide('#card-slider', {
                 perPage: 3,
                 rewind: true,
-                gap: '20px',
+                perMove: 1,
+
+                type: 'loop',
                 lazyLoad: 'nearby',
                 breakpoints: {
                     '768': {
                         perPage: 1,
 
                     },
-                    '480': {
-                        perPage: 1,
 
+
+                    1300: {
+                        perPage: 2,
                     },
 
                 }
@@ -297,9 +297,13 @@ require('database/connection.php');
             new Splide('#premium-slider', {
                 perPage: 3,
                 rewind: true,
-
-
+                lazyLoad: 'nearby',
+                perMove: 1,
+                type: 'loop',
                 breakpoints: {
+                    1200: {
+                        perPage: 2,
+                    },
                     768: {
                         perPage: 1,
                     }
@@ -309,15 +313,9 @@ require('database/connection.php');
 
 
 
-            var splideImg = new Splide('#landingImg-slider', {
-                rewind: true,
 
-                autoplay: true,
-                type: 'loop',
 
-                perPage: 1,
 
-            }).mount();
 
         });
     </script>
@@ -334,6 +332,45 @@ require('database/connection.php');
     </script>
     <script>
         AOS.init();
+    </script>
+    <script>
+        var slideIndex = 1;
+        var timer = null;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            clearTimeout(timer);
+            showDivs(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            clearTimeout(timer);
+            showDivs(slideIndex = n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            // var dots = document.getElementsByClassName("dot");
+            if (n == undefined) {
+                n = ++slideIndex
+            }
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            // for (i = 0; i < dots.length; i++) {
+            //     dots[i].className = dots[i].className.replace(" active", "");
+            // }
+            slides[slideIndex - 1].style.display = "block";
+
+            timer = setTimeout(showDivs, 6000);
+        }
     </script>
 </body>
 
