@@ -32,7 +32,7 @@ require('database/connection.php');
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 
 
 </head>
@@ -218,8 +218,8 @@ require('database/connection.php');
 
     <div class="flex justify-around w-full flex-col sm:flex-row flex-wrap-reverse enquiry text-white py-6">
         <section class="text-center ">
-            <h2 class="text-center ">Have Questions? Call Us: +91 90161 61636</h2>
-            <p class="text-center">Or mail us on info@maxcerasanitarywear.com</p>
+            <h2 class="text-center text-md">Have Questions? Call Us: +91 90161 61636</h2>
+            <p class="text-center text-md">Or mail us on info@maxcerasanitarywear.com</p>
         </section>
         <a class="py-2 px-4 hover:text-white self-center mt-10  sm:mt-0 hbtn hb-fill-middle2-bg" href="contact.php">Send An Enquiry</a>
     </div>
