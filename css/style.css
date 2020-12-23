@@ -29,7 +29,7 @@
 
 body {
   background-color: var(--bg-color);
-  overflow: hidden;
+  overflow-x: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -53,13 +53,15 @@ body {
   margin-top: 68.84px;
 }
 
-.landing .active, .landing .dot:hover {
+.landing .active,
+.landing .dot:hover {
   background-color: #717171;
 }
 
-.landing img, .landing .btns {
+.landing img,
+.landing .btns {
   width: 100%;
-  height: calc(100Vh - 68.84px);
+  height: calc(100vh - 68.84px);
 }
 
 .swing-in-top-fwd {
@@ -240,7 +242,7 @@ body {
 }
 
 .product .splide__track .splide__list .splide__slide:before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   top: 50%;
@@ -253,9 +255,9 @@ body {
 }
 
 .product .splide__track .splide__list .splide__slide:hover::before {
-  -webkit-animation: circle .75s;
+  -webkit-animation: circle 0.75s;
   z-index: 200;
-  animation: circle .75s;
+  animation: circle 0.75s;
 }
 
 @-webkit-keyframes circle {
@@ -287,7 +289,7 @@ body {
 }
 
 .product .splide__track .splide__list .splide__slide img {
-  border: 6px solid #8bd8bd;
+  border: 6px solid rgba(80, 75, 75, 0.35);
   width: 260px;
   height: 500px;
 }
