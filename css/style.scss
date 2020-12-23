@@ -18,10 +18,10 @@
     opacity: 0;
   }
 }
-
+html,
 body {
   background-color: var(--bg-color);
-  overflow: hidden;
+  overflow-x: hidden;
   box-sizing: border-box;
 }
 .parallax-window {
@@ -35,42 +35,17 @@ body {
 }
 
 .landing {
-  overflow: hidden;
+
+ 
   margin-top: 68.84px;
-  .btns{
-    margin-top: 68.84px;
+ 
+
+
+  img,
+  .btns {
+    width: 100%;
+    height: calc(100vh - 68.84px);
   }
-//   .dots{
-// position: absolute;
-// top: 0;
-// left: 50%;
-// transform: translateX(-50%);
-//   }
-// .dot {
-  
-//   cursor: pointer;
-//   height: 15px;
-//   width: 15px;
-//   margin: 0 2px;
-//   background-color: #bbb;
-//   border-radius: 50%;
-//   display: inline-block;
-//   transition: background-color 0.6s ease;
-// }
-
-
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-    
-    img, .btns {
-      width: 100%;
-      height:calc(100Vh - 68.84px);
-    }
-   
-  
 }
 .swing-in-top-fwd {
   animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
@@ -126,9 +101,12 @@ h3 {
 }
 
 .collection {
-  width: auto;
+  .splide__arrow {
+      top: 45%;
+    }
   .splide__track {
     width: 80%;
+   
   }
   .wrapper {
     input {
@@ -217,50 +195,51 @@ h3 {
         position: relative;
 
         &:before {
-          content: '';
+          content: "";
           position: absolute;
           left: 50%;
           top: 50%;
-         
+
           transform: translate(-50%, -50%);
-        
-background: rgba(255,255,255,.2);
-height: 0;
-width: 0;
-opacity: 0;
+
+          background: rgba(255, 255, 255, 0.2);
+          height: 0;
+          width: 0;
+          opacity: 0;
         }
         &:hover::before {
-  -webkit-animation: circle .75s;
-   z-index: 200;
-  animation: circle .75s;}
-  @-webkit-keyframes circle {
-	0% {
-		opacity: 1;
-	}
-	40% {
-		opacity: 1;
-	}
-	100% {
-		width: 260px;
-		height: 500px;
-		opacity: 0;
-	}
-}
-@keyframes circle {
-	0% {
-		opacity: 1;
-	}
-	40% {
-		opacity: 1;
-	}
-	100% {
-		width: 260px;
-		height: 500px;
-		opacity: 0;
-	}
-}
+          -webkit-animation: circle 0.75s;
+          z-index: 200;
+          animation: circle 0.75s;
+        }
+        @-webkit-keyframes circle {
+          0% {
+            opacity: 1;
+          }
+          40% {
+            opacity: 1;
+          }
+          100% {
+            width: 260px;
+            height: 500px;
+            opacity: 0;
+          }
+        }
+        @keyframes circle {
+          0% {
+            opacity: 1;
+          }
+          40% {
+            opacity: 1;
+          }
+          100% {
+            width: 260px;
+            height: 500px;
+            opacity: 0;
+          }
+        }
         img {
-          border: 6px solid #8bd8bd;
+          border: 6px solid rgba(80, 75, 75, 0.35);
           width: 260px;
           height: 500px;
         }

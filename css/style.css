@@ -27,6 +27,7 @@
   }
 }
 
+html,
 body {
   background-color: var(--bg-color);
   overflow-x: hidden;
@@ -45,17 +46,7 @@ body {
 }
 
 .landing {
-  overflow: hidden;
   margin-top: 68.84px;
-}
-
-.landing .btns {
-  margin-top: 68.84px;
-}
-
-.landing .active,
-.landing .dot:hover {
-  background-color: #717171;
 }
 
 .landing img,
@@ -132,8 +123,8 @@ body {
   position: absolute;
 }
 
-.collection {
-  width: auto;
+.collection .splide__arrow {
+  top: 45%;
 }
 
 .collection .splide__track {

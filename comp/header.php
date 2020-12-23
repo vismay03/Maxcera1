@@ -1,7 +1,7 @@
 <?php
 require('database/connection.php');
 ?>
-<nav class="shadow-md flex justify-between z-30 w-full fixed top-0 items-center py-3 px-5">
+<nav class="shadow-md flex justify-between z-30 fixed top-0 items-center py-3 px-5">
     <a href="index.php">
         <img src="images/logo.png"   class="logo" alt="logo" />
     </a>

@@ -29,12 +29,14 @@ require('database/connection.php');
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/Hover-Buttons-master/css/hoverbuttons.css">
-    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
-    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+
+    <link rel="stylesheet" type="text/css" href="yourpath/all-animation.css" />
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-
-
+    <link href="css/vivify.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://raw.githubusercontent.com/pavlyukpetr/motion-css/master/motion.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/cssanimation/cssanimation.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body onload="load()">
@@ -51,10 +53,10 @@ require('database/connection.php');
     ?>
 
 
-    <div id="landingImg-slider" class="landing sm:mb-32 w-full">
-        <img class=" mySlides animate__animated animate__fadeInTopRight" src="images/1.jpg" loading="lazy" style="width:100%">
-        <img class="mySlides animate__animated animate__zoomInRight" src="images/1.jpg" loading="lazy" style="width:100%">
-        <img class="mySlides animate__animated animate__flipInY" src="images/1.jpg" loading="lazy" style="width:100%">
+    <div id="landingImg-slider" class="landing relative sm:mb-32 w-full">
+        <img class=" mySlides cssanimation moveFromRight" src="images/1.jpg" loading="lazy" style="width:100%">
+        <img class="mySlides cssanimation shockInRight" src="images/1.jpg" loading="lazy" style="width:100%">
+        <img class="mySlides cssanimation moveFromRight" src="images/1.jpg" loading="lazy" style="width:100%">
 
         <div class="flex absolute w-full btns top-0 px-2">
             <button class="text-white left mr-auto focus:outline-none text-3xl" onclick="plusDivs(-1)">&#10094;</button>
