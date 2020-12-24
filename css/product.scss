@@ -24,6 +24,10 @@ html {
   background-color: var(--bg-color);
   border-bottom: 1px solid #f1f2f50c;
 
+  .desc {
+    font-family: var(--poppins);
+    width: 20rem;
+  }
   // CATEGORY
 
   .category {

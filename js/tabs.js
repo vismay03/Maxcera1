@@ -4,12 +4,14 @@
 const tabs = document.querySelectorAll(".tabs");
 const tab = document.querySelectorAll(".tab");
 const panel = document.querySelectorAll(".tab-content");
+console.log('hi tabs');
 
-const firstTab = document.getElementsByClassName('tab')[0];
-console.log(firstTab.classList.add('active'));
+tab[0].classList.add('active');
 
-const firstTabContent = document.getElementsByClassName("tab-content")[0];
-console.log(firstTabContent.classList.add("active"));
+panel[0].classList.add("active");
+
+
+
 
 function onTabClick(event) {
 

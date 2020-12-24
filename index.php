@@ -113,7 +113,7 @@ require('database/connection.php');
 
                                     <button type="submit" class="category-btn grid justify-center " value="">
 
-                                        <img src='uploads/category/<?php echo $rows['Image']; ?>' class='self-center' loading='lazy' alt='' />
+                                        <img src='uploads/category/<?php echo $rows['Image']; ?>' class='self-center object-cover' loading='lazy' alt='' />
                                         <div class="circle"></div>
                                     </button>
                                     <h3 class='uppercase text-white  text-center text-2xl mt-8'> <?php echo $rows['CName'];  ?></h3>
@@ -162,7 +162,7 @@ require('database/connection.php');
                             <div class="flex justify-center  splide__slide container">
                                 <div class="item">
 
-                                    <img class="hbtn animate__animated animate__fadeInRightBig hb-border-off3 " src="uploads/premium/<?= $premium['Image'] ?>" loading="lazy" class="self-center" alt="" />
+                                    <img class="hbtn object-cover hb-border-off3 " src="uploads/premium/<?= $premium['Image'] ?>" loading="lazy" class="self-center" alt="" />
 
                                 </div>
                             </div>
@@ -329,13 +329,7 @@ require('database/connection.php');
     </script>
 
 
-    <script>
-        var preloader = document.querySelector('.preloader');
-
-        function load() {
-            preloader.style.display = 'none';
-        }
-    </script>
+   
     <script>
         AOS.init();
     </script>

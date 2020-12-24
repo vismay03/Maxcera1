@@ -8,6 +8,7 @@
 
        $id = $_POST['id'];
         $category = $_POST['Category'];
+        $desc = $_POST['desc'];
         $image = $_FILES['Image']['name'];
         $pageImg = $_FILES['pageImg']['name'];
        
@@ -35,19 +36,13 @@
             }
 
             if (file_exists($target_file)) {
-                $_SESSION['status'] = "Sorry, file already exists.";
+                $_SESSION['status'] = "Sorry, <b>category Image</b> already exists.";
 
                 header("Location: ../admin.php");
                 exit;
             }
 
-            // Check file size
-            if ($_FILES["Image"]["size"] > 5000000) {
-                $_SESSION['status'] =  "Sorry, your file is too large.";
-
-                header("Location: ../admin.php");
-                exit;
-            }
+          
             // Allow certain file formats
             if (
                 $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
@@ -60,7 +55,7 @@
             }
             if (move_uploaded_file($_FILES["Image"]["tmp_name"], $target_file)) {
               
-                $update_category_query = "UPDATE category SET CName='$category',Image='$image'  WHERE CName='$id'";
+                $update_category_query = "UPDATE category SET CName='$category',Image='$image', description='$desc'  WHERE CName='$id'";
 
                 $update_category_result = $connection->query($update_category_query);
                 if ($update_category_result) {
@@ -75,8 +70,8 @@
             }
         } else {
             $image = $_POST['existing_image'];
-            $update_category_query = "UPDATE category SET CName='$category',Image='$image'  WHERE CName='$id'";
-
+            $update_category_query = "UPDATE category SET CName='$category',Image='$image', description='$desc'  WHERE CName='$id'";
+           
             $update_category_result = $connection->query($update_category_query);
             if ($update_category_result) {
                 $_SESSION['status'] = "Category Updated Successfully";
@@ -112,19 +107,13 @@
             }
 
             if (file_exists($target_file)) {
-                $_SESSION['status'] = "Sorry, file already exists.";
+                $_SESSION['status'] = "Sorry, <b>Page Image</b> already exists.";
 
                 header("Location: ../admin.php");
                 exit;
             }
 
-            // Check file size
-            if ($_FILES["Image"]["size"] > 5000000) {
-                $_SESSION['status'] =  "Sorry, your file is too large.";
-
-                header("Location: ../admin.php");
-                exit;
-            }
+           
             // Allow certain file formats
             if (
                 $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
@@ -137,7 +126,7 @@
             }
             if (move_uploaded_file($_FILES["pageImg"]["tmp_name"], $target_file)) {
 
-                $update_category_query = "UPDATE category SET CName='$category',Image='$image', pageImg='$pageImg'  WHERE CName='$id'";
+                $update_category_query = "UPDATE category SET CName='$category',Image='$image', pageImg='$pageImg', description='$desc'  WHERE CName='$id'";
 
                 $update_category_result = $connection->query($update_category_query);
                 if ($update_category_result) {
@@ -152,7 +141,7 @@
             }
         } else {
             $image = $_POST['existing_image'];
-            $update_category_query = "UPDATE category SET CName='$category',Image='$image'  WHERE CName='$id'";
+            $update_category_query = "UPDATE category SET CName='$category',Image='$image', pageImg='$pageImg', description='$desc'  WHERE CName='$id'";
 
             $update_category_result = $connection->query($update_category_query);
             if ($update_category_result) {

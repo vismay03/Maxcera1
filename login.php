@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+require('database/connection.php');
 ?>
 
 <!DOCTYPE html>
@@ -56,15 +56,21 @@ session_start();
 
 if (isset($_POST['adminLoginSubmit'])) {
 
+    $sql_admin = 'SELECT * FROM admin';
+    $sql_admin_res = $connection->query($sql_admin);
 
+    if ($sql_admin_res->num_rows > 0) {
 
-    if ($_POST['adminUsername'] == "max" && $_POST['adminPassword'] == "max") {
+        while ($admin = $sql_admin_res->fetch_assoc()) {
 
-        $_SESSION['username'] = $_POST['adminUsername'];
-        $_SESSION['password'] = $_POST['adminPassword'];
+            if ($_POST['adminUsername'] == $admin['Username'] && $_POST['adminPassword'] == $admin['Password']) {
 
-        header('Location: admin.php');
+                $_SESSION['username'] = $_POST['adminUsername'];
+                $_SESSION['password'] = $_POST['adminPassword'];
+                $_SESSION['status'] = "Login Successfully";
+                header('Location: admin.php');
+            }
+        }
     }
 }
-
 ?>

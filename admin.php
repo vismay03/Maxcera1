@@ -87,6 +87,9 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
                                     <input type='file' class="hidden" name="pageImg" />
                                 </label>
                             </div>
+                            <label class=" mt-3">
+                                <textarea class="w-full form-input border-2 border-gray-200 pl-2  mt-3 block" name="desc" id="" cols="30" rows="4" placeholder="Description"></textarea>
+                            </label>
                             <label class="text-center mt-10">
                                 <input type="submit" name="addCategory" class="w-full bg-gray-700 text-white round mt-3 py-1" value="Add">
                             </label>
@@ -100,6 +103,7 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
                         <th>Category</th>
                         <th>Image</th>
                         <th>Page Image</th>
+                        <th>Description</th>
 
                     </thead>
                     <?php
@@ -119,6 +123,7 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
                                 <td><?php echo $category['CName']  ?></td>
                                 <td><?php echo $category['Image']  ?></td>
                                 <td><?php echo $category['pageImg']  ?></td>
+                                <td><?php echo $category['description']  ?></td>
                                 <td class="flex border-none">
                                     <!--CATEGORY EDIT BUTTON  -->
                                     <a href="#categoryEditForm<?php echo $category['CName']; ?>">
@@ -161,6 +166,9 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['password'])) {
                                                     <input type='file' class="hidden" name="pageImg" />
                                                 </label>
                                             </div>
+                                            <label class=" mt-3">
+                                                <textarea class="w-full form-input border-2 border-gray-200 pl-2  mt-3 block" name="desc" id="" cols="30" rows="4" placeholder="Description"><?php echo $category['description']; ?></textarea>
+                                            </label>
                                             <label class="text-center mt-3">
                                                 <input type="submit" name="updateCategory" class="w-full bg-gray-700 text-white round mt-3 py-1" value="Update">
                                             </label>

@@ -24,6 +24,11 @@ html {
   border-bottom: 1px solid #f1f2f50c;
 }
 
+.title .desc {
+  font-family: var(--poppins);
+  width: 20rem;
+}
+
 .title .category h2 {
   font-family: var(--exo2);
   color: var(--light-color);

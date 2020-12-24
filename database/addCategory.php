@@ -5,6 +5,7 @@ session_start();
 if (isset($_POST['addCategory'])) {
    
     $category = $_POST['category'];
+    $desc = $_POST['desc'];
     $image = $_FILES['image']['name'];
     $pageImg = $_FILES['pageImg']['name'];
     echo $pageImg;
@@ -48,7 +49,7 @@ if (isset($_POST['addCategory'])) {
     // Check if $uploadOk is set to 0 by an error
 
     if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file1) && move_uploaded_file($_FILES["pageImg"]["tmp_name"], $target_file2)) {
-        $add_category_query = "INSERT INTO category (CName,  Image, pageImg) VALUES ('$category','$image', '$pageImg')";
+        $add_category_query = "INSERT INTO category (CName,  Image, pageImg, description) VALUES ('$category','$image', '$pageImg', '$desc')";
 
         $add_category_result = $connection->query($add_category_query);
         if ($add_category_result) {
