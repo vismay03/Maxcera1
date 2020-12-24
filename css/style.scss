@@ -194,8 +194,7 @@ h3 {
 
 .item {
   align-items: center;
-  background-color: #fff;
-  border: 1px solid #eee;
+
   display: flex;
   height: 500px;
   justify-content: center;
@@ -211,13 +210,14 @@ h3 {
 
   &::before,
   &::after {
-    background-image: linear-gradient(-180deg, #A1DEFF 0%, #5EA3DB 97%);
+    background-image: linear-gradient(-180deg, #c79797 0%, #55aef7 97%);
     content: '';
     height: 100%;
     position: absolute;
     transition: all .2s;
     transition-delay: .2s;
     transform: translateY(0px) translateX(0px);
+    border-radius: 10px;
     width: 100%;
     z-index: -1;
   }
@@ -338,6 +338,7 @@ h3 {
       .splide__slide {
         width: 260px;
         height: 500px;
+        
         position: relative;
 
         &:before {
@@ -345,7 +346,7 @@ h3 {
           position: absolute;
           left: 50%;
           top: 50%;
-
+          border-radius: 10px;
           transform: translate(-50%, -50%);
 
           background: rgba(255, 255, 255, 0.2);
@@ -385,7 +386,8 @@ h3 {
           }
         }
         img {
-          border: 6px solid rgba(80, 75, 75, 0.35);
+          border: 6px solid linear-gradient(to bottom, #a8ff78, #78ffd6);
+          border-radius: 10px;
           width: 260px;
           height: 500px;
         }
