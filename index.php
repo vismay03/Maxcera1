@@ -25,7 +25,7 @@ require('database/connection.php');
     <link rel="preload" as="style" href="css/footer.css" onload="this.rel='stylesheet'" />
     <link rel="preload" as="style" href="css/style.css" onload="this.rel='stylesheet'" />
     <link rel="preload" as="style" href="css/responsiveIndex.css" onload="this.rel='stylesheet'" />
-    <link rel="preload" as="style" href="css/slider.css" onload="this.rel='stylesheet'" />
+
     <link rel="preload" as="style" href="css/header.css" onload="this.rel='stylesheet'" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -33,8 +33,6 @@ require('database/connection.php');
 
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="css/vivify.min.css" rel="stylesheet" type="text/css" />
-    <link href="https://raw.githubusercontent.com/pavlyukpetr/motion-css/master/motion.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/cssanimation/cssanimation.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
@@ -53,7 +51,7 @@ require('database/connection.php');
     ?>
 
 
-    <div id="landingImg-slider" class="landing relative  w-full">
+    <div id="landingImg-slider" class="landing relative sm:mb-32 w-full">
         <img class=" mySlides cssanimation shockInRight" src="images/1.jpg" loading="lazy" style="width:100%">
         <img class="mySlides cssanimation doorCloseFromRight" src="images/1.jpg" loading="lazy" style="width:100%">
         <img class="mySlides cssanimation zoomInRight" src="images/1.jpg" loading="lazy" style="width:100%">
@@ -73,7 +71,7 @@ require('database/connection.php');
 
     <!-- ABOUT -->
 
-    <div id=" about" class="flex justify-center about mt-40">
+    <div id=" about" class="flex justify-center about py-16 sm:py-32">
         <img src="images/2.jpg" class="about-img" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="300" data-aos-easing="linear" loading="lazy" alt="" />
         <div class="about-content self-center text-white" data-aos="fade-left" data-aos-offset="300" data-aos-duration="1000" data-aos-easing="linear">
             <h2 class="text-4xl uppercase " data-aos-delay="1000" data-aos="flip-up">About us</h2>
@@ -92,7 +90,7 @@ require('database/connection.php');
 
     <!-- COLLECTION -->
 
-    <div class="flex flex-col  justify-center  mx-auto collection mt-48" data-aos="fade-left" data-aos-duration="2000" data-aos-easing="linear">
+    <div class="flex flex-col  justify-center  mx-auto collection   py-24 sm:py-32" data-aos="fade-left" data-aos-duration="2000" data-aos-easing="linear">
         <h2 class="text-4xl collection-title  uppercase text-center" data-aos="fade-up" data-aos-delay="500" data-aos-anchor-placement="top-center">Our COLLECTION</h2>
         <div id="card-slider" class="splide flex justify-center flex-wrap">
             <section class='splide__track py-20'>
@@ -147,11 +145,11 @@ require('database/connection.php');
 
     <!-- PRODUCTS -->
 
-    <div class=" flex flex-col justify-center mx-auto product mt-48" data-aos="fade-left" data-aos-duration="2000" data-aos-easing="linear">
+    <div class=" flex flex-col justify-center mx-auto product my-16 sm:py-16" data-aos="fade-left" data-aos-duration="2000" data-aos-easing="linear">
         <h2 class="text-4xl product-title uppercase text-center" data-aos="fade-up" data-aos-duration="500" data-aos-anchor-placement="top-center">Premium Products</h2>
         <div id="premium-slider" class="splide flex justify-center flex-wrap">
-            <section class='splide__track'>
-                <div class="splide__list ">
+            <section class='splide__track py-24'>
+                <div class="splide__list">
 
                     <?php
                     $sql_get_category_query = 'SELECT * FROM premium';
@@ -161,7 +159,7 @@ require('database/connection.php');
                         while ($premium = $sql_get_category_query_result->fetch_assoc()) {
                     ?>
 
-                            <div class="flex justify-center splide__slide container">
+                            <div class="flex justify-center  splide__slide container">
                                 <div class="item">
 
                                     <img class="hbtn animate__animated animate__fadeInRightBig hb-border-off3 " src="uploads/premium/<?= $premium['Image'] ?>" loading="lazy" class="self-center" alt="" />
@@ -181,7 +179,7 @@ require('database/connection.php');
 
     <!-- COMPANY FACTS -->
 
-    <div data-parallax="scroll" data-image-src="images/cusImg.png" class="parallax-window company-facts mt-40 flex flex-col sm:flex-row justify-around">
+    <div data-parallax="scroll" data-image-src="images/cusImg.png" class="parallax-window mt-16 company-facts flex flex-col sm:flex-row justify-around">
         <section class="facts-content flex flex-wrap h-full justify-center w-full">
             <div class="sm:w-1/2 w-full self-center flex justify-center text-center">
 
@@ -224,7 +222,7 @@ require('database/connection.php');
 
     <!-- ENQUIRY -->
 
-    <div class="flex justify-around w-full flex-col sm:flex-row flex-wrap-reverse enquiry text-white py-6">
+    <div class=" flex justify-around w-full flex-col sm:flex-row flex-wrap-reverse enquiry text-white py-6">
         <section class="text-center ">
             <h2 class="text-center text-md">Have Questions? Call Us: +91 90161 61636</h2>
             <p class="text-center text-md">Or mail us on info@maxcerasanitarywear.com</p>
@@ -263,21 +261,21 @@ require('database/connection.php');
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
 
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
-
-
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
 
     <script>
         $('.parallax-window').parallax({
-            imageSrc: 'images/cusImg.png'
+            imageSrc: './images/cusImg.png'
         });
     </script>
+
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script>

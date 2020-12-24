@@ -27,7 +27,10 @@
   }
 }
 
-html,
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: var(--bg-color);
   overflow-x: hidden;
@@ -473,6 +476,7 @@ body {
 
 .product .splide__track .splide__list .splide__slide {
   width: 260px;
+  height: 500px;
   position: relative;
 }
 
