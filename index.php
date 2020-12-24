@@ -17,7 +17,7 @@ require('database/connection.php');
 
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel='stylesheet'>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
@@ -25,12 +25,12 @@ require('database/connection.php');
     <link rel="preload" as="style" href="css/footer.css" onload="this.rel='stylesheet'" />
     <link rel="preload" as="style" href="css/style.css" onload="this.rel='stylesheet'" />
     <link rel="preload" as="style" href="css/responsiveIndex.css" onload="this.rel='stylesheet'" />
+    <link rel="preload" as="style" href="css/slider.css" onload="this.rel='stylesheet'" />
     <link rel="preload" as="style" href="css/header.css" onload="this.rel='stylesheet'" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/Hover-Buttons-master/css/hoverbuttons.css">
 
-    <link rel="stylesheet" type="text/css" href="yourpath/all-animation.css" />
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="css/vivify.min.css" rel="stylesheet" type="text/css" />
@@ -54,9 +54,9 @@ require('database/connection.php');
 
 
     <div id="landingImg-slider" class="landing relative sm:mb-32 w-full">
-        <img class=" mySlides cssanimation moveFromRight" src="images/1.jpg" loading="lazy" style="width:100%">
-        <img class="mySlides cssanimation shockInRight" src="images/1.jpg" loading="lazy" style="width:100%">
-        <img class="mySlides cssanimation moveFromRight" src="images/1.jpg" loading="lazy" style="width:100%">
+        <img class=" mySlides cssanimation shockInRight" src="images/1.jpg" loading="lazy" style="width:100%">
+        <img class="mySlides cssanimation doorCloseFromRight" src="images/1.jpg" loading="lazy" style="width:100%">
+        <img class="mySlides cssanimation zoomInRight" src="images/1.jpg" loading="lazy" style="width:100%">
 
         <div class="flex absolute w-full btns top-0 px-2">
             <button class="text-white left mr-auto focus:outline-none text-3xl" onclick="plusDivs(-1)">&#10094;</button>
@@ -68,6 +68,9 @@ require('database/connection.php');
             <span class="dot" onclick="currentSlide(3)"></span>
         </div> -->
     </div>
+
+
+
     <!-- ABOUT -->
 
     <div id=" about" class="flex justify-center about py-16 sm:py-32">
@@ -158,9 +161,12 @@ require('database/connection.php');
                         while ($premium = $sql_get_category_query_result->fetch_assoc()) {
                     ?>
 
-                            <div class="flex justify-center mt-16 splide__slide ">
-                                <img class="hbtn animate__animated animate__fadeInRightBig hb-border-off3 " src="uploads/premium/<?= $premium['Image'] ?>" loading="lazy" class="self-center" alt="" />
+                            <div class="flex justify-center mt-16 splide__slide container">
+                                <div class="item">
 
+                                    <img class="hbtn animate__animated animate__fadeInRightBig hb-border-off3 " src="uploads/premium/<?= $premium['Image'] ?>" loading="lazy" class="self-center" alt="" />
+
+                                </div>
                             </div>
 
 
@@ -374,6 +380,9 @@ require('database/connection.php');
             timer = setTimeout(showDivs, 6000);
         }
     </script>
+
+
+
 </body>
 
 </html>
