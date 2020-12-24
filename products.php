@@ -46,7 +46,7 @@
 
       <!-- DESCRIPTION -->
 
-      <section class="text-lg desc text-gray-200 self-center mt-10">
+      <section class="text-lg desc text-gray-200 text-center self-center mt-10">
         <?php echo $category['description']; ?>
       </section>
   <?php
